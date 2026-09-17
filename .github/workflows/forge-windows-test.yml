@@ -89,6 +89,13 @@ jobs:
           const generated = JSON.parse(fs.readFileSync(forgePath, 'utf8'))
           const forge = generated.servers[0].modules.find(m => m.type === 'ForgeHosted')
           if (!forge) throw new Error('ForgeHosted module not generated')
+          const fixHostedUrls = module => {
+            if (module.artifact?.url) {
+              module.artifact.url = module.artifact.url.replace('/forge/repo/', '/forge/')
+            }
+            ;(module.subModules || []).forEach(fixHostedUrls)
+          }
+          fixHostedUrls(forge)
           const server = current.servers[0]
           server.modules = [forge, ...server.modules.filter(m => !['ForgeHosted', 'Forge'].includes(m.type))]
           server.version = '0.1.4'

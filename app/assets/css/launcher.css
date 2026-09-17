@@ -2872,6 +2872,38 @@ input:checked + .toggleSwitchSlider:before {
     margin-top: 50px;
 }
 
+/* Aeldoria: make the landing controls readable on Full HD and larger screens. */
+@media (min-width: 1500px) and (min-height: 850px) {
+    #image_seal,
+    #image_seal_container {
+        height: 90px;
+        width: 90px;
+    }
+
+    #landingContainer > #lower,
+    #rightContainer {
+        font-size: 1.2em;
+    }
+
+    #launch_button {
+        font-size: 26px;
+    }
+
+    #server_selection_button,
+    #player_count,
+    #landingPlayerLabel,
+    #mojangStatusWrapper,
+    #newsButtonText,
+    #user_text {
+        font-size: 14px;
+    }
+
+    .mediaSVG {
+        width: 18px;
+        height: 18px;
+    }
+}
+
 /* Logo container styles w/ update. */
 #image_seal_container[update]{
     cursor: pointer
