@@ -1,5 +1,5 @@
-Warning: truncated output (original token count: 39179)
-Total output lines: 3802
+Warning: truncated output (original token count: 39133)
+Total output lines: 3794
 
 {
   "version": "1.0.0",
@@ -10,7 +10,7 @@ Total output lines: 3802
       "name": "Aeldoria RPG",
       "description": "Servidor RPG de Aeldoria para Minecraft 1.20.1.",
       "icon": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/master/build/icon.png",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "address": "216.201.77.215:9055",
       "minecraftVersion": "1.20.1",
       "discord": {
@@ -1455,7 +1455,11 @@ Total output lines: 3802
           "artifact": {
             "size": 1073796,
             "MD5": "1aa198519ca04993a841eadd1b6ff4de",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fieldguide-…9179 tokens truncated…  "size": 294405,
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fieldguide-…9133 tokens truncated…     "id": "aeldoria.mods:morehitboxes-forge-1.20.1-1.9.2:1.0.0",
+          "name": "morehitboxes-forge-1.20.1-1.9.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 294405,
             "MD5": "6e78456b9c5dc3ac1592392dc64a6868",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/morehitboxes-forge-1.20.1-1.9.2.jar",
             "path": "morehitboxes-forge-1.20.1-1.9.2.jar"
@@ -2878,6 +2882,17 @@ Total output lines: 3802
             "MD5": "f9362b36a09de79e7416f3ecca439c78",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/%5B1.20.1-forge%5D-Epic-Knights-Japanese-Armory-1.6.2.jar",
             "path": "[1.20.1-forge]-Epic-Knights-Japanese-Armory-1.6.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.resourcepacks:newaeldoria:1.0.0",
+          "name": "NEWAELDORIA",
+          "type": "File",
+          "artifact": {
+            "size": 83759374,
+            "MD5": "bf6c181b8b4ac4e4eba59849457bfaed",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/resourcepacks/NEWAELDORIA.zip",
+            "path": "resourcepacks/NEWAELDORIA.zip"
           }
         }
       ]
