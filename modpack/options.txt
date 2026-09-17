@@ -44,7 +44,7 @@ biomeBlendRadius:2
 renderClouds:"false"
 resourcePacks:["vanilla","mod_resources","mod/punchy:punchy","efn_enhance_must","generated/fragmentum_layer","file/NEWAELDORIA"]
 incompatibleResourcePacks:[]
-lastServer:192.168.8.101:25565
+lastServer:216.201.77.215:9055
 lang:es_es
 soundDevice:"OpenAL Soft on Auriculares (High Definition Audio Device)"
 chatVisibility:0
