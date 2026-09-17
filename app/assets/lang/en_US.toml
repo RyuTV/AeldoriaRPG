@@ -87,7 +87,7 @@ tabJavaHeaderDesc = "Manage the Java configuration (advanced)."
 memoryTitle = "Memory"
 maxRAM = "Maximum RAM"
 minRAM = "Minimum RAM"
-memoryDesc = "The recommended minimum RAM is 3 gigabytes. Setting the minimum and maximum values to the same value may reduce lag."
+memoryDesc = "Aeldoria recomienda un mínimo de 6 GB de RAM. Setting the minimum and maximum values to the same value may reduce lag."
 memoryTotalTitle = "Total"
 memoryAvailableTitle = "Available"
 javaExecutableTitle = "Java Executable"
@@ -212,8 +212,8 @@ checking = "Checking for News"
 
 [js.landing.discord]
 loading = "Loading game.."
-joining = "Sailing to Westeros!"
-joined = "Exploring the Realm!"
+joining = "Viajando a Aeldoria..."
+joined = "Explorando Aeldoria"
 
 [js.overlay]
 dismiss = "Dismiss"
