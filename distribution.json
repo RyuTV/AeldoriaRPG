@@ -1,0 +1,2886 @@
+Warning: truncated output (original token count: 39179)
+Total output lines: 3802
+
+{
+  "version": "1.0.0",
+  "rss": "https://github.com/RyuTV/AeldoriaRPG/commits/master.atom",
+  "servers": [
+    {
+      "id": "Aeldoria_RPG",
+      "name": "Aeldoria RPG",
+      "description": "Servidor RPG de Aeldoria para Minecraft 1.20.1.",
+      "icon": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/master/build/icon.png",
+      "version": "0.1.0",
+      "address": "216.201.77.215:9055",
+      "minecraftVersion": "1.20.1",
+      "discord": {
+        "shortId": "Aeldoria",
+        "largeImageText": "Aeldoria RPG",
+        "largeImageKey": "aeldoria"
+      },
+      "mainServer": true,
+      "autoconnect": true,
+      "javaOptions": {
+        "supported": ">=17 <18",
+        "suggestedMajor": 17,
+        "ram": {
+          "recommended": 6144,
+          "minimum": 4096
+        }
+      },
+      "modules": [
+        {
+          "id": "aeldoria.mods:1.3.0-weaponsofharmony-forge-emf-20.14.4:1.0.0",
+          "name": "1.3.0-WeaponsOfHarmony-Forge-EMF-20.14.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5885744,
+            "MD5": "897806008a4a6f19eec5557855b22c94",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/1.3.0-WeaponsOfHarmony-Forge-EMF-20.14.4.jar",
+            "path": "1.3.0-WeaponsOfHarmony-Forge-EMF-20.14.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:abridged-2.0.0-forge-1.20.1:1.0.0",
+          "name": "abridged-2.0.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 120848,
+            "MD5": "b8b9a25389577d5ab60adcbcc6261b5d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/abridged-2.0.0-forge-1.20.1.jar",
+            "path": "abridged-2.0.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:advanced-team-forge-1.20.1-1.4.6:1.0.0",
+          "name": "Advanced Team-forge-1.20.1-1.4.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 354654,
+            "MD5": "aae8607a67a7b13864f4cd8ddc7fa63a",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Advanced%20Team-forge-1.20.1-1.4.6.jar",
+            "path": "Advanced Team-forge-1.20.1-1.4.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:advs_spells_arts-1.0.0.a-forge-1.20.1:1.0.0",
+          "name": "advs_spells_arts-1.0.0.a-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 607985,
+            "MD5": "64dd0f4df24a3f3b6bf4d82d28bfc1fd",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/advs_spells_arts-1.0.0.a-forge-1.20.1.jar",
+            "path": "advs_spells_arts-1.0.0.a-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:aeldoria-rpg-core-0.5.0:1.0.0",
+          "name": "aeldoria-rpg-core-0.5.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 14247376,
+            "MD5": "dacf432fa82aaf0c6dd61baa72a35c4f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aeldoria-rpg-core-0.5.0.jar",
+            "path": "aeldoria-rpg-core-0.5.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:aeldoriarpgprivatemod-1.1.0-forge-1.20.1:1.0.0",
+          "name": "aeldoriarpgprivatemod-1.1.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 123848082,
+            "MD5": "c6d555c4ef9be3386a38d3f15eface99",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aeldoriarpgprivatemod-1.1.0-forge-1.20.1.jar",
+            "path": "aeldoriarpgprivatemod-1.1.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ai-improvements-1.20-0.5.2-2:1.0.0",
+          "name": "AI-Improvements-1.20-0.5.2 (2)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 29553,
+            "MD5": "9a6776ce2deab597d198e8755daa56ff",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/AI-Improvements-1.20-0.5.2%20(2).jar",
+            "path": "AI-Improvements-1.20-0.5.2 (2).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:alltheleaks-1.0.6-1.20.1-forge:1.0.0",
+          "name": "alltheleaks-1.0.6+1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1172581,
+            "MD5": "160ab11da7a2825a6a3213f750d37bd5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/alltheleaks-1.0.6%2B1.20.1-forge.jar",
+            "path": "alltheleaks-1.0.6+1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ambientsounds_forge_v6.1.11_mc1.20.1:1.0.0",
+          "name": "AmbientSounds_FORGE_v6.1.11_mc1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 51722248,
+            "MD5": "78270b771d833d9f2936a2bd95a7ec21",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/AmbientSounds_FORGE_v6.1.11_mc1.20.1.jar",
+            "path": "AmbientSounds_FORGE_v6.1.11_mc1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:animalistic_mod_1.2.2_1.20.1:1.0.0",
+          "name": "Animalistic_mod_1.2.2_1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4051589,
+            "MD5": "acbc7682cbeccb0f7113575d81d93489",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Animalistic_mod_1.2.2_1.20.1.jar",
+            "path": "Animalistic_mod_1.2.2_1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:apothicattributes-1.20.1-1.3.7:1.0.0",
+          "name": "ApothicAttributes-1.20.1-1.3.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 227511,
+            "MD5": "d4f8d1945416d5150cd67d27469b5ce9",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ApothicAttributes-1.20.1-1.3.7.jar",
+            "path": "ApothicAttributes-1.20.1-1.3.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:aquamirae-forge-1.20.1-6.1.0:1.0.0",
+          "name": "aquamirae-forge-1.20.1-6.1.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 17323071,
+            "MD5": "eb60199c7d746f6bbc018aaeb7843b8a",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aquamirae-forge-1.20.1-6.1.0.jar",
+            "path": "aquamirae-forge-1.20.1-6.1.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:architectury-9.2.14-forge:1.0.0",
+          "name": "architectury-9.2.14-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 580602,
+            "MD5": "76b40d407b6bf0257dd1dab6d3d395d5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/architectury-9.2.14-forge.jar",
+            "path": "architectury-9.2.14-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:armor-of-the-ages-forge-1.20.1-1.3.11-1:1.0.0",
+          "name": "Armor of the Ages-forge-1.20.1-1.3.11 (1)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 347665,
+            "MD5": "bfb15c9366d1be53b8630d379cc6bfca",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Armor%20of%20the%20Ages-forge-1.20.1-1.3.11%20(1).jar",
+            "path": "Armor of the Ages-forge-1.20.1-1.3.11 (1).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:armored_redstone-1.20.1-1.0.1:1.0.0",
+          "name": "armored_redstone-1.20.1-1.0.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 142623,
+            "MD5": "c781446943932b592743d24af2e8325e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/armored_redstone-1.20.1-1.0.1.jar",
+            "path": "armored_redstone-1.20.1-1.0.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:armourersworkshop-forge-1.20.1-3.2.7-beta:1.0.0",
+          "name": "armourersworkshop-forge-1.20.1-3.2.7-beta",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5904485,
+            "MD5": "24414e0c8a6cfef7bfa3ac7ab653cc14",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/armourersworkshop-forge-1.20.1-3.2.7-beta.jar",
+            "path": "armourersworkshop-forge-1.20.1-3.2.7-beta.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:artifacts-forge-9.5.16:1.0.0",
+          "name": "artifacts-forge-9.5.16",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 850457,
+            "MD5": "85081468e7498005f5dfdab2ae520097",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/artifacts-forge-9.5.16.jar",
+            "path": "artifacts-forge-9.5.16.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ascended_arts-0.2.3-1.20.1:1.0.0",
+          "name": "ascended_arts-0.2.3-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 6783893,
+            "MD5": "fe3f73613299da70e1577db4098f125e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ascended_arts-0.2.3-1.20.1.jar",
+            "path": "ascended_arts-0.2.3-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:async-locator-forge-1.20-1.3.0:1.0.0",
+          "name": "async-locator-forge-1.20-1.3.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 264951,
+            "MD5": "8b5e3d0c39d567a44f269439f880b444",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/async-locator-forge-1.20-1.3.0.jar",
+            "path": "async-locator-forge-1.20-1.3.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ati-structures-default-v1.4.2-1.20:1.0.0",
+          "name": "ATi Structures Default V1.4.2 (1.20+)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3149756,
+            "MD5": "8e613645ef4ad6583edd0a41b7188bba",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ATi%20Structures%20Default%20V1.4.2%20(1.20%2B).jar",
+            "path": "ATi Structures Default V1.4.2 (1.20+).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:attributefix-forge-1.20.1-21.0.4:1.0.0",
+          "name": "AttributeFix-Forge-1.20.1-21.0.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 19471,
+            "MD5": "e8fb517833e21335106e9d4d1a39ecd4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/AttributeFix-Forge-1.20.1-21.0.4.jar",
+            "path": "AttributeFix-Forge-1.20.1-21.0.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:azurelib-neo-1.20.1-3.0.26:1.0.0",
+          "name": "azurelib-neo-1.20.1-3.0.26",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1332212,
+            "MD5": "737f3e9c828b47b294e5edc1eb2fb2d2",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/azurelib-neo-1.20.1-3.0.26.jar",
+            "path": "azurelib-neo-1.20.1-3.0.26.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:badmobs-1.20.1-19.0.4:1.0.0",
+          "name": "BadMobs-1.20.1-19.0.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 10425,
+            "MD5": "c82edfea81516b7f8c9607ad5b2f75d6",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/BadMobs-1.20.1-19.0.4.jar",
+            "path": "BadMobs-1.20.1-19.0.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:badoptimizations-2.4.1-1.20.1:1.0.0",
+          "name": "BadOptimizations-2.4.1-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 460234,
+            "MD5": "f8dd994ef309213c5dae5cbeef53123c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/BadOptimizations-2.4.1-1.20.1.jar",
+            "path": "BadOptimizations-2.4.1-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:balm-forge-1.20.1-7.3.36-all:1.0.0",
+          "name": "balm-forge-1.20.1-7.3.36-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 590483,
+            "MD5": "49a2cf9866753311a84c213893b63e4e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/balm-forge-1.20.1-7.3.36-all.jar",
+            "path": "balm-forge-1.20.1-7.3.36-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:baublemounts-3.0.1-1.20.1:1.0.0",
+          "name": "baublemounts-3.0.1-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 254187,
+            "MD5": "7bf64431403270e5726c9a373d2c9442",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/baublemounts-3.0.1-1.20.1.jar",
+            "path": "baublemounts-3.0.1-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bb-1.0.2-forge-1.20.1:1.0.0",
+          "name": "bb-1.0.2-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 7447449,
+            "MD5": "7f5690119149d1119b7da2ac98fe4f6c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/bb-1.0.2-forge-1.20.1.jar",
+            "path": "bb-1.0.2-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:beautify-2.0.2:1.0.0",
+          "name": "beautify-2.0.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 838292,
+            "MD5": "c04d94abedfec613a2f93fbbf394455e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/beautify-2.0.2.jar",
+            "path": "beautify-2.0.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:betterf3-7.0.2-forge-1.20.1:1.0.0",
+          "name": "BetterF3-7.0.2-Forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 468517,
+            "MD5": "7411ae023390cf6b148f05a6b685279f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/BetterF3-7.0.2-Forge-1.20.1.jar",
+            "path": "BetterF3-7.0.2-Forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:betterlockon-1.1.3-forge:1.0.0",
+          "name": "betterlockon-1.1.3-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 238294,
+            "MD5": "80b34b5b301bd0305744edbf96a1a37e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/betterlockon-1.1.3-forge.jar",
+            "path": "betterlockon-1.1.3-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bettertab-1.0.0:1.0.0",
+          "name": "Bettertab-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 7117,
+            "MD5": "820b2dd05e9a419f983b4574011bb8b0",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Bettertab-1.0.0.jar",
+            "path": "Bettertab-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bettervannilafishes-1.20.1-1.0.6:1.0.0",
+          "name": "BetterVannilaFishes-1.20.1-1.0.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 747629,
+            "MD5": "5b2e79d760e0389c2a9ee2e3c0be7fb7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/BetterVannilaFishes-1.20.1-1.0.6.jar",
+            "path": "BetterVannilaFishes-1.20.1-1.0.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:biomeparticleweather-v4.1.0-1.20.1-forge:1.0.0",
+          "name": "BiomeParticleWeather-v4.1.0-1.20.1-Forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 175070,
+            "MD5": "a11dd09a89761879949c5b14c477ba64",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/BiomeParticleWeather-v4.1.0-1.20.1-Forge.jar",
+            "path": "BiomeParticleWeather-v4.1.0-1.20.1-Forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:biomesoplenty-forge-1.20.1-19.0.0.96:1.0.0",
+          "name": "BiomesOPlenty-forge-1.20.1-19.0.0.96",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 22381010,
+            "MD5": "886b3d33f1e7dca2a937ec5c5dc19af8",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/BiomesOPlenty-forge-1.20.1-19.0.0.96.jar",
+            "path": "BiomesOPlenty-forge-1.20.1-19.0.0.96.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bks_weapon_arts-0.2.1:1.0.0",
+          "name": "bks_weapon_arts-0.2.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 874893,
+            "MD5": "132567af81a65646c459e3b7a97162e5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/bks_weapon_arts-0.2.1.jar",
+            "path": "bks_weapon_arts-0.2.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bleedout-1.0.3:1.0.0",
+          "name": "bleedout-1.0.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 34148,
+            "MD5": "e0e30f02ff8929c8ad9aace3196e5205",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/bleedout-1.0.3.jar",
+            "path": "bleedout-1.0.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:blueprint-1.20.1-7.1.3:1.0.0",
+          "name": "blueprint-1.20.1-7.1.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1151213,
+            "MD5": "de8703f1bd1de5c64ebd411e37b19d47",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/blueprint-1.20.1-7.1.3.jar",
+            "path": "blueprint-1.20.1-7.1.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bookofdragons-1.21-1.20.1:1.0.0",
+          "name": "bookofdragons-1.21-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4578909,
+            "MD5": "1f38ebbb14839de98a4472c32297c5c5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/bookofdragons-1.21-1.20.1.jar",
+            "path": "bookofdragons-1.21-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:born_in_chaos_-forge-1.20.1_1.7.2:1.0.0",
+          "name": "born_in_chaos_[Forge]1.20.1_1.7.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 11816101,
+            "MD5": "53c0274da230c0b83864a8f1043d0a60",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/born_in_chaos_%5BForge%5D1.20.1_1.7.2.jar",
+            "path": "born_in_chaos_[Forge]1.20.1_1.7.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bossesrise-1.20.1-forge-1.0.9.2b:1.0.0",
+          "name": "bossesrise-1.20.1-forge-1.0.9.2b",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 21696354,
+            "MD5": "e4633b2ee6376af022037ba96c2d4349",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/bossesrise-1.20.1-forge-1.0.9.2b.jar",
+            "path": "bossesrise-1.20.1-forge-1.0.9.2b.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:boss_spawner-1.1.0:1.0.0",
+          "name": "boss_spawner-1.1.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 60021,
+            "MD5": "16cfd1f1f0beceb18aec1bbfc0e160b7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/boss_spawner-1.1.0.jar",
+            "path": "boss_spawner-1.1.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:boundless-1.20.1-forge-11.1:1.0.0",
+          "name": "boundless-1.20.1-forge-11.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3574697,
+            "MD5": "4d86596e166423086f1a293363dcac0c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/boundless-1.20.1-forge-11.1.jar",
+            "path": "boundless-1.20.1-forge-11.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:bound_for_the_stars-1.0.0:1.0.0",
+          "name": "bound_for_the_stars-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 613118,
+            "MD5": "e626801e404595b08ce0e280a4bb4b2b",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/bound_for_the_stars-1.0.0.jar",
+            "path": "bound_for_the_stars-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:caelus-forge-3.2.0-1.20.1:1.0.0",
+          "name": "caelus-forge-3.2.0+1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 40125,
+            "MD5": "e37854c44b1849b753afc4a205f31b46",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/caelus-forge-3.2.0%2B1.20.1.jar",
+            "path": "caelus-forge-3.2.0+1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:callfromthedepth_-1.21-forge-1.20.1:1.0.0",
+          "name": "callfromthedepth_-1.21-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 50438067,
+            "MD5": "9967c2ce9e6687044cd1987bbf85e905",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/callfromthedepth_-1.21-forge-1.20.1.jar",
+            "path": "callfromthedepth_-1.21-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cataclysm_dimension-forge1.20.1-1.5.6:1.0.0",
+          "name": "cataclysm_dimension-forge1.20.1-1.5.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 196377,
+            "MD5": "553c4c8f98c67755e08a5bcafd9abb58",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cataclysm_dimension-forge1.20.1-1.5.6.jar",
+            "path": "cataclysm_dimension-forge1.20.1-1.5.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cataclysm_spellbooks-1.2.5-1.20.1-all:1.0.0",
+          "name": "cataclysm_spellbooks-1.2.5-1.20.1-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1261296,
+            "MD5": "23a304cf92bac66f1c36cb4dc1df6f89",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cataclysm_spellbooks-1.2.5-1.20.1-all.jar",
+            "path": "cataclysm_spellbooks-1.2.5-1.20.1-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:celestisynth-1.20.1-1.3.3-all:1.0.0",
+          "name": "celestisynth-1.20.1-1.3.3-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2664846,
+            "MD5": "157863735338be0e964ce1e81ddf39e1",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/celestisynth-1.20.1-1.3.3-all.jar",
+            "path": "celestisynth-1.20.1-1.3.3-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cerbonsapi-forge-1.20.1-1.1.0-1:1.0.0",
+          "name": "CerbonsAPI-Forge-1.20.1-1.1.0 (1)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 241148,
+            "MD5": "a8c22aef55560092ee068e04024da418",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/CerbonsAPI-Forge-1.20.1-1.1.0%20(1).jar",
+            "path": "CerbonsAPI-Forge-1.20.1-1.1.0 (1).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:chalk-1.20.1-1.6.7:1.0.0",
+          "name": "chalk-1.20.1-1.6.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 322379,
+            "MD5": "0f916c5dc990ba5fd942824f2b6d45f9",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/chalk-1.20.1-1.6.7.jar",
+            "path": "chalk-1.20.1-1.6.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:chatanimation-forge-1.20.1-1.1.3:1.0.0",
+          "name": "chatanimation-forge-1.20.1-1.1.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 381473,
+            "MD5": "4d20168e4327b7e6357eb108030a0baf",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/chatanimation-forge-1.20.1-1.1.3.jar",
+            "path": "chatanimation-forge-1.20.1-1.1.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:chloride-forge-mc1.20.1-v1.7.2:1.0.0",
+          "name": "chloride-FORGE-mc1.20.1-v1.7.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 944500,
+            "MD5": "a50f626acc0ade9c250df4cd16ec960d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/chloride-FORGE-mc1.20.1-v1.7.2.jar",
+            "path": "chloride-FORGE-mc1.20.1-v1.7.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:citadel-2.6.3-1.20.1:1.0.0",
+          "name": "citadel-2.6.3-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3185275,
+            "MD5": "da80c09b998d829b6d580e5be76dcc7b",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/citadel-2.6.3-1.20.1.jar",
+            "path": "citadel-2.6.3-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cloth-config-11.1.136-forge:1.0.0",
+          "name": "cloth-config-11.1.136-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1181413,
+            "MD5": "ca5de5acbcb4a30c010aa6953bd7ef53",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cloth-config-11.1.136-forge.jar",
+            "path": "cloth-config-11.1.136-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:clothing_of_the_lowlands-1.0.6-forge-1.20.1:1.0.0",
+          "name": "Clothing_Of_The_Lowlands-1.0.6-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 619559,
+            "MD5": "59bc4c95485851b6535c37eb7d88c5fa",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Clothing_Of_The_Lowlands-1.0.6-forge-1.20.1.jar",
+            "path": "Clothing_Of_The_Lowlands-1.0.6-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cnpc-epicfight-addon-1.20.1-20.10.1:1.0.0",
+          "name": "CNPC-EpicFight-Addon-1.20.1-20.10.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 49545,
+            "MD5": "959972298465fa87e16b519d3bd4a8c6",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/CNPC-EpicFight-Addon-1.20.1-20.10.1.jar",
+            "path": "CNPC-EpicFight-Addon-1.20.1-20.10.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cnpc-gecko-addon-1.20.1-1.0.6:1.0.0",
+          "name": "CNPC-Gecko-Addon-1.20.1-1.0.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 158788,
+            "MD5": "f82e4f80cee55cbeb86d0ac5520bd126",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/CNPC-Gecko-Addon-1.20.1-1.0.6.jar",
+            "path": "CNPC-Gecko-Addon-1.20.1-1.0.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cnpcextended-2026-04-19-perfboost-1.1:1.0.0",
+          "name": "cnpcextended-2026-04-19-PerfBoost-1.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 200136,
+            "MD5": "b7a74581bbf30f60bb7951c13660895b",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cnpcextended-2026-04-19-PerfBoost-1.1.jar",
+            "path": "cnpcextended-2026-04-19-PerfBoost-1.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:collective-1.20.1-8.7:1.0.0",
+          "name": "collective-1.20.1-8.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 661398,
+            "MD5": "faee1d8a77c13246c5cf9e663e5c2dd3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/collective-1.20.1-8.7.jar",
+            "path": "collective-1.20.1-8.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:combatevolution-1.1.21:1.0.0",
+          "name": "CombatEvolution-1.1.21",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2261721,
+            "MD5": "d76f97556dcb32e2b7e5e2e0ccd1b935",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/CombatEvolution-1.1.21.jar",
+            "path": "CombatEvolution-1.1.21.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:combat_focus-forge-1.20.1-1.0:1.0.0",
+          "name": "combat_focus-forge-1.20.1-1.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 84014,
+            "MD5": "5bc880c986bb2ed7f95f259c55263af4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/combat_focus-forge-1.20.1-1.0.jar",
+            "path": "combat_focus-forge-1.20.1-1.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:common-networking-forge-1.0.5-1.20.1:1.0.0",
+          "name": "common-networking-forge-1.0.5-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 20701,
+            "MD5": "3c18ff746596a5e9fdec530f1a1621d5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/common-networking-forge-1.0.5-1.20.1.jar",
+            "path": "common-networking-forge-1.0.5-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:companions-forge-1.20.1-1.1.1:1.0.0",
+          "name": "companions-forge-1.20.1-1.1.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 7016241,
+            "MD5": "e14d50de822c954b663a4cd6becc06cc",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/companions-forge-1.20.1-1.1.1.jar",
+            "path": "companions-forge-1.20.1-1.1.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:configured-forge-1.20.1-2.2.3:1.0.0",
+          "name": "configured-forge-1.20.1-2.2.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 418929,
+            "MD5": "9380dc31c599c523a5682a4025fceb92",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/configured-forge-1.20.1-2.2.3.jar",
+            "path": "configured-forge-1.20.1-2.2.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:connectiblechains-forge-1.20.1-1.2.5:1.0.0",
+          "name": "connectiblechains-forge-1.20.1-1.2.5",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 320859,
+            "MD5": "c0b10f4017c05237deade969b67e3fb6",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/connectiblechains-forge-1.20.1-1.2.5.jar",
+            "path": "connectiblechains-forge-1.20.1-1.2.5.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:controlling-forge-1.20.1-12.0.2:1.0.0",
+          "name": "Controlling-forge-1.20.1-12.0.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 115280,
+            "MD5": "952274bc9994bba9733e8747558f73fa",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Controlling-forge-1.20.1-12.0.2.jar",
+            "path": "Controlling-forge-1.20.1-12.0.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:corgilib-forge-1.20.1-4.0.3.4:1.0.0",
+          "name": "Corgilib-Forge-1.20.1-4.0.3.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 360700,
+            "MD5": "a9ea019fc3f069f5f47f0d8451dac4cd",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Corgilib-Forge-1.20.1-4.0.3.4.jar",
+            "path": "Corgilib-Forge-1.20.1-4.0.3.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:coroutil-forge-1.20.1-1.3.7:1.0.0",
+          "name": "coroutil-forge-1.20.1-1.3.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 64187,
+            "MD5": "6fb9ccbe8c05c1da61c224d1127e9643",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/coroutil-forge-1.20.1-1.3.7.jar",
+            "path": "coroutil-forge-1.20.1-1.3.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cosmeticarmorreworked-1.20.1-v1a:1.0.0",
+          "name": "cosmeticarmorreworked-1.20.1-v1a",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 88752,
+            "MD5": "2454075e9a25cbadc0fce66502e3261d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cosmeticarmorreworked-1.20.1-v1a.jar",
+            "path": "cosmeticarmorreworked-1.20.1-v1a.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cosycritters-0.3.2-1.20.1-forge:1.0.0",
+          "name": "cosycritters-0.3.2+1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 733481,
+            "MD5": "e49ba775cf1d62cd725830bba0d9d4bd",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cosycritters-0.3.2%2B1.20.1-forge.jar",
+            "path": "cosycritters-0.3.2+1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:crazy_chocobos-1.20.1-1.2:1.0.0",
+          "name": "Crazy_Chocobos-1.20.1-1.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 564981,
+            "MD5": "4e6ac29625a4bd3814ea38f00700c959",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Crazy_Chocobos-1.20.1-1.2.jar",
+            "path": "Crazy_Chocobos-1.20.1-1.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:creativecore_forge_v2.12.32_mc1.20.1:1.0.0",
+          "name": "CreativeCore_FORGE_v2.12.32_mc1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1158417,
+            "MD5": "7aabe100af362d0df92d8ea1dbc2667b",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/CreativeCore_FORGE_v2.12.32_mc1.20.1.jar",
+            "path": "CreativeCore_FORGE_v2.12.32_mc1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cristellib-1.1.6-forge:1.0.0",
+          "name": "cristellib-1.1.6-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 431318,
+            "MD5": "b52e8b225a34abab9300049c85f6855a",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cristellib-1.1.6-forge.jar",
+            "path": "cristellib-1.1.6-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:cupboard-1.20.1-4.1:1.0.0",
+          "name": "cupboard-1.20.1-4.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 33114,
+            "MD5": "d2c543b79f45e3cf9e0dfa2132e9bbfd",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/cupboard-1.20.1-4.1.jar",
+            "path": "cupboard-1.20.1-4.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:curios-forge-5.14.1-1.20.1:1.0.0",
+          "name": "curios-forge-5.14.1+1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 398066,
+            "MD5": "2fdcc97cbc66c4b2492b407c792e7159",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/curios-forge-5.14.1%2B1.20.1.jar",
+            "path": "curios-forge-5.14.1+1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:customnpcs-1.20.1-gbport-unofficial-1.20.1.20260227:1.0.0",
+          "name": "CustomNPCs-1.20.1-GBPort-Unofficial-1.20.1.20260227",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 10846030,
+            "MD5": "e8c891960a4b5ab828762d5a23f93659",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/CustomNPCs-1.20.1-GBPort-Unofficial-1.20.1.20260227.jar",
+            "path": "CustomNPCs-1.20.1-GBPort-Unofficial-1.20.1.20260227.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:dailyboss-1.20.1-1.4:1.0.0",
+          "name": "DailyBoss-1.20.1-1.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 33932615,
+            "MD5": "c1731bcccbf23b31577a8f651ee0d514",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/DailyBoss-1.20.1-1.4.jar",
+            "path": "DailyBoss-1.20.1-1.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:dbmb-1.0.0:1.0.0",
+          "name": "dbmb-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 19143507,
+            "MD5": "e6d99fedede555a5b1e94b67e387478c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/dbmb-1.0.0.jar",
+            "path": "dbmb-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:dodge_parry_reward-1.20.1forge-20.12.2:1.0.0",
+          "name": "dodge_parry_reward-1.20.1forge-20.12.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 285238,
+            "MD5": "46a26918e4d66c5a80af9f812f57a1b7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/dodge_parry_reward-1.20.1forge-20.12.2.jar",
+            "path": "dodge_parry_reward-1.20.1forge-20.12.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:dragonmounts-1.20.1-10017:1.0.0",
+          "name": "dragonmounts-1.20.1-10017",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3131809,
+            "MD5": "2001178463a6d5764c8d2b16db621bfe",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/dragonmounts-1.20.1-10017.jar",
+            "path": "dragonmounts-1.20.1-10017.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:dualaxes-20.12.1:1.0.0",
+          "name": "DualAxes-20.12.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 853593,
+            "MD5": "72aff6572b1986d5ac71724775cbf104",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/DualAxes-20.12.1.jar",
+            "path": "DualAxes-20.12.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:dungeonsarise-1.20.x-2.1.58-release:1.0.0",
+          "name": "DungeonsArise-1.20.x-2.1.58-release",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 8762342,
+            "MD5": "6ac48d0cf2ce763824f96f6d26963219",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/DungeonsArise-1.20.x-2.1.58-release.jar",
+            "path": "DungeonsArise-1.20.x-2.1.58-release.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:dungeons_and_combat-1.2.3-forge-1.20.1:1.0.0",
+          "name": "dungeons_and_combat-1.2.3-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 12488348,
+            "MD5": "c11488a78d31c65a34e0fe4027f4a56e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/dungeons_and_combat-1.2.3-forge-1.20.1.jar",
+            "path": "dungeons_and_combat-1.2.3-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21:1.0.0",
+          "name": "ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 9250820,
+            "MD5": "da027dcb012d6e38c6aa477924b83b10",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21.jar",
+            "path": "ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:eeeabsmobs-1.20.1-0.98.1:1.0.0",
+          "name": "eeeabsmobs-1.20.1-0.98.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 29425926,
+            "MD5": "869b5af568abeeb6209751aacfefe651",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/eeeabsmobs-1.20.1-0.98.1.jar",
+            "path": "eeeabsmobs-1.20.1-0.98.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:effectdescriptions-v8.0.2-1.20.1-forge:1.0.0",
+          "name": "EffectDescriptions-v8.0.2-1.20.1-Forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 61214,
+            "MD5": "47ddb61eef0e2a2f479e7802c3178ac5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EffectDescriptions-v8.0.2-1.20.1-Forge.jar",
+            "path": "EffectDescriptions-v8.0.2-1.20.1-Forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:efs_iss-1.0.3:1.0.0",
+          "name": "efs_iss-1.0.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 299741,
+            "MD5": "b008733e4c0fa5636771ea5d8b24bc05",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/efs_iss-1.0.3.jar",
+            "path": "efs_iss-1.0.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:eldritch_end-forge-mc1.20.1-0.3.4:1.0.0",
+          "name": "Eldritch_End-FORGE-MC1.20.1-0.3.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5293864,
+            "MD5": "359c4f58d3f16fce6de4770b98fb9203",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Eldritch_End-FORGE-MC1.20.1-0.3.4.jar",
+            "path": "Eldritch_End-FORGE-MC1.20.1-0.3.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:elegant_architecture-1.0.0-forge-1.20.1:1.0.0",
+          "name": "elegant_architecture-1.0.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3704760,
+            "MD5": "ed48c188ca703b7e38971f7c5bc0b0f3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/elegant_architecture-1.0.0-forge-1.20.1.jar",
+            "path": "elegant_architecture-1.0.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:elegant_countryside-2025-forge-1.20.1:1.0.0",
+          "name": "elegant_countryside-2025-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 27957571,
+            "MD5": "9da16af1182b737ae57a85427f5e622e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/elegant_countryside-2025-forge-1.20.1.jar",
+            "path": "elegant_countryside-2025-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:embeddium-0.3.31-mc1.20.1:1.0.0",
+          "name": "embeddium-0.3.31+mc1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1320675,
+            "MD5": "1dfb2ee49ce9ad5d484ff3eea0d628b7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/embeddium-0.3.31%2Bmc1.20.1.jar",
+            "path": "embeddium-0.3.31+mc1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:endermanoverhaul-forge-1.20.1-1.0.4:1.0.0",
+          "name": "endermanoverhaul-forge-1.20.1-1.0.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1208062,
+            "MD5": "992f4f6fad129c6ff47b33b0365d485a",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/endermanoverhaul-forge-1.20.1-1.0.4.jar",
+            "path": "endermanoverhaul-forge-1.20.1-1.0.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:enderwyrmlings-1.0.0-forge-1.20.1:1.0.0",
+          "name": "EnderWyrmlings-1.0.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 777627,
+            "MD5": "a8431c94215c316861be61e5ca46b9a4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EnderWyrmlings-1.0.0-forge-1.20.1.jar",
+            "path": "EnderWyrmlings-1.0.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:enhancedequipmentdisplay-forge-1.20.1-1.1:1.0.0",
+          "name": "enhancedequipmentdisplay-forge-1.20.1-1.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 338252,
+            "MD5": "c93189ea40d0640a7e343855168b1c6f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/enhancedequipmentdisplay-forge-1.20.1-1.1.jar",
+            "path": "enhancedequipmentdisplay-forge-1.20.1-1.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:entityculling-forge-1.8.2-mc1.20.1:1.0.0",
+          "name": "entityculling-forge-1.8.2-mc1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 478568,
+            "MD5": "27a0e6445bca14ddd3bfc7c28a0b2077",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/entityculling-forge-1.8.2-mc1.20.1.jar",
+            "path": "entityculling-forge-1.8.2-mc1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:entitylootdrops-2.9.3:1.0.0",
+          "name": "EntityLootDrops-2.9.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 158539,
+            "MD5": "771d794990f62a4a003490e5a1e2ca79",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EntityLootDrops-2.9.3.jar",
+            "path": "EntityLootDrops-2.9.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:entityrespawner-1.0.2:1.0.0",
+          "name": "entityrespawner-1.0.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 15301,
+            "MD5": "5c06a9b006d4981ef0e3c6af02f88cfc",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/entityrespawner-1.0.2.jar",
+            "path": "entityrespawner-1.0.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epic-dungeons-1.2.0-1.20:1.0.0",
+          "name": "Epic Dungeons 1.2.0 (1.20+)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 9564825,
+            "MD5": "f7e8be29a3e33df65ade076802004175",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Epic%20Dungeons%201.2.0%20(1.20%2B).jar",
+            "path": "Epic Dungeons 1.2.0 (1.20+).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epic-fight-x-curios-compat-1.4:1.0.0",
+          "name": "Epic Fight x Curios Compat 1.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 20178,
+            "MD5": "6810a35f113d431575465d9e5a3fb4d1",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Epic%20Fight%20x%20Curios%20Compat%201.4.jar",
+            "path": "Epic Fight x Curios Compat 1.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epic-fight-20.14.6-mc1.20.1-forge:1.0.0",
+          "name": "epic-fight-20.14.6-mc1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 8046035,
+            "MD5": "326c715bee615d217b94899197dd2196",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epic-fight-20.14.6-mc1.20.1-forge.jar",
+            "path": "epic-fight-20.14.6-mc1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epic-fight-invincible-lib-20.14.7.5-mc1.20.1-forge:1.0.0",
+          "name": "epic-fight-invincible-lib-20.14.7.5-mc1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 267680,
+            "MD5": "b05bfd6423a0c54da7bc12e0cb19e8ab",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epic-fight-invincible-lib-20.14.7.5-mc1.20.1-forge.jar",
+            "path": "epic-fight-invincible-lib-20.14.7.5-mc1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight-nightfall-3.3.4:1.0.0",
+          "name": "EpicFight Nightfall-3.3.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 51976626,
+            "MD5": "c7d0140e0aa30095978c76683ae9ff05",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EpicFight%20Nightfall-3.3.4.jar",
+            "path": "EpicFight Nightfall-3.3.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight-x-emotes-1.1:1.0.0",
+          "name": "EpicFight x Emotes 1.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 275417,
+            "MD5": "c8e9be518ec25f6c2705330303b83b81",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EpicFight%20x%20Emotes%201.1.jar",
+            "path": "EpicFight x Emotes 1.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight-clashblade-1.20.1-1.7:1.0.0",
+          "name": "Epicfight-ClashBlade-1.20.1-1.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 704687,
+            "MD5": "3648e99526f1643b165a6238c252579f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Epicfight-ClashBlade-1.20.1-1.7.jar",
+            "path": "Epicfight-ClashBlade-1.20.1-1.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight-extra-1.1.6-mc1.20.1-forge-all:1.0.0",
+          "name": "epicfight-extra-1.1.6-mc1.20.1-forge-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 23719219,
+            "MD5": "c68500c13e1192944f7fd878af92c44f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epicfight-extra-1.1.6-mc1.20.1-forge-all.jar",
+            "path": "epicfight-extra-1.1.6-mc1.20.1-forge-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight-resurrection-forge1.20.1-0.20.12.2:1.0.0",
+          "name": "EpicFight-Resurrection-forge1.20.1-0.20.12.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 19348884,
+            "MD5": "fb1d76684224264f8976e1d48dec50d4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EpicFight-Resurrection-forge1.20.1-0.20.12.2.jar",
+            "path": "EpicFight-Resurrection-forge1.20.1-0.20.12.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight-skilltree-forge-20.2.5-1.20.1:1.0.0",
+          "name": "epicfight-skilltree-forge-20.2.5-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 319561,
+            "MD5": "bd9e8b3da31e3a7246f819b7f3f9db20",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epicfight-skilltree-forge-20.2.5-1.20.1.jar",
+            "path": "epicfight-skilltree-forge-20.2.5-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfightdd-20.14.1.14.0:1.0.0",
+          "name": "EpicfightDd-20.14.1.14.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 26754213,
+            "MD5": "3f137c777585dea5a001656fa6116a51",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EpicfightDd-20.14.1.14.0.jar",
+            "path": "EpicfightDd-20.14.1.14.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight_awaken-1.0.4-forge-1.20.1:1.0.0",
+          "name": "epicfight_awaken-1.0.4-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2622486,
+            "MD5": "6fdad0c68e232bc3ba32a9f2a3bd4781",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epicfight_awaken-1.0.4-forge-1.20.1.jar",
+            "path": "epicfight_awaken-1.0.4-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight_extended_datapacks-1.8-rev1.1:1.0.0",
+          "name": "epicfight_extended_datapacks-1.8-Rev1.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 160785,
+            "MD5": "9a4d21b6e2960bc1a85a71c0e9ca01cc",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epicfight_extended_datapacks-1.8-Rev1.1.jar",
+            "path": "epicfight_extended_datapacks-1.8-Rev1.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicfight_moreskillslots-0.0.1-mc1.20.1-forge:1.0.0",
+          "name": "epicfight_moreskillslots-0.0.1-mc1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 102997,
+            "MD5": "2b63f431edae9d53bb8a95f6c7a7850e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epicfight_moreskillslots-0.0.1-mc1.20.1-forge.jar",
+            "path": "epicfight_moreskillslots-0.0.1-mc1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicmoonmod-1.1.6:1.0.0",
+          "name": "epicmoonmod-1.1.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1585341,
+            "MD5": "48454f844dda7f6f9d9b3b522c7c510d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epicmoonmod-1.1.6.jar",
+            "path": "epicmoonmod-1.1.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epicpaladins-1.0.2-1.20.1-forge-1:1.0.0",
+          "name": "epicpaladins-1.0.2-1.20.1-forge (1)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 991785,
+            "MD5": "491d824d5b28a108de668adbca6488ef",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epicpaladins-1.0.2-1.20.1-forge%20(1).jar",
+            "path": "epicpaladins-1.0.2-1.20.1-forge (1).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:epic_fight_avalon-20.12.6.3:1.0.0",
+          "name": "epic_fight_avalon-20.12.6.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 689108,
+            "MD5": "8b7a6400f3d365992cc3aaa1069cdb11",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/epic_fight_avalon-20.12.6.3.jar",
+            "path": "epic_fight_avalon-20.12.6.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ewu-0.0.2-forge-1.20.1b:1.0.0",
+          "name": "ewu-0.0.2-forge-1.20.1b",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1748558,
+            "MD5": "33c4fb043ff0ea4136e8c2b2e4a348f5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ewu-0.0.2-forge-1.20.1b.jar",
+            "path": "ewu-0.0.2-forge-1.20.1b.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:expandability-9.0.4:1.0.0",
+          "name": "expandability-9.0.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 80765,
+            "MD5": "8090193f88097a1b4cb30386c29cae77",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/expandability-9.0.4.jar",
+            "path": "expandability-9.0.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:extended_stacks-1.20.1-forge:1.0.0",
+          "name": "Extended_stacks-1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 8713,
+            "MD5": "9137cce908437a2d32171b09a333f96c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Extended_stacks-1.20.1-forge.jar",
+            "path": "Extended_stacks-1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:extralib-2.1.4-1.20.1-forge:1.0.0",
+          "name": "ExtraLib-2.1.4-1.20.1-Forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 7793098,
+            "MD5": "5a73a45c0a1e6ecd61508598c9fa985c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ExtraLib-2.1.4-1.20.1-Forge.jar",
+            "path": "ExtraLib-2.1.4-1.20.1-Forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:extraquests-1.6.2-1.20.1-forge:1.0.0",
+          "name": "ExtraQuests-1.6.2-1.20.1-Forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 50279,
+            "MD5": "3dc29abe24edb8a172e6c2798b9d6b95",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ExtraQuests-1.6.2-1.20.1-Forge.jar",
+            "path": "ExtraQuests-1.6.2-1.20.1-Forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:falchionmoveset-20.14.0:1.0.0",
+          "name": "falchionmoveset-20.14.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 127553,
+            "MD5": "860eeac11e52efbf5a1bfd6ce1e6e373",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/falchionmoveset-20.14.0.jar",
+            "path": "falchionmoveset-20.14.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fancy-trail1.20.1-1.2.2-all:1.0.0",
+          "name": "Fancy-Trail1.20.1-1.2.2-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5888419,
+            "MD5": "b9542d9130dff86a743a294583933412",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Fancy-Trail1.20.1-1.2.2-all.jar",
+            "path": "Fancy-Trail1.20.1-1.2.2-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fancytoasts-forge-1.20.1-1.4.2:1.0.0",
+          "name": "fancytoasts-forge-1.20.1-1.4.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 246795,
+            "MD5": "cd66e8e4254b12fabcf9a3733950898f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fancytoasts-forge-1.20.1-1.4.2.jar",
+            "path": "fancytoasts-forge-1.20.1-1.4.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fantasy_armor-1.1.1-1.20.1:1.0.0",
+          "name": "fantasy_armor-1.1.1-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 396086,
+            "MD5": "a3ba6451050e85e7be6800fed497e095",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fantasy_armor-1.1.1-1.20.1.jar",
+            "path": "fantasy_armor-1.1.1-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fastevent-1.20.1-1.1.1:1.0.0",
+          "name": "FastEvent-1.20.1-1.1.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 32785,
+            "MD5": "ea61fd5a57e82f4d960e9308c1e1733e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/FastEvent-1.20.1-1.1.1.jar",
+            "path": "FastEvent-1.20.1-1.1.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fastload-reforged-mc1.20.1-3.4.0:1.0.0",
+          "name": "Fastload-Reforged-mc1.20.1-3.4.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 66989,
+            "MD5": "3266e638032dc9b957bf1e7372671c05",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Fastload-Reforged-mc1.20.1-3.4.0.jar",
+            "path": "Fastload-Reforged-mc1.20.1-3.4.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fdbosses-2.0.8-1.20.1:1.0.0",
+          "name": "fdbosses-2.0.8-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 21090635,
+            "MD5": "d77093b85c06f849ad6c01350fb44c1d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fdbosses-2.0.8-1.20.1.jar",
+            "path": "fdbosses-2.0.8-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fdlib-1.0.3-1.20.1:1.0.0",
+          "name": "fdlib-1.0.3-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1418133,
+            "MD5": "75bf28784e1ca3ad5e6b1a63ffde9da7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fdlib-1.0.3-1.20.1.jar",
+            "path": "fdlib-1.0.3-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ferritecore-6.0.1-forge:1.0.0",
+          "name": "ferritecore-6.0.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 123034,
+            "MD5": "f52f538207a4829d7060550092ce2383",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ferritecore-6.0.1-forge.jar",
+            "path": "ferritecore-6.0.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fetzisdisplays-forge-1.0.1-1.20.1:1.0.0",
+          "name": "fetzisdisplays-forge-1.0.1-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1305713,
+            "MD5": "94734a74f35e4455f930a8db453a8244",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fetzisdisplays-forge-1.0.1-1.20.1.jar",
+            "path": "fetzisdisplays-forge-1.0.1-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:fieldguide-forge-1.20.1-1.7.5:1.0.0",
+          "name": "fieldguide-forge-1.20.1-1.7.5",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1073796,
+            "MD5": "1aa198519ca04993a841eadd1b6ff4de",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/fieldguide-…9179 tokens truncated…  "size": 294405,
+            "MD5": "6e78456b9c5dc3ac1592392dc64a6868",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/morehitboxes-forge-1.20.1-1.9.2.jar",
+            "path": "morehitboxes-forge-1.20.1-1.9.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:morevanillaarmor-1.20.1-5.1.2:1.0.0",
+          "name": "MoreVanillaArmor-1.20.1-5.1.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 233271,
+            "MD5": "b10a851f6c7ac1da546322750d6e31cc",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/MoreVanillaArmor-1.20.1-5.1.2.jar",
+            "path": "MoreVanillaArmor-1.20.1-5.1.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:mortal_boons-1.0.0:1.0.0",
+          "name": "mortal_boons-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 466653,
+            "MD5": "33836b91d47a2513edfab11571abfb44",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/mortal_boons-1.0.0.jar",
+            "path": "mortal_boons-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:mots-forge-1.20.1-1.2.0:1.0.0",
+          "name": "MOTS-Forge-1.20.1-1.2.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 8377468,
+            "MD5": "4d0c3f70c58070e0ecfbcac7ef944a3a",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/MOTS-Forge-1.20.1-1.2.0.jar",
+            "path": "MOTS-Forge-1.20.1-1.2.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:mowziesmobs-1.8.2:1.0.0",
+          "name": "mowziesmobs-1.8.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 36033850,
+            "MD5": "d650da053314d7384a537db1f316d11f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/mowziesmobs-1.8.2.jar",
+            "path": "mowziesmobs-1.8.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:mru-1.0.4-1.20.1-forge:1.0.0",
+          "name": "MRU-1.0.4+1.20.1+forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 287393,
+            "MD5": "4485788a466877a0ddd42d3df84ea913",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/MRU-1.0.4%2B1.20.1%2Bforge.jar",
+            "path": "MRU-1.0.4+1.20.1+forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:mss-1.2.7-1.20:1.0.0",
+          "name": "mss-1.2.7-1.20",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3141173,
+            "MD5": "7ee02a11be2a0c5ff239b0c45c445189",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/mss-1.2.7-1.20.jar",
+            "path": "mss-1.2.7-1.20.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:multiplayerbosses-1.1.3:1.0.0",
+          "name": "multiplayerbosses-1.1.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 43426,
+            "MD5": "600d977b7812ef377b71aeb54f5cae90",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/multiplayerbosses-1.1.3.jar",
+            "path": "multiplayerbosses-1.1.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:munkeysworldboss-1.0.0-forge-1.20.1:1.0.0",
+          "name": "munkeysworldboss-1.0.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 799020,
+            "MD5": "c27fbe2e873fee7841fa432e1640c46f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/munkeysworldboss-1.0.0-forge-1.20.1.jar",
+            "path": "munkeysworldboss-1.0.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:mutant_addition_mod-1.5.2-forge-1.20.1:1.0.0",
+          "name": "mutant_addition_mod-1.5.2-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 7443216,
+            "MD5": "75f40dbfed2169b78c7389138efd67a1",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/mutant_addition_mod-1.5.2-forge-1.20.1.jar",
+            "path": "mutant_addition_mod-1.5.2-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:mythical_weaponry-1.0.1:1.0.0",
+          "name": "mythical_weaponry-1.0.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 247426,
+            "MD5": "7dd5077b4e972f2ffe67be6193896c3b",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/mythical_weaponry-1.0.1.jar",
+            "path": "mythical_weaponry-1.0.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:nexuslayer-1.0.6:1.0.0",
+          "name": "NexusLayer-1.0.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 283231,
+            "MD5": "41019f1f5f049584f6978b59ac8a5af7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/NexusLayer-1.0.6.jar",
+            "path": "NexusLayer-1.0.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:nightfall-enhance-1.1.2-all:1.0.0",
+          "name": "Nightfall Enhance-1.1.2-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 8814635,
+            "MD5": "f8570eeeab81d2415f370ae438a3f9f4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Nightfall%20Enhance-1.1.2-all.jar",
+            "path": "Nightfall Enhance-1.1.2-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:nightreigngearv1.5:1.0.0",
+          "name": "NightreignGearv1.5",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 196756,
+            "MD5": "f69b908b34432c427a227f9c780a1dd5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/NightreignGearv1.5.jar",
+            "path": "NightreignGearv1.5.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:nirvana-lib-forge-1.20.1-2.0.17:1.0.0",
+          "name": "Nirvana Lib-forge-1.20.1-2.0.17",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1107581,
+            "MD5": "3bf4f2170a001b31674137f471973e76",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Nirvana%20Lib-forge-1.20.1-2.0.17.jar",
+            "path": "Nirvana Lib-forge-1.20.1-2.0.17.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:noisium-forge-2.3.0-mc1.20-1.20.1:1.0.0",
+          "name": "noisium-forge-2.3.0+mc1.20-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 218152,
+            "MD5": "3a8e9a24408c991b3fb97685884f2cce",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/noisium-forge-2.3.0%2Bmc1.20-1.20.1.jar",
+            "path": "noisium-forge-2.3.0+mc1.20-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:not-enough-recipe-book-forge-0.4.1-1.20.1:1.0.0",
+          "name": "Not Enough Recipe Book-FORGE-0.4.1+1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 21667,
+            "MD5": "fa8240906f36683f66de537b34587643",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Not%20Enough%20Recipe%20Book-FORGE-0.4.1%2B1.20.1.jar",
+            "path": "Not Enough Recipe Book-FORGE-0.4.1+1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:notenoughcrashes-4.4.9-1.20.1-forge:1.0.0",
+          "name": "notenoughcrashes-4.4.9+1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 134885,
+            "MD5": "59f7bd924454a832b87998999d58eea7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/notenoughcrashes-4.4.9%2B1.20.1-forge.jar",
+            "path": "notenoughcrashes-4.4.9+1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:noxporbs-1.0.0:1.0.0",
+          "name": "noxporbs-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3916,
+            "MD5": "39dd17b3c29a91463755e08f545e03c6",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/noxporbs-1.0.0.jar",
+            "path": "noxporbs-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:obscure_api-15:1.0.0",
+          "name": "obscure_api-15",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 497136,
+            "MD5": "e9cfade6b7a9964fcadffc6e8d4fedff",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/obscure_api-15.jar",
+            "path": "obscure_api-15.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:obscure_tooltips-forge-1.20.1-3.10.0:1.0.0",
+          "name": "obscure_tooltips-forge-1.20.1-3.10.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1137730,
+            "MD5": "56f4fed0f411e4a95e72dc32fd88ff07",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/obscure_tooltips-forge-1.20.1-3.10.0.jar",
+            "path": "obscure_tooltips-forge-1.20.1-3.10.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:octolib-forge-0.5.0.1-1.20.1:1.0.0",
+          "name": "OctoLib-FORGE-0.5.0.1+1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 424035,
+            "MD5": "6b2fd012966b13a96ce4f68ae42eab8c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/OctoLib-FORGE-0.5.0.1%2B1.20.1.jar",
+            "path": "OctoLib-FORGE-0.5.0.1+1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:oculus-mc1.20.1-1.8.0:1.0.0",
+          "name": "oculus-mc1.20.1-1.8.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2851119,
+            "MD5": "1dd891634ac21591b5a692471f112572",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/oculus-mc1.20.1-1.8.0.jar",
+            "path": "oculus-mc1.20.1-1.8.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:oh-the-biomes-weve-gone-forge-1.7.1:1.0.0",
+          "name": "Oh-The-Biomes-Weve-Gone-Forge-1.7.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 19293977,
+            "MD5": "c5aa019d730657d5956792adb1a4d80d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Oh-The-Biomes-Weve-Gone-Forge-1.7.1.jar",
+            "path": "Oh-The-Biomes-Weve-Gone-Forge-1.7.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:oh-the-trees-youll-grow-forge-1.20.1-1.4.2:1.0.0",
+          "name": "Oh-The-Trees-Youll-Grow-forge-1.20.1-1.4.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 140928,
+            "MD5": "48c0ad8fdaa8a05369e2fb959d4b9966",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Oh-The-Trees-Youll-Grow-forge-1.20.1-1.4.2.jar",
+            "path": "Oh-The-Trees-Youll-Grow-forge-1.20.1-1.4.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:onelayer-0.6.0:1.0.0",
+          "name": "onelayer-0.6.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 48486,
+            "MD5": "f4fed25f9a957ad1772f371a607364a6",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/onelayer-0.6.0.jar",
+            "path": "onelayer-0.6.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:opposing-force-1.20.1-1.0.0:1.0.0",
+          "name": "Opposing-Force-1.20.1-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2350525,
+            "MD5": "2d7b395f6ee5a2f6220ba7091391fbbf",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Opposing-Force-1.20.1-1.0.0.jar",
+            "path": "Opposing-Force-1.20.1-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:orbital_railgun-1.4.2:1.0.0",
+          "name": "orbital_railgun-1.4.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 830757,
+            "MD5": "523031ce3637564999d5908351c529fe",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/orbital_railgun-1.4.2.jar",
+            "path": "orbital_railgun-1.4.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:p1nero_bow-forge1.20.1-20.13.1.5:1.0.0",
+          "name": "p1nero_bow-forge1.20.1-20.13.1.5",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 932136,
+            "MD5": "7854efca30e4b22ca6f2a6315059bb4f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/p1nero_bow-forge1.20.1-20.13.1.5.jar",
+            "path": "p1nero_bow-forge1.20.1-20.13.1.5.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:p1nero_ec-20.14.0.4:1.0.0",
+          "name": "p1nero_ec-20.14.0.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4060725,
+            "MD5": "9192be1114a2df7c5f573bec1869b0c5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/p1nero_ec-20.14.0.4.jar",
+            "path": "p1nero_ec-20.14.0.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:packetfixer-3.3.0-1.18-1.20.4-merged:1.0.0",
+          "name": "packetfixer-3.3.0-1.18-1.20.4-merged",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 190422,
+            "MD5": "75045a749fde88dc20972e34bb815f29",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/packetfixer-3.3.0-1.18-1.20.4-merged.jar",
+            "path": "packetfixer-3.3.0-1.18-1.20.4-merged.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:particular-1.20.1-forge-1.2.7:1.0.0",
+          "name": "particular-1.20.1-Forge-1.2.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 420332,
+            "MD5": "de5105497a7fa79ab099a592879ef260",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/particular-1.20.1-Forge-1.2.7.jar",
+            "path": "particular-1.20.1-Forge-1.2.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:passiveskilltree-1.20.1-beta-0.7.2b-all:1.0.0",
+          "name": "PassiveSkillTree-1.20.1-BETA-0.7.2b-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1923785,
+            "MD5": "4b3283e4a1313a37602991045b6a395a",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/PassiveSkillTree-1.20.1-BETA-0.7.2b-all.jar",
+            "path": "PassiveSkillTree-1.20.1-BETA-0.7.2b-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:patchouli-1.20.1-84.1-forge:1.0.0",
+          "name": "Patchouli-1.20.1-84.1-FORGE",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 642711,
+            "MD5": "d5154cacf6859582eebd853bd59f5537",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Patchouli-1.20.1-84.1-FORGE.jar",
+            "path": "Patchouli-1.20.1-84.1-FORGE.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:pehkui-3.8.2-1.20.1-forge:1.0.0",
+          "name": "Pehkui-3.8.2+1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 671605,
+            "MD5": "95bdd5558d34044f54aab0ce292e679b",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Pehkui-3.8.2%2B1.20.1-forge.jar",
+            "path": "Pehkui-3.8.2+1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:perception-forge-0.1.4-1.20.1:1.0.0",
+          "name": "Perception-FORGE-0.1.4+1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 70069,
+            "MD5": "7a14c317f9c361d3cca18ce3d130cb45",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Perception-FORGE-0.1.4%2B1.20.1.jar",
+            "path": "Perception-FORGE-0.1.4+1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:photon-forge-1.20.1-1.1.14:1.0.0",
+          "name": "photon-forge-1.20.1-1.1.14",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4448109,
+            "MD5": "90814ecc88f87320193aafefeb9b75f6",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/photon-forge-1.20.1-1.1.14.jar",
+            "path": "photon-forge-1.20.1-1.1.14.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:piglet_structures_-modpack_edition-_1.20.1-ver.1.455:1.0.0",
+          "name": "Piglet_Structures_[modpack_edition]_1.20.1(ver.1.455)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 12345866,
+            "MD5": "40632447cae7b03c8c481ee7abec92c9",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Piglet_Structures_%5Bmodpack_edition%5D_1.20.1(ver.1.455).jar",
+            "path": "Piglet_Structures_[modpack_edition]_1.20.1(ver.1.455).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:placebo-1.20.1-8.6.3:1.0.0",
+          "name": "Placebo-1.20.1-8.6.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 282474,
+            "MD5": "13133ab9989e8474931cd7a86bd19cc5",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Placebo-1.20.1-8.6.3.jar",
+            "path": "Placebo-1.20.1-8.6.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:player-animation-lib-forge-1.0.2-rc1-1.20:1.0.0",
+          "name": "player-animation-lib-forge-1.0.2-rc1+1.20",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 181437,
+            "MD5": "46f8554181d4d240075ea4919d01fd01",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/player-animation-lib-forge-1.0.2-rc1%2B1.20.jar",
+            "path": "player-animation-lib-forge-1.0.2-rc1+1.20.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:plenty_of_golems-1.4.2-forge-1.20.1:1.0.0",
+          "name": "plenty_of_golems-1.4.2-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4226998,
+            "MD5": "99bbadde0663536be10eacf080dcdf62",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/plenty_of_golems-1.4.2-forge-1.20.1.jar",
+            "path": "plenty_of_golems-1.4.2-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:portablewardrobearmorswap-1.0.2.5-forge-1.20.1:1.0.0",
+          "name": "portablewardrobearmorswap-1.0.2.5-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 975042,
+            "MD5": "011910e26de4f6d1729992fe1d725a26",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/portablewardrobearmorswap-1.0.2.5-forge-1.20.1.jar",
+            "path": "portablewardrobearmorswap-1.0.2.5-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:primal-1.1.6-1.20.1:1.0.0",
+          "name": "primal-1.1.6+1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 13303587,
+            "MD5": "1b947c4e4fa45534ed5f1d2901a9c9b0",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/primal-1.1.6%2B1.20.1.jar",
+            "path": "primal-1.1.6+1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:prism-1.20.1-forge-1.0.5:1.0.0",
+          "name": "Prism-1.20.1-forge-1.0.5",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 52205,
+            "MD5": "de0e319e29e813f407314b33739f7eb8",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Prism-1.20.1-forge-1.0.5.jar",
+            "path": "Prism-1.20.1-forge-1.0.5.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:projectile_damage-forge-3.2.2-1.20.1:1.0.0",
+          "name": "projectile_damage-forge-3.2.2+1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 251688,
+            "MD5": "68c529bd75678dfe737895fbf8c3ea51",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/projectile_damage-forge-3.2.2%2B1.20.1.jar",
+            "path": "projectile_damage-forge-3.2.2+1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:projectorshield-1.20.1-forge-47.2.0-1.0.0:1.0.0",
+          "name": "projectorshield-1.20.1-Forge 47.2.0-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 469467,
+            "MD5": "3a1d2c893e503d5cfa43ea625476fadd",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/projectorshield-1.20.1-Forge%2047.2.0-1.0.0.jar",
+            "path": "projectorshield-1.20.1-Forge 47.2.0-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:punchy-2.5.1-forge-1.20.1:1.0.0",
+          "name": "punchy-2.5.1-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1635422,
+            "MD5": "81f24dfff2ff1892c09387bd41cec171",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/punchy-2.5.1-forge-1.20.1.jar",
+            "path": "punchy-2.5.1-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:puzzleslib-v8.1.33-1.20.1-forge:1.0.0",
+          "name": "PuzzlesLib-v8.1.33-1.20.1-Forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1342987,
+            "MD5": "19f23e3040eaadc7c30ae38f5a3dec68",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
+            "path": "PuzzlesLib-v8.1.33-1.20.1-Forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:qliphoth_awakening_dimensions-forge1.20.1-1.0.0:1.0.0",
+          "name": "qliphoth_awakening_dimensions-forge1.20.1-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 36535,
+            "MD5": "6fc1879f7b95d42cd902a594898aab8c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/qliphoth_awakening_dimensions-forge1.20.1-1.0.0.jar",
+            "path": "qliphoth_awakening_dimensions-forge1.20.1-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:questsadditions-1.4.7:1.0.0",
+          "name": "questsadditions-1.4.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 112015,
+            "MD5": "285f47b10614f6cb3258ec04df16b44b",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/questsadditions-1.4.7.jar",
+            "path": "questsadditions-1.4.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:realmrpg_skeletons-1.1.0-forge-1.20.1:1.0.0",
+          "name": "realmrpg_skeletons-1.1.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 652022,
+            "MD5": "39a9a0fbe5cba2765f46090dc0c245b8",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/realmrpg_skeletons-1.1.0-forge-1.20.1.jar",
+            "path": "realmrpg_skeletons-1.1.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:recased-2.0.0-1.20.1:1.0.0",
+          "name": "recased-2.0.0-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 260434,
+            "MD5": "947dfb2e012983fa804c2ff50c49efa0",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/recased-2.0.0-1.20.1.jar",
+            "path": "recased-2.0.0-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:recipeessentials-1.20.1-4.7:1.0.0",
+          "name": "recipeessentials-1.20.1-4.7",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 50772,
+            "MD5": "01d7c99e08796d42e4a5ed439aae4f59",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/recipeessentials-1.20.1-4.7.jar",
+            "path": "recipeessentials-1.20.1-4.7.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:refm-0.3.4-1.20.1:1.0.0",
+          "name": "refm-0.3.4-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2827514,
+            "MD5": "3aefd68660771657a4a2819aa0b14330",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/refm-0.3.4-1.20.1.jar",
+            "path": "refm-0.3.4-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:reldas-medieval-armor-1.20.1-2.1:1.0.0",
+          "name": "Reldas+Medieval+Armor+1.20.1(2.1)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 14707525,
+            "MD5": "ddf54645d0716a8640a8f97b54108016",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Reldas%2BMedieval%2BArmor%2B1.20.1(2.1).jar",
+            "path": "Reldas+Medieval+Armor+1.20.1(2.1).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:resourcefulconfig-forge-1.20.1-2.1.3:1.0.0",
+          "name": "resourcefulconfig-forge-1.20.1-2.1.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 136923,
+            "MD5": "947463b04c043937cd24506842f737a3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/resourcefulconfig-forge-1.20.1-2.1.3.jar",
+            "path": "resourcefulconfig-forge-1.20.1-2.1.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:resourcefullib-forge-1.20.1-2.1.29:1.0.0",
+          "name": "resourcefullib-forge-1.20.1-2.1.29",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 432753,
+            "MD5": "a040c6cc86f653fddf280ff3af9068f0",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/resourcefullib-forge-1.20.1-2.1.29.jar",
+            "path": "resourcefullib-forge-1.20.1-2.1.29.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:resourcify-1.20.1-forge--1.7.4:1.0.0",
+          "name": "Resourcify (1.20.1-forge)-1.7.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2547400,
+            "MD5": "7d20d1618e7cef6270deebe4df948bdf",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Resourcify%20(1.20.1-forge)-1.7.4.jar",
+            "path": "Resourcify (1.20.1-forge)-1.7.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:ribbits-1.20.1-forge-3.0.4:1.0.0",
+          "name": "Ribbits-1.20.1-Forge-3.0.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2218573,
+            "MD5": "a43ce8463310788ec0535c98f255a958",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Ribbits-1.20.1-Forge-3.0.4.jar",
+            "path": "Ribbits-1.20.1-Forge-3.0.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:roadweaver-forge-2.1.1-1.20.1:1.0.0",
+          "name": "roadweaver-forge-2.1.1-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5362195,
+            "MD5": "7942640e74d0310e7a4a83c5749967fb",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/roadweaver-forge-2.1.1-1.20.1.jar",
+            "path": "roadweaver-forge-2.1.1-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:rpgmounts-0.9.0:1.0.0",
+          "name": "rpgmounts-0.9.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 139240,
+            "MD5": "355ece0921ed04334df93bacaccfe22f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/rpgmounts-0.9.0.jar",
+            "path": "rpgmounts-0.9.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:rpg_style_more_bosses_1.0.1_forge_1.20.1:1.0.0",
+          "name": "RPG_Style_More_Bosses_1.0.1_Forge_1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 6670509,
+            "MD5": "cbfc1224cf7ebe9b95b2caa4a9b7f760",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/RPG_Style_More_Bosses_1.0.1_Forge_1.20.1.jar",
+            "path": "RPG_Style_More_Bosses_1.0.1_Forge_1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:rpg_style_more_weapons_r_1.0.3_forge_1.20.1:1.0.0",
+          "name": "RPG_Style_More_Weapons_R_1.0.3_Forge_1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1492579,
+            "MD5": "97524969f61a28820faa6da541e7b747",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/RPG_Style_More_Weapons_R_1.0.3_Forge_1.20.1.jar",
+            "path": "RPG_Style_More_Weapons_R_1.0.3_Forge_1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:runicskills-1.0.0:1.0.0",
+          "name": "runicskills-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1205560,
+            "MD5": "cfd3f4081036eaa81ee98ca9710b123f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/runicskills-1.0.0.jar",
+            "path": "runicskills-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:safepets-1.0.2:1.0.0",
+          "name": "safepets-1.0.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 74166,
+            "MD5": "1d9b6c1c6c6f9498b0df7a39d32f1d20",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/safepets-1.0.2.jar",
+            "path": "safepets-1.0.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:saintsdragons-0.9.2-forge-1.20.1:1.0.0",
+          "name": "saintsdragons-0.9.2+forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 24710431,
+            "MD5": "78bf4c2237391f7a6803a2af3ee6ac7d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/saintsdragons-0.9.2%2Bforge-1.20.1.jar",
+            "path": "saintsdragons-0.9.2+forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:sdm_ui_lib-forge-1.20.1-1.8.3:1.0.0",
+          "name": "sdm_ui_lib-forge-1.20.1-1.8.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 261631,
+            "MD5": "aa64ab55d3c993754c0103722d71a210",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/sdm_ui_lib-forge-1.20.1-1.8.3.jar",
+            "path": "sdm_ui_lib-forge-1.20.1-1.8.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:searchables-forge-1.20.1-1.0.3:1.0.0",
+          "name": "Searchables-forge-1.20.1-1.0.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 77732,
+            "MD5": "9f5418e9c08c18a375ef42fada4bcef2",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Searchables-forge-1.20.1-1.0.3.jar",
+            "path": "Searchables-forge-1.20.1-1.0.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:simple_movesets-20.12.1.0:1.0.0",
+          "name": "simple_movesets-20.12.1.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 73187,
+            "MD5": "38f5d695b74f8a98e157c4bf61dea0ff",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/simple_movesets-20.12.1.0.jar",
+            "path": "simple_movesets-20.12.1.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:simplymore-forge-1.1.3-1:1.0.0",
+          "name": "simplymore-forge-1.1.3 (1)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1570304,
+            "MD5": "5454cc2fd91d38c402835eb09a0dbca3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/simplymore-forge-1.1.3%20(1).jar",
+            "path": "simplymore-forge-1.1.3 (1).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:simplyswords-epicfied-2:1.0.0",
+          "name": "Simplyswords-Epicfied-2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4217268,
+            "MD5": "a400d3785db9d8dd538859cc3a56f461",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Simplyswords-Epicfied-2.jar",
+            "path": "Simplyswords-Epicfied-2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:simplyswords-forge-1.56.0-1.20.1:1.0.0",
+          "name": "simplyswords-forge-1.56.0-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 15202091,
+            "MD5": "da155dc9ccd825f2a824532488675d85",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/simplyswords-forge-1.56.0-1.20.1.jar",
+            "path": "simplyswords-forge-1.56.0-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:skeleton_overlord_set-1.1.0-forge-1.20.1:1.0.0",
+          "name": "skeleton_overlord_set-1.1.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 206432,
+            "MD5": "3af986dabc87fe293ce9d91cff9562e3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/skeleton_overlord_set-1.1.0-forge-1.20.1.jar",
+            "path": "skeleton_overlord_set-1.1.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:smallships-forge-1.20.1-2.0.0-b1.4:1.0.0",
+          "name": "smallships-forge-1.20.1-2.0.0-b1.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1816687,
+            "MD5": "c52bf453f18b87f43cae36acf628eb60",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/smallships-forge-1.20.1-2.0.0-b1.4.jar",
+            "path": "smallships-forge-1.20.1-2.0.0-b1.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:sols_itemrarity-1.20.1-1.4.0:1.0.0",
+          "name": "sols_itemrarity-1.20.1-1.4.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 92440,
+            "MD5": "34e6d82e275f81dbed808b4a8c39adb3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/sols_itemrarity-1.20.1-1.4.0.jar",
+            "path": "sols_itemrarity-1.20.1-1.4.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:sophisticatedbackpacks-1.20.1-3.24.9.1391:1.0.0",
+          "name": "sophisticatedbackpacks-1.20.1-3.24.9.1391",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 970980,
+            "MD5": "7b5cda6c1fa78f5e3f9a0ee20b6cf59a",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/sophisticatedbackpacks-1.20.1-3.24.9.1391.jar",
+            "path": "sophisticatedbackpacks-1.20.1-3.24.9.1391.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:sophisticatedcore-1.20.1-1.2.102.1218:1.0.0",
+          "name": "sophisticatedcore-1.20.1-1.2.102.1218",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1433659,
+            "MD5": "e7e7ea07873b36ad12e7d9aaab8518c4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/sophisticatedcore-1.20.1-1.2.102.1218.jar",
+            "path": "sophisticatedcore-1.20.1-1.2.102.1218.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:soulslike-weaponry-1.2.4-1.20.1-forge:1.0.0",
+          "name": "soulslike-weaponry-1.2.4-1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 53763136,
+            "MD5": "eda10d385cf97bd72e676497088502bf",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/soulslike-weaponry-1.2.4-1.20.1-forge.jar",
+            "path": "soulslike-weaponry-1.2.4-1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:sound-physics-remastered-forge-1.20.1-1.5.1:1.0.0",
+          "name": "sound-physics-remastered-forge-1.20.1-1.5.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 206984,
+            "MD5": "d70031b5058fb81d2670a4039440b00f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/sound-physics-remastered-forge-1.20.1-1.5.1.jar",
+            "path": "sound-physics-remastered-forge-1.20.1-1.5.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:sounds-2.2.1-1.20.1-forge:1.0.0",
+          "name": "Sounds-2.2.1+1.20.1+forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 10974911,
+            "MD5": "ea8427a4988c1f5ad6b5ed7a38b8224d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Sounds-2.2.1%2B1.20.1%2Bforge.jar",
+            "path": "Sounds-2.2.1+1.20.1+forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:spiral_tower_village-0.0.2:1.0.0",
+          "name": "spiral_tower_village-0.0.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 10661687,
+            "MD5": "6adf7ece59b184c365afbd2db2f0c038",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/spiral_tower_village-0.0.2.jar",
+            "path": "spiral_tower_village-0.0.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:starlight-1.1.2-forge.1cda73c:1.0.0",
+          "name": "starlight-1.1.2+forge.1cda73c",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 110583,
+            "MD5": "da99a054428fb62342b6767b993c4c8d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/starlight-1.1.2%2Bforge.1cda73c.jar",
+            "path": "starlight-1.1.2+forge.1cda73c.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:structureessentials-1.20.1-5.0:1.0.0",
+          "name": "structureessentials-1.20.1-5.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 62974,
+            "MD5": "fb5aa74d86c0a642ef71f5456de966ea",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/structureessentials-1.20.1-5.0.jar",
+            "path": "structureessentials-1.20.1-5.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:structure_layout_optimizer-forge-1.0.10:1.0.0",
+          "name": "structure_layout_optimizer-forge-1.0.10",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 246374,
+            "MD5": "b4fe9693e36a50619124dec5e1328542",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/structure_layout_optimizer-forge-1.0.10.jar",
+            "path": "structure_layout_optimizer-forge-1.0.10.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tdmweaponsreforged-1.2:1.0.0",
+          "name": "tdmweaponsreforged-1.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 393627,
+            "MD5": "31cbb55549afb3816c6508bb6f29fb39",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/tdmweaponsreforged-1.2.jar",
+            "path": "tdmweaponsreforged-1.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:terrablender-forge-1.20.1-3.0.1.10:1.0.0",
+          "name": "TerraBlender-forge-1.20.1-3.0.1.10",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 107532,
+            "MD5": "9d8e305b95ae5a8f7b446d6346324267",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/TerraBlender-forge-1.20.1-3.0.1.10.jar",
+            "path": "TerraBlender-forge-1.20.1-3.0.1.10.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tes-forge-1.20.1-1.5.1-1:1.0.0",
+          "name": "TES-forge-1.20.1-1.5.1 (1)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 131142,
+            "MD5": "43dc1fc2c87b48c957172c51d5d63921",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/TES-forge-1.20.1-1.5.1%20(1).jar",
+            "path": "TES-forge-1.20.1-1.5.1 (1).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:textdisplay_pen-1.1.13:1.0.0",
+          "name": "textdisplay_pen-1.1.13",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 67594,
+            "MD5": "af88150ae89d90532883c48a165a7506",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/textdisplay_pen-1.1.13.jar",
+            "path": "textdisplay_pen-1.1.13.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:textiles_and_trinkets-1.1.1-forge-1.20.1:1.0.0",
+          "name": "textiles_and_trinkets-1.1.1-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5970935,
+            "MD5": "c058a31d098965c1e3e22400b7267095",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/textiles_and_trinkets-1.1.1-forge-1.20.1.jar",
+            "path": "textiles_and_trinkets-1.1.1-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:threateningly_mobs-1.0.9.82-forge-1.20.1:1.0.0",
+          "name": "threateningly_mobs-1.0.9.82-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 9837055,
+            "MD5": "5a383d34fbcd8a4fe2049388ad3f4cdc",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/threateningly_mobs-1.0.9.82-forge-1.20.1.jar",
+            "path": "threateningly_mobs-1.0.9.82-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tide-forge-1.20.1-2.0.3:1.0.0",
+          "name": "tide-forge-1.20.1-2.0.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2006809,
+            "MD5": "ec9633a7b3a3613afb2d79016666055d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/tide-forge-1.20.1-2.0.3.jar",
+            "path": "tide-forge-1.20.1-2.0.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tombs-1.0.0:1.0.0",
+          "name": "tombs-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3263067,
+            "MD5": "b482bb69f6cc1bbd95cbb282e4cec24f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/tombs-1.0.0.jar",
+            "path": "tombs-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tooltipoverhaul-forge-1.20.1-1.0.0:1.0.0",
+          "name": "tooltipoverhaul-forge-1.20.1-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 262822,
+            "MD5": "f7b8f544ed63020a49d3eec644d485db",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/tooltipoverhaul-forge-1.20.1-1.0.0.jar",
+            "path": "tooltipoverhaul-forge-1.20.1-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tooltip_bars-1.0.0:1.0.0",
+          "name": "tooltip_bars-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 25854,
+            "MD5": "de0ae5865ff82e20e0b6a53bd695e8b2",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/tooltip_bars-1.0.0.jar",
+            "path": "tooltip_bars-1.0.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:too_many_bows-forge-3.7.0:1.0.0",
+          "name": "too_many_bows-forge-3.7.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 954221,
+            "MD5": "37628116f25cfb8a4cdef58fce2a0054",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/too_many_bows-forge-3.7.0.jar",
+            "path": "too_many_bows-forge-3.7.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:torchmaster-20.1.9-2:1.0.0",
+          "name": "torchmaster-20.1.9 (2)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 119348,
+            "MD5": "5ccfbdd3ad8436df3b99967e746ac2cd",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/torchmaster-20.1.9%20(2).jar",
+            "path": "torchmaster-20.1.9 (2).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:towns-and-towers-1.12-fabric-forge:1.0.0",
+          "name": "Towns-and-Towers-1.12-Fabric+Forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 2864275,
+            "MD5": "237a2186d2482856f67c638c06489fb8",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Towns-and-Towers-1.12-Fabric%2BForge.jar",
+            "path": "Towns-and-Towers-1.12-Fabric+Forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:transmog-forge-1.3.0-1.20-1:1.0.0",
+          "name": "transmog-forge-1.3.0+1.20 (1)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 104088,
+            "MD5": "fa510da6cd97af6ef652da0d292c8345",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/transmog-forge-1.3.0%2B1.20%20(1).jar",
+            "path": "transmog-forge-1.3.0+1.20 (1).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:trashslot-forge-1.20-15.1.2:1.0.0",
+          "name": "trashslot-forge-1.20-15.1.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 117791,
+            "MD5": "e1df6b412a4c22894967ba42beb347be",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/trashslot-forge-1.20-15.1.2.jar",
+            "path": "trashslot-forge-1.20-15.1.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:travelerstitles-1.20-forge-4.0.2:1.0.0",
+          "name": "TravelersTitles-1.20-Forge-4.0.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 228191,
+            "MD5": "c9052dc79261ec5cd3a243cb031a2164",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/TravelersTitles-1.20-Forge-4.0.2.jar",
+            "path": "TravelersTitles-1.20-Forge-4.0.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tt20forged-0.8.2-forge-1.20.x:1.0.0",
+          "name": "tt20forged-0.8.2-forge-1.20.x",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 51100,
+            "MD5": "d1d0953b0d483225b70c12f5ecd0e7cf",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/tt20forged-0.8.2-forge-1.20.x.jar",
+            "path": "tt20forged-0.8.2-forge-1.20.x.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:tyz-s-skills-4.3-1.20.1:1.0.0",
+          "name": "Tyz's skills 4.3-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1527268,
+            "MD5": "0417e45c6b67d4dc39e41ca7d601ba91",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Tyz's%20skills%204.3-1.20.1.jar",
+            "path": "Tyz's skills 4.3-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:undeadunleashed-1.2.2-forge-1.20.1:1.0.0",
+          "name": "UndeadUnleashed-1.2.2-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1496183,
+            "MD5": "5130911fe0f6c3a2c50487487966ca0d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/UndeadUnleashed-1.2.2-forge-1.20.1.jar",
+            "path": "UndeadUnleashed-1.2.2-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:uniqueaccessories-1.1.4-forge-mc1.20.1:1.0.0",
+          "name": "uniqueaccessories-1.1.4-forge-mc1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 312697,
+            "MD5": "8143af34a02abf61149e87d9463f55a7",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/uniqueaccessories-1.1.4-forge-mc1.20.1.jar",
+            "path": "uniqueaccessories-1.1.4-forge-mc1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:upgrade_aquatic-1.20.1-6.0.3:1.0.0",
+          "name": "upgrade_aquatic-1.20.1-6.0.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4981396,
+            "MD5": "7a716707609063fb3fe6261a6c76a305",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/upgrade_aquatic-1.20.1-6.0.3.jar",
+            "path": "upgrade_aquatic-1.20.1-6.0.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:uranus-2.2.6-bugfix.2-1.20.1-forge:1.0.0",
+          "name": "uranus-2.2.6-bugfix.2-1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 823386,
+            "MD5": "0f105911ccb83c0af4440b78dd141af4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/uranus-2.2.6-bugfix.2-1.20.1-forge.jar",
+            "path": "uranus-2.2.6-bugfix.2-1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:vix-1.0.4-all:1.0.0",
+          "name": "VIX-1.0.4-all",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 506152,
+            "MD5": "b0cde0f64b7a9e007a8f82fea44b0e80",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/VIX-1.0.4-all.jar",
+            "path": "VIX-1.0.4-all.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:walljump-1.20.1-1.3.5-forge:1.0.0",
+          "name": "walljump-1.20.1-1.3.5-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 161934,
+            "MD5": "ac6b2bd998795c39461200d8c7bf16e3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/walljump-1.20.1-1.3.5-forge.jar",
+            "path": "walljump-1.20.1-1.3.5-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:watut-forge-1.20.1-1.2.3:1.0.0",
+          "name": "watut-forge-1.20.1-1.2.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 435496,
+            "MD5": "345d3ecdf94dffaa0e3ba55538c65f80",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/watut-forge-1.20.1-1.2.3.jar",
+            "path": "watut-forge-1.20.1-1.2.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:waypointguide-forge-1.0.1:1.0.0",
+          "name": "waypointguide-forge-1.0.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 38327,
+            "MD5": "1d311b5bab8457caa987375b6945917c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/waypointguide-forge-1.0.1.jar",
+            "path": "waypointguide-forge-1.0.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:waystones-forge-1.20.1-14.1.17:1.0.0",
+          "name": "waystones-forge-1.20.1-14.1.17",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 518286,
+            "MD5": "c0991381d238b6e1ba9526132b8a9a7c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/waystones-forge-1.20.1-14.1.17.jar",
+            "path": "waystones-forge-1.20.1-14.1.17.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:weaponleveling-1.20.1-2.2.2-forge:1.0.0",
+          "name": "weaponleveling-1.20.1-2.2.2-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 238858,
+            "MD5": "fc95829f29963e1e20b11f7a6a140815",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/weaponleveling-1.20.1-2.2.2-forge.jar",
+            "path": "weaponleveling-1.20.1-2.2.2-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:weaponsofmiracles-2.0.15-mc1.20.1-forge:1.0.0",
+          "name": "WeaponsOfMiracles-2.0.15-mc1.20.1-forge",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 20276434,
+            "MD5": "ab0aafd05b3a90bf1efc23409fb7413c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/WeaponsOfMiracles-2.0.15-mc1.20.1-forge.jar",
+            "path": "WeaponsOfMiracles-2.0.15-mc1.20.1-forge.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:wings-of-fire-v1.0---forge-1.20.1:1.0.0",
+          "name": "Wings Of Fire V1.0 - Forge 1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1019901,
+            "MD5": "920ecb5f8f63db8094d125a1fa872121",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Wings%20Of%20Fire%20V1.0%20-%20Forge%201.20.1.jar",
+            "path": "Wings Of Fire V1.0 - Forge 1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:wolegendarymonsters-1.0.2-forge-1.20.1:1.0.0",
+          "name": "WOLegendaryMonsters-1.0.2-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 31735,
+            "MD5": "b591e748f58ff00d107b57de430bb78f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/WOLegendaryMonsters-1.0.2-forge-1.20.1.jar",
+            "path": "WOLegendaryMonsters-1.0.2-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:wyrmroost-forge-1.20.1-1.3.3:1.0.0",
+          "name": "wyrmroost-forge-1.20.1-1.3.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4286795,
+            "MD5": "8878d830e3fd963d85ad7ca9cc0ebee0",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/wyrmroost-forge-1.20.1-1.3.3.jar",
+            "path": "wyrmroost-forge-1.20.1-1.3.3.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:w_o_w_armors_and_weapons-1.0.1-forge-1.20.1:1.0.0",
+          "name": "w_o_w_armors_and_weapons-1.0.1-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 17012880,
+            "MD5": "4d10a505b4ec25c270f53f108c7e5e21",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/w_o_w_armors_and_weapons-1.0.1-forge-1.20.1.jar",
+            "path": "w_o_w_armors_and_weapons-1.0.1-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:xaerosworldmap_1.39.12_forge_1.20:1.0.0",
+          "name": "XaerosWorldMap_1.39.12_Forge_1.20",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 960799,
+            "MD5": "002d9a661be7e982db177d7b0fc8d49e",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/XaerosWorldMap_1.39.12_Forge_1.20.jar",
+            "path": "XaerosWorldMap_1.39.12_Forge_1.20.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:xaeros_minimap_25.2.10_forge_1.20:1.0.0",
+          "name": "Xaeros_Minimap_25.2.10_Forge_1.20",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1723029,
+            "MD5": "2b2bfaf3a1872b83c57aaa51c73f10d9",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Xaeros_Minimap_25.2.10_Forge_1.20.jar",
+            "path": "Xaeros_Minimap_25.2.10_Forge_1.20.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yahaha-1.1.2---1.20.1:1.0.0",
+          "name": "yahaha-1.1.2 - 1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4996767,
+            "MD5": "29c08dcac63c2f221b0a85cd9d14e6c4",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/yahaha-1.1.2%20-%201.20.1.jar",
+            "path": "yahaha-1.1.2 - 1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yazz-s-dungeons-the-sequel---1.20.1---1.0.1:1.0.0",
+          "name": "Yazz's Dungeons The Sequel - 1.20.1 - 1.0.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 5632114,
+            "MD5": "cb4228ee9da5e711a49f1f2f92860cad",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/Yazz's%20Dungeons%20The%20Sequel%20-%201.20.1%20-%201.0.1.jar",
+            "path": "Yazz's Dungeons The Sequel - 1.20.1 - 1.0.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yeonhwajeong-1.0.0-forge-1.20.1:1.0.0",
+          "name": "yeonhwajeong-1.0.0-forge-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 819990,
+            "MD5": "fa696887d440a9c2ff98665ba9a37740",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/yeonhwajeong-1.0.0-forge-1.20.1.jar",
+            "path": "yeonhwajeong-1.0.0-forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yet_another_config_lib_v3-3.6.6-1.20.1-forge-2:1.0.0",
+          "name": "yet_another_config_lib_v3-3.6.6+1.20.1-forge (2)",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1105891,
+            "MD5": "2437cb642e24726a83f864e345f24479",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/yet_another_config_lib_v3-3.6.6%2B1.20.1-forge%20(2).jar",
+            "path": "yet_another_config_lib_v3-3.6.6+1.20.1-forge (2).jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yungsapi-1.20-forge-4.0.6:1.0.0",
+          "name": "YungsApi-1.20-Forge-4.0.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 370524,
+            "MD5": "fe79f43dba8edbb8ede99f4e358e5b0c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/YungsApi-1.20-Forge-4.0.6.jar",
+            "path": "YungsApi-1.20-Forge-4.0.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yungsbetterendisland-1.20-forge-2.0.6:1.0.0",
+          "name": "YungsBetterEndIsland-1.20-Forge-2.0.6",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 387111,
+            "MD5": "7f5ed661e5478668a91ea199fba75fb3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
+            "path": "YungsBetterEndIsland-1.20-Forge-2.0.6.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yungsbetteroceanmonuments-1.20-forge-3.0.4:1.0.0",
+          "name": "YungsBetterOceanMonuments-1.20-Forge-3.0.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 1033262,
+            "MD5": "467336218d681221ef8d875b226eb1bc",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
+            "path": "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:yungscavebiomes-1.20.1-forge-2.0.5:1.0.0",
+          "name": "YungsCaveBiomes-1.20.1-Forge-2.0.5",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 13014967,
+            "MD5": "b05321af475e51ece0f7d38c64b5e842",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/YungsCaveBiomes-1.20.1-Forge-2.0.5.jar",
+            "path": "YungsCaveBiomes-1.20.1-Forge-2.0.5.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:zipline-forge-1.20.1-1.2.0:1.0.0",
+          "name": "zipline-forge-1.20.1-1.2.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 248416,
+            "MD5": "f928d521797ac208600580ba24948b48",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/zipline-forge-1.20.1-1.2.0.jar",
+            "path": "zipline-forge-1.20.1-1.2.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:zylob-forge1.20.1-0.3.0fix-epicfight20.11:1.0.0",
+          "name": "zylob-forge1.20.1-0.3.0Fix-EpicFight20.11+",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 3691357,
+            "MD5": "c5e6a8c089b0e0f97110c14bee27023d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/zylob-forge1.20.1-0.3.0Fix-EpicFight20.11%2B.jar",
+            "path": "zylob-forge1.20.1-0.3.0Fix-EpicFight20.11+.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:1.20.1-forge--epic-knights-japanese-armory-1.6.2:1.0.0",
+          "name": "[1.20.1-forge]-Epic-Knights-Japanese-Armory-1.6.2",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 343504,
+            "MD5": "f9362b36a09de79e7416f3ecca439c78",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/%5B1.20.1-forge%5D-Epic-Knights-Japanese-Armory-1.6.2.jar",
+            "path": "[1.20.1-forge]-Epic-Knights-Japanese-Armory-1.6.2.jar"
+          }
+        }
+      ]
+    }
+  ]
+}
