@@ -8,7 +8,7 @@ mediaGitHubURL = "https://github.com/RyuTV/AeldoriaRPG"
 mediaXURL = "#"
 mediaInstagramURL = "#"
 mediaYouTubeURL = "#"
-mediaDiscordURL = "#"
+mediaDiscordURL = "https://discord.gg/E2VFYPeA2W"
 
 [ejs.settings]
 sourceGithubLink = "https://github.com/RyuTV/AeldoriaRPG"
