@@ -1,8 +1,8 @@
-appId: 'helioslauncher'
-productName: 'Helios Launcher'
+appId: 'com.aeldoria.launcher'
+productName: 'Aeldoria Launcher'
 artifactName: '${productName}-setup-${version}.${ext}'
 
-copyright: 'Copyright © 2018-2026 Daniel Scalzi'
+copyright: 'Copyright © 2026 Aeldoria RPG. Basado en Helios Launcher de Daniel Scalzi.'
 
 asar: true
 compression: 'maximum'
@@ -39,10 +39,10 @@ mac:
 # Linux Configuration
 linux: 
   target: 'AppImage'
-  maintainer: 'Daniel Scalzi'
-  vendor: 'Daniel Scalzi'
-  synopsis: 'Modded Minecraft Launcher'
-  description: 'Custom launcher which allows users to join modded servers. All mods, configurations, and updates are handled automatically.'
+  maintainer: 'Aeldoria RPG'
+  vendor: 'Aeldoria RPG'
+  synopsis: 'Launcher oficial de Aeldoria RPG'
+  description: 'Launcher oficial para instalar, actualizar e iniciar Aeldoria RPG automáticamente.'
   category: 'Game'
 
 
