@@ -96,8 +96,15 @@
             <div class="bot_wrapper">
                 <div id="content">
                     <div id="server_status_wrapper">
-                        <span class="bot_label" id="landingPlayerLabel"><%- lang('landing.serverStatus') %></span>
-                        <span id="player_count"><%- lang('landing.serverStatusPlaceholder') %></span>
+                        <div class="aeldoriaStatusRow">
+                            <span id="aeldoria_status_icon">&#8226;</span>
+                            <span class="bot_label" id="aeldoria_status_label"><%- lang('landing.serverStatus') %></span>
+                            <span id="aeldoria_status_text"><%- lang('landing.serverStatusPlaceholder') %></span>
+                        </div>
+                        <div class="aeldoriaStatusRow">
+                            <span class="bot_label" id="landingPlayerLabel"><%- lang('landing.travelersConnected') %></span>
+                            <span id="player_count">0</span>
+                        </div>
                     </div>
                     <div class="bot_divider"></div>
                     <div id="mojangStatusWrapper">
@@ -141,6 +148,7 @@
         <div id="right">
             <div class="bot_wrapper">
                 <div id="launch_content">
+                    <button id="repair_button" title="Comprueba y vuelve a descargar archivos dañados">REPARAR</button>
                     <button id="launch_button"><%- lang('landing.launchButton') %></button>
                     <div class="bot_divider"></div>
                     <button id="server_selection_button" class="bot_label"><%- lang('landing.launchButtonPlaceholder') %></button>

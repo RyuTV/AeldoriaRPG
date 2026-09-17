@@ -72,6 +72,23 @@ async function showMainUI(data){
         document.body.style.backgroundImage = `url('assets/images/backgrounds/${document.body.getAttribute('bkid')}.jpg')`
         $('#main').show()
 
+        // Rotate Aeldoria backgrounds after preloading them to prevent blank flashes.
+        const backgroundIds = [0, 1, 2, 3, 4, 5, 6, 7]
+        let currentBackground = Number(document.body.getAttribute('bkid')) || 0
+        setInterval(() => {
+            let next = backgroundIds[Math.floor(Math.random() * backgroundIds.length)]
+            if(next === currentBackground){
+                next = backgroundIds[(backgroundIds.indexOf(next) + 1) % backgroundIds.length]
+            }
+            const preload = new Image()
+            preload.onload = () => {
+                currentBackground = next
+                document.body.setAttribute('bkid', String(next))
+                document.body.style.backgroundImage = `url('assets/images/backgrounds/${next}.jpg')`
+            }
+            preload.src = `assets/images/backgrounds/${next}.jpg`
+        }, 45000)
+
         const isLoggedIn = Object.keys(ConfigManager.getAuthAccounts()).length > 0
 
         // If this is enabled in a development environment we'll get ratelimited.

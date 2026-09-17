@@ -39,6 +39,7 @@ const launch_progress_label   = document.getElementById('launch_progress_label')
 const launch_details_text     = document.getElementById('launch_details_text')
 const server_selection_button = document.getElementById('server_selection_button')
 const user_text               = document.getElementById('user_text')
+const repair_button           = document.getElementById('repair_button')
 
 const loggerLanding = LoggerUtil.getLogger('Landing')
 
@@ -239,14 +240,16 @@ const refreshServerStatus = async (fade = false) => {
     loggerLanding.info('Refreshing Server Status')
     const serv = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer())
 
-    let pLabel = Lang.queryJS('landing.serverStatus.server')
-    let pVal = Lang.queryJS('landing.serverStatus.offline')
+    let stateText = Lang.queryJS('landing.serverStatus.offline')
+    let stateColor = '#e35d6a'
+    let pVal = '0'
 
     try {
 
         const servStat = await getServerStatus(47, serv.hostname, serv.port)
         console.log(servStat)
-        pLabel = Lang.queryJS('landing.serverStatus.players')
+        stateText = Lang.queryJS('landing.serverStatus.online')
+        stateColor = '#75d06f'
         pVal = servStat.players.online + '/' + servStat.players.max
 
     } catch (err) {
@@ -255,12 +258,14 @@ const refreshServerStatus = async (fade = false) => {
     }
     if(fade){
         $('#server_status_wrapper').fadeOut(250, () => {
-            document.getElementById('landingPlayerLabel').innerHTML = pLabel
+            document.getElementById('aeldoria_status_text').innerHTML = stateText
+            document.getElementById('aeldoria_status_icon').style.color = stateColor
             document.getElementById('player_count').innerHTML = pVal
             $('#server_status_wrapper').fadeIn(500)
         })
     } else {
-        document.getElementById('landingPlayerLabel').innerHTML = pLabel
+        document.getElementById('aeldoria_status_text').innerHTML = stateText
+        document.getElementById('aeldoria_status_icon').style.color = stateColor
         document.getElementById('player_count').innerHTML = pVal
     }
     
@@ -273,6 +278,18 @@ refreshMojangStatuses()
 let mojangStatusListener = setInterval(() => refreshMojangStatuses(true), 60*60*1000)
 // Set refresh rate to once every 5 minutes.
 let serverStatusListener = setInterval(() => refreshServerStatus(true), 300000)
+
+repair_button.onclick = async () => {
+    repair_button.disabled = true
+    setLaunchDetails('Comprobando la instalación de Aeldoria...')
+    try {
+        await dlAsync(false)
+        setLaunchDetails('Instalación reparada correctamente.')
+    } finally {
+        repair_button.disabled = false
+        setTimeout(() => toggleLaunchArea(false), 1200)
+    }
+}
 
 /**
  * Shows an error overlay, toggles off the launch area.
@@ -516,11 +533,12 @@ async function dlAsync(login = true) {
 
     if(invalidFileCount > 0) {
         loggerLaunchSuite.info('Downloading files.')
-        setLaunchDetails(Lang.queryJS('landing.dlAsync.downloadingFiles'))
+        setLaunchDetails(`${Lang.queryJS('landing.dlAsync.downloadingFiles')} (${invalidFileCount})`)
         setLaunchPercentage(0)
         try {
             await fullRepairModule.download(percent => {
                 setDownloadPercentage(percent)
+                setLaunchDetails(`${Lang.queryJS('landing.dlAsync.downloadingFiles')} (${invalidFileCount}) · ${Math.round(percent)}%`)
             })
             setDownloadPercentage(100)
         } catch(err) {
@@ -530,6 +548,7 @@ async function dlAsync(login = true) {
         }
     } else {
         loggerLaunchSuite.info('No invalid files, skipping download.')
+        setLaunchDetails(Lang.queryJS('landing.dlAsync.installationReady'))
     }
 
     // Remove download bar.

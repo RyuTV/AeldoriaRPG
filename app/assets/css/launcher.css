@@ -3998,3 +3998,189 @@ input:checked + .toggleSwitchSlider:before {
 .rotating {
     animation: rotating 10s linear infinite;
 }
+
+/* Aeldoria RPG controls */
+#launch_content {
+    gap: 18px;
+    align-items: center;
+}
+
+#server_status_wrapper {
+    width: auto;
+    min-width: 205px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.aeldoriaStatusRow {
+    display: flex;
+    align-items: center;
+    min-height: 14px;
+    white-space: nowrap;
+}
+
+#aeldoria_status_icon {
+    color: #e35d6a;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 10px;
+    margin-right: 7px;
+    text-shadow: 0 0 12px currentColor;
+}
+
+#aeldoria_status_text,
+#player_count {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.7px;
+    margin-left: 10px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+}
+
+.bot_label,
+#newsButtonText,
+#launch_details_text {
+    font-size: 12px;
+}
+
+#launch_button,
+#repair_button,
+#server_selection_button,
+#settingsNavDone,
+.settingsSwitchServerButton,
+.settingsAddAuthAccount {
+    min-height: 42px;
+    padding: 0 22px;
+    border: 1px solid rgba(106, 196, 255, 0.75);
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(12, 37, 68, 0.96), rgba(35, 73, 123, 0.9));
+    box-shadow: 0 0 14px rgba(52, 157, 255, 0.22), inset 0 0 12px rgba(255, 255, 255, 0.05);
+    font-family: 'Avenir Medium';
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+#launch_button {
+    min-width: 180px;
+    min-height: 60px;
+    font-size: 28px;
+    border-color: #d7b96d;
+    background: linear-gradient(135deg, #173b68, #315d98 58%, #76622e);
+}
+
+#repair_button {
+    min-width: 138px;
+    min-height: 48px;
+    font-size: 15px;
+}
+
+#launch_button:hover,
+#repair_button:hover,
+#server_selection_button:hover,
+#settingsNavDone:hover,
+.settingsSwitchServerButton:hover,
+.settingsAddAuthAccount:hover {
+    transform: translateY(-2px);
+    border-color: #f2d88a;
+    box-shadow: 0 0 24px rgba(67, 174, 255, 0.52), 0 0 12px rgba(226, 190, 93, 0.28);
+}
+
+#launch_button:active,
+#repair_button:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+#repair_button:disabled {
+    cursor: progress;
+    filter: grayscale(0.55);
+    opacity: 0.72;
+}
+
+#launch_progress[value] {
+    width: 360px;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+#launch_progress[value]::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+}
+
+#launch_progress[value]::-webkit-progress-value {
+    background: linear-gradient(90deg, #459ee8, #80d8ff 68%, #e0c270);
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(72, 172, 255, 0.8);
+}
+
+#launch_details {
+    padding: 13px 18px;
+    border: 1px solid rgba(102, 187, 255, 0.48);
+    border-radius: 10px;
+    background: rgba(3, 13, 27, 0.78);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.32);
+}
+
+#loadCenterImage {
+    width: 250px;
+    filter: drop-shadow(0 0 24px rgba(67, 166, 255, 0.55));
+}
+
+#loadSpinnerImage {
+    width: 390px;
+    filter: drop-shadow(0 0 14px rgba(225, 192, 105, 0.5));
+}
+
+#image_seal,
+#welcomeImageSeal,
+#loginImageSeal,
+#settingsAboutLogo {
+    filter: drop-shadow(0 0 14px rgba(76, 174, 255, 0.52));
+}
+
+#settingsNavDone,
+.settingsSwitchServerButton,
+.settingsAddAuthAccount {
+    font-size: 14px;
+}
+
+@media (min-width: 1500px) and (min-height: 850px) {
+    #launch_button {
+        min-width: 220px;
+        min-height: 72px;
+        font-size: 34px;
+    }
+
+    #repair_button {
+        min-width: 165px;
+        min-height: 56px;
+        font-size: 17px;
+    }
+
+    #landingContainer > #lower {
+        transform: scale(1.22);
+        transform-origin: center bottom;
+    }
+
+    #rightContainer {
+        transform: scale(1.16);
+        transform-origin: right top;
+    }
+
+    #settingsContainer > #settingsContent,
+    #welcomeContent,
+    #loginContent,
+    #loginOptionsContent {
+        zoom: 1.12;
+    }
+
+    #image_seal,
+    #image_seal_container {
+        height: 104px;
+        width: 104px;
+    }
+}
