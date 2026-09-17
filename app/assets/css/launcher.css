@@ -4007,9 +4007,14 @@ input:checked + .toggleSwitchSlider:before {
 
 #server_status_wrapper {
     width: auto;
-    min-width: 205px;
+    min-width: 230px;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
+    padding: 10px 14px;
+    border: 1px solid rgba(105, 190, 255, 0.36);
+    border-radius: 9px;
+    background: linear-gradient(135deg, rgba(3, 15, 31, 0.82), rgba(13, 39, 69, 0.62));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), inset 0 0 16px rgba(72, 158, 230, 0.06);
 }
 
 .aeldoriaStatusRow {
@@ -4017,6 +4022,7 @@ input:checked + .toggleSwitchSlider:before {
     align-items: center;
     min-height: 14px;
     white-space: nowrap;
+    justify-content: space-between;
 }
 
 #aeldoria_status_icon {
@@ -4036,6 +4042,38 @@ input:checked + .toggleSwitchSlider:before {
     letter-spacing: 0.7px;
     margin-left: 10px;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+}
+
+#aeldoria_status_label,
+#landingPlayerLabel {
+    color: #d9e8f5;
+    letter-spacing: 1.15px;
+}
+
+#aeldoria_status_text {
+    color: #8ee38a;
+}
+
+#landingContainer > #lower > #left {
+    justify-content: flex-start;
+    padding-left: 34px;
+    box-sizing: border-box;
+}
+
+#landingContainer > #lower > #left #content {
+    left: 0;
+    top: 22px;
+    align-items: center;
+}
+
+#landingContainer > #lower > #left .bot_divider {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#mojangStatusWrapper {
+    align-items: center;
+    white-space: nowrap;
 }
 
 .bot_label,
@@ -4162,8 +4200,7 @@ input:checked + .toggleSwitchSlider:before {
     }
 
     #landingContainer > #lower {
-        transform: scale(1.22);
-        transform-origin: center bottom;
+        transform: none;
     }
 
     #rightContainer {

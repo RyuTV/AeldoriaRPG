@@ -73,8 +73,13 @@ async function showMainUI(data){
         $('#main').show()
 
         // Rotate Aeldoria backgrounds after preloading them to prevent blank flashes.
-        const backgroundIds = [0, 1, 2, 3, 4, 5, 6, 7]
+        const backgroundIds = [0, 1, 2]
         let currentBackground = Number(document.body.getAttribute('bkid')) || 0
+        if(!backgroundIds.includes(currentBackground)){
+            currentBackground = 0
+            document.body.setAttribute('bkid', '0')
+            document.body.style.backgroundImage = "url('assets/images/backgrounds/0.jpg')"
+        }
         setInterval(() => {
             let next = backgroundIds[Math.floor(Math.random() * backgroundIds.length)]
             if(next === currentBackground){
