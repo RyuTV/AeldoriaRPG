@@ -7,7 +7,7 @@
       "name": "Aeldoria RPG",
       "description": "Servidor RPG de Aeldoria para Minecraft 1.20.1.",
       "icon": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/build/icon.png",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "address": "216.201.77.215:9055",
       "minecraftVersion": "1.20.1",
       "discord": {
@@ -4360,6 +4360,72 @@
             "MD5": "e8d1a0a68305c6ea71b0cf8f9aa90047",
             "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/options.txt",
             "path": "options.txt"
+          }
+        },
+        {
+          "id": "aeldoria.files:config-leawind_third_person.json:1.0.0",
+          "name": "Aeldoria - config/leawind_third_person.json",
+          "type": "File",
+          "artifact": {
+            "size": 2001,
+            "MD5": "f0d23ef59c2ffd406a25d0b8f295dada",
+            "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/config/leawind_third_person.json",
+            "path": "config/leawind_third_person.json"
+          }
+        },
+        {
+          "id": "aeldoria.files:config-xaeroworldmap-common.txt:1.0.0",
+          "name": "Aeldoria - config/xaeroworldmap-common.txt",
+          "type": "File",
+          "artifact": {
+            "size": 120,
+            "MD5": "5a2200d083554257d61384f2c486162b",
+            "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/config/xaeroworldmap-common.txt",
+            "path": "config/xaeroworldmap-common.txt"
+          }
+        },
+        {
+          "id": "aeldoria.files:config-xaerominimap-common.txt:1.0.0",
+          "name": "Aeldoria - config/xaerominimap-common.txt",
+          "type": "File",
+          "artifact": {
+            "size": 145,
+            "MD5": "c4bb2d96ebd8182b307ef6b2fda27370",
+            "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/config/xaerominimap-common.txt",
+            "path": "config/xaerominimap-common.txt"
+          }
+        },
+        {
+          "id": "aeldoria.files:config-xaerominimap_entities.json:1.0.0",
+          "name": "Aeldoria - config/xaerominimap_entities.json",
+          "type": "File",
+          "artifact": {
+            "size": 5531,
+            "MD5": "e87f24bcf76e9dd754062655420a3773",
+            "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/config/xaerominimap_entities.json",
+            "path": "config/xaerominimap_entities.json"
+          }
+        },
+        {
+          "id": "aeldoria.files:config-xaerominimap.txt:1.0.0",
+          "name": "Aeldoria - config/xaerominimap.txt",
+          "type": "File",
+          "artifact": {
+            "size": 3641,
+            "MD5": "02a121eebd82041595244023b3b4f826",
+            "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/config/xaerominimap.txt",
+            "path": "config/xaerominimap.txt"
+          }
+        },
+        {
+          "id": "aeldoria.files:config-xaeroworldmap.txt:1.0.0",
+          "name": "Aeldoria - config/xaeroworldmap.txt",
+          "type": "File",
+          "artifact": {
+            "size": 1220,
+            "MD5": "9a543634a80ac466ae709969bb1f1970",
+            "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/config/xaeroworldmap.txt",
+            "path": "config/xaeroworldmap.txt"
           }
         }
       ]
