@@ -57,6 +57,7 @@ class ProcessBuilder {
         // Forge 1.20.x no longer loads Helios' legacy Maven mod list reliably.
         // Materialize launcher-managed mods in the instance mods directory.
         this.syncForgeMods(modObj.fMods)
+        this.syncResourcePacks()
         
         // Mod list below 1.13
         // Fabric only supports 1.14+
@@ -161,6 +162,49 @@ class ProcessBuilder {
 
         fs.writeFileSync(manifestPath, JSON.stringify(current, null, 2), 'utf8')
         logger.info(`Synced ${current.length} launcher-managed mods to ${modsDir}`)
+    }
+
+    /**
+     * Ensure distribution-managed resource packs are present in the active
+     * instance. This also repairs installations created by older launcher
+     * builds which downloaded the pack but did not materialize it there.
+     */
+    syncResourcePacks(){
+        const resourcePacksDir = path.join(this.gameDir, 'resourcepacks')
+        fs.ensureDirSync(resourcePacksDir)
+
+        let synced = 0
+        for(const module of this.server.modules){
+            const artifactPath = module.rawModule.artifact != null
+                ? module.rawModule.artifact.path
+                : null
+
+            if(module.rawModule.type !== 'File' || artifactPath == null || !artifactPath.startsWith('resourcepacks/')){
+                continue
+            }
+
+            const source = module.getPath()
+            const destination = path.join(resourcePacksDir, path.basename(artifactPath))
+            if(!fs.existsSync(source)){
+                throw new Error(`Downloaded resource pack is missing: ${source}`)
+            }
+
+            if(path.resolve(source) !== path.resolve(destination)){
+                fs.copyFileSync(source, destination)
+            }
+            synced++
+        }
+
+        const optionsPath = path.join(this.gameDir, 'options.txt')
+        if(fs.existsSync(optionsPath)){
+            const options = fs.readFileSync(optionsPath, 'utf8')
+            const corrected = options.replace(/"file\/NEWAELDORIA(?:\.zip)?"/g, '"file/NEWAELDORIA.zip"')
+            if(corrected !== options){
+                fs.writeFileSync(optionsPath, corrected, 'utf8')
+            }
+        }
+
+        logger.info(`Synced ${synced} launcher-managed resource packs to ${resourcePacksDir}`)
     }
 
     /**
