@@ -4000,17 +4000,121 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 /* Aeldoria RPG controls */
+#landingContainer > #lower {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 210px;
+    display: grid;
+    grid-template-columns: minmax(320px, 390px) 1fr minmax(470px, 570px);
+    align-items: end;
+    gap: 28px;
+    padding: 0 42px 34px;
+    box-sizing: border-box;
+    background:
+        linear-gradient(to top, rgba(1, 7, 15, 0.96) 0%, rgba(2, 11, 22, 0.76) 48%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+}
+
+#landingContainer > #lower::after {
+    content: '';
+    position: absolute;
+    left: 42px;
+    right: 42px;
+    bottom: 24px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(106, 196, 255, 0.34), rgba(224, 194, 112, 0.52), transparent);
+    box-shadow: 0 0 12px rgba(77, 171, 242, 0.22);
+}
+
+#landingContainer > #lower > #left,
+#landingContainer > #lower > #center,
+#landingContainer > #lower > #right {
+    position: relative;
+    top: auto;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    display: flex;
+    pointer-events: auto;
+}
+
+#landingContainer > #lower > #left {
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+#landingContainer > #lower > #center {
+    justify-content: center;
+}
+
+#landingContainer > #lower > #right {
+    justify-content: flex-end;
+}
+
+#landingContainer > #lower > #left #content,
+#landingContainer > #lower > #center #content,
+#landingContainer > #lower > #right .bot_wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+#landingContainer > #lower > #left #content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: stretch;
+    width: 100%;
+    line-height: normal;
+}
+
+#landingContainer > #lower > #left .bot_divider {
+    display: none;
+}
+
 #launch_content {
-    gap: 18px;
+    position: relative;
+    top: auto;
+    display: grid;
+    grid-template-columns: 156px minmax(230px, 270px);
+    grid-template-areas:
+        "realm realm"
+        "repair play";
+    gap: 10px 14px;
     align-items: center;
+    padding: 14px 16px 16px;
+    border: 1px solid rgba(103, 184, 245, 0.34);
+    border-radius: 13px;
+    background: linear-gradient(135deg, rgba(2, 13, 28, 0.91), rgba(8, 28, 51, 0.78));
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+#launch_content::before {
+    content: 'COMIENZA TU AVENTURA';
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    color: rgba(224, 194, 112, 0.76);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2.1px;
+    pointer-events: none;
+}
+
+#launch_content > .bot_divider {
+    display: none;
 }
 
 #server_status_wrapper {
-    width: auto;
-    min-width: 230px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     flex-direction: column;
     gap: 7px;
-    padding: 10px 14px;
+    padding: 13px 16px;
     border: 1px solid rgba(105, 190, 255, 0.36);
     border-radius: 9px;
     background: linear-gradient(135deg, rgba(3, 15, 31, 0.82), rgba(13, 39, 69, 0.62));
@@ -4055,25 +4159,21 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 #landingContainer > #lower > #left {
-    justify-content: flex-start;
-    padding-left: 34px;
     box-sizing: border-box;
 }
 
 #landingContainer > #lower > #left #content {
-    left: 0;
-    top: 22px;
     align-items: center;
-}
-
-#landingContainer > #lower > #left .bot_divider {
-    margin-left: 16px;
-    margin-right: 16px;
 }
 
 #mojangStatusWrapper {
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
     white-space: nowrap;
+    gap: 9px;
+    min-height: 25px;
+    padding-left: 5px;
 }
 
 .bot_label,
@@ -4102,17 +4202,39 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 #launch_button {
-    min-width: 180px;
-    min-height: 60px;
-    font-size: 28px;
+    grid-area: play;
+    width: 100%;
+    min-width: 0;
+    min-height: 66px;
+    font-size: 29px;
     border-color: #d7b96d;
     background: linear-gradient(135deg, #173b68, #315d98 58%, #76622e);
+    box-shadow: 0 0 22px rgba(52, 157, 255, 0.28), inset 0 0 18px rgba(255, 255, 255, 0.07);
 }
 
 #repair_button {
-    min-width: 138px;
-    min-height: 48px;
-    font-size: 15px;
+    grid-area: repair;
+    width: 100%;
+    min-width: 0;
+    min-height: 54px;
+    font-size: 14px;
+    background: linear-gradient(135deg, rgba(10, 32, 59, 0.96), rgba(25, 62, 103, 0.9));
+}
+
+#server_selection_button {
+    grid-area: realm;
+    justify-self: start;
+    min-height: 29px;
+    max-width: 58%;
+    padding: 0 12px;
+    border-color: rgba(111, 199, 255, 0.32);
+    background: rgba(10, 39, 68, 0.58);
+    color: #dcecff;
+    font-size: 11px;
+    line-height: 29px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #launch_button:hover,
@@ -4156,11 +4278,35 @@ input:checked + .toggleSwitchSlider:before {
 }
 
 #launch_details {
-    padding: 13px 18px;
+    position: relative;
+    top: auto;
+    width: 470px;
+    box-sizing: border-box;
+    padding: 16px 18px;
     border: 1px solid rgba(102, 187, 255, 0.48);
     border-radius: 10px;
     background: rgba(3, 13, 27, 0.78);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.32);
+}
+
+#newsButton {
+    min-width: 154px;
+    min-height: 48px;
+    padding: 7px 24px 5px;
+    border: 1px solid rgba(112, 194, 255, 0.32);
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(3, 17, 33, 0.82), rgba(16, 45, 75, 0.7));
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+#newsButtonSVG {
+    height: 8px;
+    margin-bottom: 1px;
+}
+
+#newsButtonText {
+    justify-content: center;
+    line-height: 19px;
 }
 
 #loadCenterImage {
@@ -4188,15 +4334,13 @@ input:checked + .toggleSwitchSlider:before {
 
 @media (min-width: 1500px) and (min-height: 850px) {
     #launch_button {
-        min-width: 220px;
         min-height: 72px;
-        font-size: 34px;
+        font-size: 33px;
     }
 
     #repair_button {
-        min-width: 165px;
-        min-height: 56px;
-        font-size: 17px;
+        min-height: 58px;
+        font-size: 15px;
     }
 
     #landingContainer > #lower {
@@ -4219,5 +4363,35 @@ input:checked + .toggleSwitchSlider:before {
     #image_seal_container {
         height: 104px;
         width: 104px;
+    }
+}
+
+@media (max-width: 1250px), (max-height: 720px) {
+    #landingContainer > #lower {
+        height: 180px;
+        grid-template-columns: minmax(260px, 330px) 1fr minmax(400px, 470px);
+        gap: 18px;
+        padding: 0 26px 24px;
+    }
+
+    #landingContainer > #lower::after {
+        left: 26px;
+        right: 26px;
+        bottom: 15px;
+    }
+
+    #launch_content {
+        grid-template-columns: 132px minmax(195px, 225px);
+        padding: 11px 13px 13px;
+    }
+
+    #launch_button {
+        min-height: 58px;
+        font-size: 25px;
+    }
+
+    #repair_button {
+        min-height: 48px;
+        font-size: 12px;
     }
 }

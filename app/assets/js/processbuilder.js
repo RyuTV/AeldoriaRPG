@@ -174,6 +174,7 @@ class ProcessBuilder {
         fs.ensureDirSync(resourcePacksDir)
 
         let synced = 0
+        const enabledPacks = []
         for(const module of this.server.modules){
             const artifactPath = module.rawModule.artifact != null
                 ? module.rawModule.artifact.path
@@ -192,19 +193,57 @@ class ProcessBuilder {
             if(path.resolve(source) !== path.resolve(destination)){
                 fs.copyFileSync(source, destination)
             }
+            enabledPacks.push(`file/${path.basename(artifactPath)}`)
             synced++
         }
 
         const optionsPath = path.join(this.gameDir, 'options.txt')
-        if(fs.existsSync(optionsPath)){
-            const options = fs.readFileSync(optionsPath, 'utf8')
-            const corrected = options.replace(/"file\/NEWAELDORIA(?:\.zip)?"/g, '"file/NEWAELDORIA.zip"')
-            if(corrected !== options){
-                fs.writeFileSync(optionsPath, corrected, 'utf8')
+        if(enabledPacks.length > 0){
+            let options = fs.existsSync(optionsPath)
+                ? fs.readFileSync(optionsPath, 'utf8')
+                : ''
+
+            const updateList = (key, transform, fallback) => {
+                const expression = new RegExp(`^${key}:(.*)$`, 'm')
+                const match = options.match(expression)
+                let values = fallback
+
+                if(match != null){
+                    try {
+                        values = JSON.parse(match[1])
+                    } catch(err) {
+                        logger.warn(`Could not parse ${key}; rebuilding its resource-pack list.`, err)
+                    }
+                }
+
+                values = transform(Array.isArray(values) ? values : fallback)
+                const replacement = `${key}:${JSON.stringify(values)}`
+                options = match != null
+                    ? options.replace(expression, replacement)
+                    : `${options}${options.length > 0 && !options.endsWith('\n') ? '\n' : ''}${replacement}\n`
             }
+
+            const managedNames = new Set(enabledPacks.map(pack => pack.toLowerCase()))
+            // Older builds wrote the same pack without its .zip extension.
+            managedNames.add('file/newaeldoria')
+
+            updateList('resourcePacks', (packs) => {
+                const preserved = packs.filter(pack => !managedNames.has(String(pack).toLowerCase()))
+                return preserved.concat(enabledPacks)
+            }, ['vanilla'])
+
+            // Preserve Minecraft's accepted-incompatibility flags while fixing
+            // the old extensionless identifier there as well.
+            updateList('incompatibleResourcePacks', (packs) => {
+                return packs.map(pack => String(pack).toLowerCase() === 'file/newaeldoria'
+                    ? 'file/NEWAELDORIA.zip'
+                    : pack)
+            }, [])
+
+            fs.writeFileSync(optionsPath, options, 'utf8')
         }
 
-        logger.info(`Synced ${synced} launcher-managed resource packs to ${resourcePacksDir}`)
+        logger.info(`Synced and enabled ${synced} launcher-managed resource packs in ${resourcePacksDir}`)
     }
 
     /**
