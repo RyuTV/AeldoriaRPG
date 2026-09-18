@@ -72,6 +72,40 @@ async function showMainUI(data){
         document.body.style.backgroundImage = `url('assets/images/backgrounds/${document.body.getAttribute('bkid')}.jpg')`
         $('#main').show()
 
+        // Rotate Aeldoria backgrounds after preloading them to prevent blank flashes.
+        const backgroundIds = [0, 1, 2]
+        const backgroundLore = {
+            0: ['AELDORIA', 'EL MUNDO DE LOS VIAJEROS'],
+            1: ['BOSQUE DE ELARION', 'DONDE LOS SECRETOS DESPIERTAN'],
+            2: ['BELMORA', 'LA CIUDAD DE LOS VIAJEROS']
+        }
+        const updateBackgroundLore = (backgroundId) => {
+            const lore = backgroundLore[backgroundId] || backgroundLore[0]
+            document.getElementById('realmLoreName').textContent = lore[0]
+            document.getElementById('realmLoreLine').textContent = lore[1]
+        }
+        let currentBackground = Number(document.body.getAttribute('bkid')) || 0
+        if(!backgroundIds.includes(currentBackground)){
+            currentBackground = 0
+            document.body.setAttribute('bkid', '0')
+            document.body.style.backgroundImage = "url('assets/images/backgrounds/0.jpg')"
+        }
+        updateBackgroundLore(currentBackground)
+        setInterval(() => {
+            let next = backgroundIds[Math.floor(Math.random() * backgroundIds.length)]
+            if(next === currentBackground){
+                next = backgroundIds[(backgroundIds.indexOf(next) + 1) % backgroundIds.length]
+            }
+            const preload = new Image()
+            preload.onload = () => {
+                currentBackground = next
+                document.body.setAttribute('bkid', String(next))
+                document.body.style.backgroundImage = `url('assets/images/backgrounds/${next}.jpg')`
+                updateBackgroundLore(next)
+            }
+            preload.src = `assets/images/backgrounds/${next}.jpg`
+        }, 45000)
+
         const isLoggedIn = Object.keys(ConfigManager.getAuthAccounts()).length > 0
 
         // If this is enabled in a development environment we'll get ratelimited.

@@ -39,6 +39,10 @@ const launch_progress_label   = document.getElementById('launch_progress_label')
 const launch_details_text     = document.getElementById('launch_details_text')
 const server_selection_button = document.getElementById('server_selection_button')
 const user_text               = document.getElementById('user_text')
+const repair_button           = document.getElementById('repair_button')
+const open_folder_button      = document.getElementById('open_folder_button')
+const launch_progress_stage   = document.getElementById('launch_progress_stage')
+const travelerLastJourney     = document.getElementById('travelerLastJourney')
 
 const loggerLanding = LoggerUtil.getLogger('Landing')
 
@@ -55,7 +59,8 @@ function toggleLaunchArea(loading){
         launch_content.style.display = 'none'
     } else {
         launch_details.style.display = 'none'
-        launch_content.style.display = 'inline-flex'
+        // Clear the temporary inline value so the RPG CSS grid is restored.
+        launch_content.style.display = ''
     }
 }
 
@@ -66,6 +71,32 @@ function toggleLaunchArea(loading){
  */
 function setLaunchDetails(details){
     launch_details_text.innerHTML = details
+}
+
+function setLaunchStage(stage){
+    launch_progress_stage.innerHTML = stage
+}
+
+function playPortalChime(){
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)()
+        const gain = audioContext.createGain()
+        gain.gain.setValueAtTime(0.0001, audioContext.currentTime)
+        gain.gain.exponentialRampToValueAtTime(0.11, audioContext.currentTime + 0.02)
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.55)
+        gain.connect(audioContext.destination)
+        ;[392, 587.33].forEach((frequency, index) => {
+            const oscillator = audioContext.createOscillator()
+            oscillator.type = 'sine'
+            oscillator.frequency.value = frequency
+            oscillator.connect(gain)
+            oscillator.start(audioContext.currentTime + (index * 0.08))
+            oscillator.stop(audioContext.currentTime + 0.58)
+        })
+        setTimeout(() => audioContext.close(), 700)
+    } catch(err) {
+        loggerLanding.debug('Unable to play portal chime.', err)
+    }
 }
 
 /**
@@ -101,6 +132,8 @@ function setLaunchEnabled(val){
 // Bind launch button
 document.getElementById('launch_button').addEventListener('click', async e => {
     loggerLanding.info('Launching game..')
+    playPortalChime()
+    setLaunchStage('ABRIENDO EL PORTAL')
     try {
         const server = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer())
         const jExe = ConfigManager.getJavaExecutable(ConfigManager.getSelectedServer())
@@ -153,6 +186,12 @@ function updateSelectedAccount(authUser){
         }
     }
     user_text.innerHTML = username
+    const lastPlayed = Number(localStorage.getItem('aeldoriaLastPlayedAt'))
+    const totalMinutes = Math.floor(Number(localStorage.getItem('aeldoriaPlaytimeMs') || 0) / 60000)
+    const lastLabel = lastPlayed > 0
+        ? `Último viaje: ${new Date(lastPlayed).toLocaleDateString('es-ES')} · ${totalMinutes} min`
+        : 'Primera expedición preparada'
+    travelerLastJourney.innerHTML = lastLabel
 }
 updateSelectedAccount(ConfigManager.getSelectedAccount())
 
@@ -239,14 +278,16 @@ const refreshServerStatus = async (fade = false) => {
     loggerLanding.info('Refreshing Server Status')
     const serv = (await DistroAPI.getDistribution()).getServerById(ConfigManager.getSelectedServer())
 
-    let pLabel = Lang.queryJS('landing.serverStatus.server')
-    let pVal = Lang.queryJS('landing.serverStatus.offline')
+    let stateText = Lang.queryJS('landing.serverStatus.offline')
+    let stateColor = '#e35d6a'
+    let pVal = '0'
 
     try {
 
         const servStat = await getServerStatus(47, serv.hostname, serv.port)
         console.log(servStat)
-        pLabel = Lang.queryJS('landing.serverStatus.players')
+        stateText = Lang.queryJS('landing.serverStatus.online')
+        stateColor = '#75d06f'
         pVal = servStat.players.online + '/' + servStat.players.max
 
     } catch (err) {
@@ -255,12 +296,14 @@ const refreshServerStatus = async (fade = false) => {
     }
     if(fade){
         $('#server_status_wrapper').fadeOut(250, () => {
-            document.getElementById('landingPlayerLabel').innerHTML = pLabel
+            document.getElementById('aeldoria_status_text').innerHTML = stateText
+            document.getElementById('aeldoria_status_icon').style.color = stateColor
             document.getElementById('player_count').innerHTML = pVal
             $('#server_status_wrapper').fadeIn(500)
         })
     } else {
-        document.getElementById('landingPlayerLabel').innerHTML = pLabel
+        document.getElementById('aeldoria_status_text').innerHTML = stateText
+        document.getElementById('aeldoria_status_icon').style.color = stateColor
         document.getElementById('player_count').innerHTML = pVal
     }
     
@@ -273,6 +316,43 @@ refreshMojangStatuses()
 let mojangStatusListener = setInterval(() => refreshMojangStatuses(true), 60*60*1000)
 // Set refresh rate to once every 5 minutes.
 let serverStatusListener = setInterval(() => refreshServerStatus(true), 300000)
+
+async function repairInstallation(){
+    repair_button.disabled = true
+    setLaunchStage('VERIFICANDO ARCHIVOS')
+    setLaunchDetails('Comprobando la instalación de Aeldoria...')
+    try {
+        await dlAsync(false)
+        setLaunchStage('INSTALACIÓN LISTA')
+        setLaunchDetails('Instalación reparada correctamente.')
+    } finally {
+        repair_button.disabled = false
+        setTimeout(() => toggleLaunchArea(false), 1200)
+    }
+}
+
+repair_button.onclick = () => {
+    setOverlayContent(
+        'Reparar instalación',
+        'Se comprobarán Forge, mods, configuraciones y el resource pack. Los archivos dañados o ausentes se descargarán de nuevo.',
+        'INICIAR REPARACIÓN',
+        'CANCELAR'
+    )
+    setOverlayHandler(() => {
+        toggleOverlay(false)
+        repairInstallation()
+    })
+    setDismissHandler(() => toggleOverlay(false))
+    toggleOverlay(true, true)
+}
+
+open_folder_button.onclick = () => {
+    const serverId = ConfigManager.getSelectedServer()
+    const instancePath = serverId == null
+        ? ConfigManager.getInstanceDirectory()
+        : path.join(ConfigManager.getInstanceDirectory(), serverId)
+    shell.openPath(instancePath)
+}
 
 /**
  * Shows an error overlay, toggles off the launch area.
@@ -452,6 +532,7 @@ async function dlAsync(login = true) {
 
     const loggerLaunchSuite = LoggerUtil.getLogger('LaunchSuite')
 
+    setLaunchStage('CONECTANDO CON AELDORIA')
     setLaunchDetails(Lang.queryJS('landing.dlAsync.loadingServerInfo'))
 
     let distro
@@ -500,6 +581,7 @@ async function dlAsync(login = true) {
     })
 
     loggerLaunchSuite.info('Validating files.')
+    setLaunchStage('VERIFICANDO LA INSTALACIÓN')
     setLaunchDetails(Lang.queryJS('landing.dlAsync.validatingFileIntegrity'))
     let invalidFileCount = 0
     try {
@@ -516,11 +598,13 @@ async function dlAsync(login = true) {
 
     if(invalidFileCount > 0) {
         loggerLaunchSuite.info('Downloading files.')
-        setLaunchDetails(Lang.queryJS('landing.dlAsync.downloadingFiles'))
+        setLaunchStage(`${invalidFileCount} ARCHIVOS PENDIENTES`)
+        setLaunchDetails(`${Lang.queryJS('landing.dlAsync.downloadingFiles')} (${invalidFileCount})`)
         setLaunchPercentage(0)
         try {
             await fullRepairModule.download(percent => {
                 setDownloadPercentage(percent)
+                setLaunchDetails(`${Lang.queryJS('landing.dlAsync.downloadingFiles')} (${invalidFileCount}) · ${Math.round(percent)}%`)
             })
             setDownloadPercentage(100)
         } catch(err) {
@@ -530,6 +614,8 @@ async function dlAsync(login = true) {
         }
     } else {
         loggerLaunchSuite.info('No invalid files, skipping download.')
+        setLaunchStage('INSTALACIÓN COMPLETA')
+        setLaunchDetails(Lang.queryJS('landing.dlAsync.installationReady'))
     }
 
     // Remove download bar.
@@ -537,6 +623,7 @@ async function dlAsync(login = true) {
 
     fullRepairModule.destroyReceiver()
 
+    setLaunchStage('PREPARANDO FORGE 47.4.16')
     setLaunchDetails(Lang.queryJS('landing.dlAsync.preparingToLaunch'))
 
     const mojangIndexProcessor = new MojangIndexProcessor(
@@ -606,13 +693,23 @@ async function dlAsync(login = true) {
 
         try {
             // Build Minecraft process.
+            const journeyStartedAt = Date.now()
             proc = pb.build()
+
+            proc.on('close', () => {
+                const journeyDuration = Math.max(0, Date.now() - journeyStartedAt)
+                const previousDuration = Number(localStorage.getItem('aeldoriaPlaytimeMs') || 0)
+                localStorage.setItem('aeldoriaPlaytimeMs', String(previousDuration + journeyDuration))
+                localStorage.setItem('aeldoriaLastPlayedAt', String(Date.now()))
+                updateSelectedAccount(ConfigManager.getSelectedAccount())
+            })
 
             // Bind listeners to stdout.
             proc.stdout.on('data', tempListener)
             proc.stderr.on('data', gameErrorListener)
 
             setLaunchDetails(Lang.queryJS('landing.dlAsync.doneEnjoyServer'))
+            setLaunchStage('PORTAL ABIERTO')
 
             // Init Discord Hook
             if(distro.rawDistribution.discord != null && serv.rawServer.discord != null){
@@ -958,10 +1055,34 @@ function displayArticle(articleObject, index){
  */
 async function loadNews(){
 
+    const officialArticle = {
+        link: 'https://discord.gg/E2VFYPeA2W',
+        title: '⚔ AELDORIA RPG — NUEVA ERA',
+        date: '18 de septiembre de 2026',
+        author: 'Equipo de Aeldoria',
+        comments: 'Discord oficial',
+        commentsLink: 'https://discord.gg/E2VFYPeA2W',
+        content: `
+            <article class="aeldoriaNewsArticle">
+                <div class="aeldoriaNewsHero">
+                    <span class="aeldoriaNewsEyebrow">CRÓNICAS DE AELDORIA</span>
+                    <h1>El mundo de Aeldoria sigue creciendo.</h1>
+                    <p>Una nueva etapa comienza para todos los Viajeros. Nuevos sistemas, historias y desafíos están tomando forma.</p>
+                </div>
+                <section><h2>🧬 Razas y Linajes</h2><p>Elige entre Humanos, Elfos, Enanos, Orcos, Elfos Oscuros, Goblins, Semihumanos y No Muertos. Cada linaje cuenta con su propia identidad, rasgos y características.</p></section>
+                <section><h2>✨ Nuevas Habilidades</h2><p>Progresa con tu clase y desbloquea nuevas habilidades a medida que aumenta tu nivel. Construye tu propio estilo de combate.</p></section>
+                <section><h2>📜 Misiones y Encargos</h2><p>Nuevas historias, personajes, recompensas y tablones de encargos repartidos por el mundo esperan ser descubiertos.</p></section>
+                <section><h2>🐺 Sistema de Compañeros</h2><p>Encuentra criaturas, crea vínculos con ellas e invócalas para que te acompañen durante tu aventura.</p></section>
+                <section><h2>🗺️ Aeldoria continúa expandiéndose</h2><p>Nuevas zonas, enemigos, secretos y Guardianes esperan a los Viajeros en cada territorio.</p></section>
+                <section><h2>🚀 Launcher Oficial</h2><p>Aeldoria estrena launcher propio con instalación, reparación y actualizaciones automatizadas. Seguiremos añadiendo nuevas funciones y mejoras.</p></section>
+                <blockquote>Esto no ha hecho más que empezar, Viajero.</blockquote>
+            </article>`
+    }
+
     const distroData = await DistroAPI.getDistribution()
     if(!distroData.rawDistribution.rss) {
         loggerLanding.debug('No RSS feed provided.')
-        return null
+        return { articles: [officialArticle] }
     }
 
     const promise = new Promise((resolve, reject) => {
@@ -1010,15 +1131,12 @@ async function loadNews(){
                         }
                     )
                 }
-                resolve({
-                    articles
-                })
+                resolve({ articles: [officialArticle].concat(articles) })
             },
             timeout: 2500
         }).catch(err => {
-            resolve({
-                articles: null
-            })
+            loggerLanding.warn('RSS news unavailable; using the built-in Aeldoria bulletin.')
+            resolve({ articles: [officialArticle] })
         })
     })
 
