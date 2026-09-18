@@ -4229,6 +4229,7 @@ input:checked + .toggleSwitchSlider:before {
 .settingsSwitchServerButton,
 .settingsAddAuthAccount {
     min-height: 42px;
+    box-sizing: border-box;
     padding: 0 22px;
     border: 1px solid rgba(106, 196, 255, 0.75);
     border-radius: 8px;
@@ -4275,7 +4276,8 @@ input:checked + .toggleSwitchSlider:before {
     grid-area: realm;
     justify-self: start;
     min-height: 29px;
-    max-width: 58%;
+    width: 155px;
+    max-width: 155px;
     padding: 0 12px;
     border-color: rgba(111, 199, 255, 0.32);
     background: rgba(10, 39, 68, 0.58);
@@ -4648,6 +4650,20 @@ input:checked + .toggleSwitchSlider:before {
     #launch_content {
         grid-template-columns: 132px minmax(195px, 225px);
         padding: 11px 13px 13px;
+    }
+
+    #launch_content::before {
+        right: 14px;
+        top: 14px;
+        max-width: 190px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #server_selection_button {
+        width: 128px;
+        max-width: 128px;
     }
 
     #launch_button {

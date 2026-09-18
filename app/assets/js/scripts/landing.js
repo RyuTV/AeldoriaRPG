@@ -59,7 +59,8 @@ function toggleLaunchArea(loading){
         launch_content.style.display = 'none'
     } else {
         launch_details.style.display = 'none'
-        launch_content.style.display = 'inline-flex'
+        // Clear the temporary inline value so the RPG CSS grid is restored.
+        launch_content.style.display = ''
     }
 }
 
