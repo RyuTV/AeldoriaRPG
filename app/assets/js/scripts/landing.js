@@ -1172,7 +1172,15 @@ document.querySelectorAll('[data-aeldoria-nav]').forEach(button => {
                 break
             case 'news':
                 aeldoriaOpenNews()
-                aeldoriaSetSidebarActive('news')
+                aeldoriaSetSidebarActive('guide')
+                break
+            case 'guide':
+                aeldoriaOpenNews()
+                aeldoriaSetSidebarActive('guide')
+                break
+            case 'gallery':
+                aeldoriaOpenNews()
+                aeldoriaSetSidebarActive('gallery')
                 break
             case 'modpack':
                 open_folder_button?.click()
@@ -1189,18 +1197,18 @@ document.querySelectorAll('[data-aeldoria-nav]').forEach(button => {
 
 document.getElementById('aeldoriaViewAllNews')?.addEventListener('click', () => {
     aeldoriaOpenNews()
-    aeldoriaSetSidebarActive('news')
+    aeldoriaSetSidebarActive('guide')
 })
 
 document.getElementById('aeldoriaFeaturedNews')?.addEventListener('click', () => {
     aeldoriaOpenNews()
-    aeldoriaSetSidebarActive('news')
+    aeldoriaSetSidebarActive('guide')
 })
 
 document.querySelectorAll('.aeldoriaNewsShortcut').forEach(button => {
     button.addEventListener('click', () => {
         aeldoriaOpenNews()
-        aeldoriaSetSidebarActive('news')
+        aeldoriaSetSidebarActive('guide')
     })
 })
 
@@ -1214,3 +1222,8 @@ document.addEventListener('keydown', event => {
     }
 })
 
+
+// ===== AELDORIA REFERENCE MATCH V3 =====
+document.getElementById('settings_quick_button')?.addEventListener('click', () => {
+    document.getElementById('settingsMediaButton')?.click()
+})

@@ -5369,3 +5369,759 @@ input:checked + .toggleSwitchSlider:before {
     }
 }
 
+
+/* ===== AELDORIA REFERENCE MATCH V3 ===== */
+
+#realmLore,
+#aeldoriaBrandText,
+#image_seal_container {
+    display: none !important;
+}
+
+#landingContainer {
+    overflow: hidden;
+}
+
+/* LEFT RPG NAVIGATION */
+#aeldoriaSidebar {
+    width: 96px !important;
+    padding: 54px 0 16px !important;
+    border-right: 1px solid rgba(208, 176, 88, .28) !important;
+    background: linear-gradient(180deg, rgba(2,8,16,.92), rgba(2,12,23,.86) 72%, rgba(1,6,12,.97)) !important;
+    box-shadow: 12px 0 35px rgba(0,0,0,.28) !important;
+}
+
+.aeldoriaNavItem {
+    height: 80px !important;
+    flex-basis: 80px !important;
+    gap: 7px !important;
+    color: rgba(219,225,226,.72) !important;
+}
+
+.aeldoriaNavItem svg {
+    width: 29px !important;
+    height: 29px !important;
+}
+
+.aeldoriaNavItem span {
+    font-size: 9px !important;
+    letter-spacing: 1.15px !important;
+}
+
+.aeldoriaNavItem::before {
+    top: 9px !important;
+    bottom: 9px !important;
+    width: 3px !important;
+}
+
+.aeldoriaNavItem:hover,
+.aeldoriaNavItem:focus,
+.aeldoriaNavItem.is-active {
+    color: #f0d38a !important;
+    background: linear-gradient(90deg, rgba(216,177,72,.20), rgba(216,177,72,.04), transparent) !important;
+}
+
+.aeldoriaSidebarFoot {
+    gap: 3px !important;
+}
+
+.aeldoriaSidebarFoot img {
+    width: 39px;
+    height: 39px;
+    object-fit: contain;
+    opacity: .76;
+    filter: drop-shadow(0 0 8px rgba(95,174,235,.28));
+}
+
+.aeldoriaSidebarFoot b {
+    color: rgba(213,225,233,.70);
+    font-size: 7px !important;
+}
+
+.aeldoriaSidebarFoot span {
+    color: rgba(213,225,233,.54);
+    font-size: 7px !important;
+}
+
+/* TOP-RIGHT TRAVELER CARD + GEAR */
+#landingContainer > #upper > #right {
+    position: absolute !important;
+    z-index: 45 !important;
+    top: 20px !important;
+    right: 22px !important;
+    width: 390px !important;
+    height: 70px !important;
+}
+
+#rightContainer {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 70px !important;
+    display: block !important;
+    transform: none !important;
+}
+
+#user_content {
+    width: 336px !important;
+    height: 70px !important;
+    justify-content: flex-start !important;
+    padding: 9px 34px 9px 72px !important;
+    border: 1px solid rgba(100,168,220,.34) !important;
+    border-radius: 7px !important;
+    background: linear-gradient(90deg, rgba(2,12,24,.88), rgba(4,24,42,.78)) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.04) !important;
+}
+
+#user_content::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 31px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #52df76;
+    box-shadow: 0 0 10px #52df76;
+}
+
+#avatarContainer {
+    position: absolute !important;
+    left: 10px !important;
+    top: 8px !important;
+    width: 52px !important;
+    height: 52px !important;
+    border-color: rgba(219,190,103,.72) !important;
+}
+
+#travelerIdentity {
+    position: static !important;
+    width: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+    align-items: flex-start !important;
+}
+
+#travelerIdentityLabel {
+    font-size: 7px !important;
+    color: #e7c974 !important;
+}
+
+#travelerIdentity #user_text {
+    position: static !important;
+    font-size: 14px !important;
+    text-align: left !important;
+}
+
+#travelerLastJourney {
+    font-size: 8px !important;
+    text-align: left !important;
+}
+
+#mediaContent {
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 44px !important;
+    height: 70px !important;
+    margin: 0 !important;
+}
+
+#internalMedia {
+    display: block !important;
+}
+
+#externalMedia,
+#mediaContent > .mediaDivider {
+    display: none !important;
+}
+
+#settingsMediaContainer {
+    width: 44px !important;
+    height: 44px !important;
+    margin-top: 13px !important;
+}
+
+#settingsMediaButton {
+    width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid rgba(100,168,220,.25) !important;
+    border-radius: 6px !important;
+    background: rgba(2,15,28,.78) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,.30) !important;
+}
+
+#settingsMediaButton .mediaSVG {
+    width: 22px !important;
+    height: 22px !important;
+    fill: #d8e3ea !important;
+}
+
+/* RIGHT NEWS PANEL */
+#aeldoriaHomeNews {
+    top: 108px !important;
+    right: 22px !important;
+    bottom: 188px !important;
+    width: 390px !important;
+    height: auto !important;
+    min-height: 420px !important;
+    border: 1px solid rgba(102,169,218,.30) !important;
+    border-radius: 5px !important;
+    background: linear-gradient(180deg, rgba(2,13,25,.91), rgba(3,18,32,.88)) !important;
+    box-shadow: 0 20px 46px rgba(0,0,0,.42), inset 0 0 0 1px rgba(225,190,95,.05) !important;
+}
+
+.aeldoriaHomeNewsHead {
+    min-height: 50px !important;
+    padding: 0 17px !important;
+    border-bottom: 1px solid rgba(97,159,205,.22) !important;
+}
+
+.aeldoriaHomeNewsHead > span {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 18px !important;
+    color: #e8c77a !important;
+    letter-spacing: 1.8px !important;
+}
+
+#aeldoriaViewAllNews {
+    color: #6fc9ff !important;
+    font-size: 8px !important;
+}
+
+.aeldoriaFeaturedNews {
+    position: relative !important;
+    padding: 10px 10px 13px !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(97,159,205,.20) !important;
+}
+
+.aeldoriaFeaturedNews img {
+    height: 180px !important;
+    border: 1px solid rgba(123,184,226,.22);
+    border-radius: 4px;
+    object-fit: cover !important;
+    filter: saturate(.92) contrast(1.06) brightness(.72) !important;
+}
+
+.aeldoriaFeaturedNews::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    height: 180px;
+    border-radius: 4px;
+    background: linear-gradient(to top, rgba(0,7,14,.72), transparent 58%);
+    pointer-events: none;
+}
+
+.aeldoriaNewsTag {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    top: 154px;
+    padding: 3px 7px;
+    border: 1px solid rgba(221,181,72,.58);
+    color: #efd17b;
+    background: rgba(12,13,12,.74);
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: .8px;
+}
+
+.aeldoriaFeaturedNews strong {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    right: 18px;
+    top: 176px;
+    margin: 0 !important;
+    color: #fff !important;
+    font-family: 'Avenir Medium' !important;
+    font-size: 15px !important;
+    letter-spacing: .4px !important;
+}
+
+.aeldoriaFeaturedNews em {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    right: 18px;
+    top: 198px;
+    margin: 0 !important;
+    color: rgba(225,233,239,.86) !important;
+    font-size: 9px !important;
+}
+
+.aeldoriaNewsDots {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    border-bottom: 1px solid rgba(97,159,205,.18);
+}
+
+.aeldoriaNewsDots i {
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(213,226,235,.45);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.aeldoriaNewsDots i.active {
+    border-color: #e2c570;
+    background: #e2c570;
+    box-shadow: 0 0 9px rgba(226,197,112,.72);
+}
+
+.aeldoriaNewsShortcuts {
+    flex: 1 1 auto !important;
+    display: grid !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+}
+
+.aeldoriaNewsShortcut {
+    display: grid !important;
+    grid-template-columns: 43px 1fr auto !important;
+    gap: 10px !important;
+    align-items: center !important;
+    padding: 7px 13px !important;
+    border-bottom: 1px solid rgba(97,159,205,.14) !important;
+}
+
+.aeldoriaNewsShortcut img {
+    width: 43px;
+    height: 36px;
+    object-fit: cover;
+    border: 1px solid rgba(123,184,226,.18);
+}
+
+.aeldoriaNewsShortcut > span {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.aeldoriaNewsShortcut b {
+    font-size: 9px !important;
+    color: #e7eef3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+}
+
+.aeldoriaNewsShortcut small {
+    margin-top: 2px;
+    color: rgba(198,213,223,.61);
+    font-size: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+}
+
+.aeldoriaNewsShortcut time {
+    color: rgba(178,204,222,.68);
+    font-size: 7px;
+}
+
+/* BOTTOM HUD */
+#landingContainer > #lower {
+    left: 96px !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: auto !important;
+    height: 166px !important;
+    display: grid !important;
+    grid-template-columns: minmax(300px, 365px) minmax(420px, 1fr) 390px !important;
+    align-items: end !important;
+    gap: 18px !important;
+    padding: 0 22px 28px 24px !important;
+    background: linear-gradient(to top, rgba(0,6,13,.96), rgba(1,9,18,.62) 56%, transparent) !important;
+}
+
+#landingContainer > #lower::after {
+    left: 24px !important;
+    right: 22px !important;
+    bottom: 18px !important;
+}
+
+#landingContainer > #lower > #left,
+#landingContainer > #lower > #center,
+#landingContainer > #lower > #right {
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+}
+
+#landingContainer > #lower > #left {
+    justify-content: flex-start !important;
+}
+
+#landingContainer > #lower > #center {
+    justify-content: flex-end !important;
+}
+
+#landingContainer > #lower > #right {
+    justify-content: flex-end !important;
+}
+
+#landingContainer > #lower > #left #content,
+#landingContainer > #lower > #center #content {
+    position: static !important;
+    width: 100% !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+#server_status_wrapper {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    border-radius: 6px !important;
+    border-color: rgba(89,169,224,.30) !important;
+    background: linear-gradient(135deg, rgba(3,18,34,.90), rgba(7,33,57,.76)) !important;
+}
+
+.aeldoriaStatusRow {
+    min-height: 18px !important;
+}
+
+#aeldoria_status_label,
+#landingPlayerLabel {
+    font-size: 9px !important;
+}
+
+#aeldoria_status_text,
+#player_count {
+    font-size: 10px !important;
+}
+
+#mojangStatusWrapper {
+    margin-top: 7px;
+    padding-left: 4px !important;
+    font-size: 8px !important;
+}
+
+#aeldoriaQuickActions {
+    width: min(510px, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(118px, 1fr));
+    gap: 10px;
+}
+
+#aeldoriaQuickActions button {
+    min-height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 12px;
+    border: 1px solid rgba(95,166,219,.30);
+    border-radius: 6px;
+    color: #dfe9ef;
+    background: linear-gradient(180deg, rgba(4,21,38,.93), rgba(3,15,29,.93));
+    box-shadow: 0 8px 20px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.035);
+    cursor: pointer;
+    font-family: 'Avenir Medium';
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+
+#aeldoriaQuickActions button:hover,
+#aeldoriaQuickActions button:focus {
+    transform: translateY(-2px);
+    border-color: rgba(228,194,100,.66);
+    box-shadow: 0 10px 24px rgba(0,0,0,.34), 0 0 15px rgba(219,181,77,.12);
+}
+
+#aeldoriaQuickActions svg {
+    width: 24px;
+    height: 24px;
+    fill: #d7e4ec;
+    opacity: .92;
+}
+
+#aeldoriaQuickActions span {
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1.45;
+    letter-spacing: .8px;
+    text-align: left;
+}
+
+#newsButton {
+    display: none !important;
+}
+
+#landingContainer > #lower > #right .bot_wrapper,
+#launch_content {
+    width: 390px !important;
+}
+
+#launch_content {
+    position: static !important;
+    display: block !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#launch_content::before {
+    display: none !important;
+}
+
+#server_selection_button {
+    display: none !important;
+}
+
+#launch_button {
+    width: 100% !important;
+    min-height: 91px !important;
+    border-radius: 5px !important;
+    border: 1px solid #c9a64e !important;
+    color: #fff5d1 !important;
+    background:
+        linear-gradient(180deg, rgba(156,124,65,.89), rgba(91,67,30,.95)),
+        rgba(107,80,35,.96) !important;
+    box-shadow:
+        0 0 0 7px rgba(3,16,28,.88),
+        0 0 0 8px rgba(202,166,78,.25),
+        0 10px 30px rgba(0,0,0,.42),
+        inset 0 1px 0 rgba(255,239,184,.30) !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 34px !important;
+    letter-spacing: 3.2px !important;
+    text-shadow: 0 2px 7px rgba(44,27,4,.72) !important;
+}
+
+#launch_button::after {
+    content: 'COMIENZA TU AVENTURA';
+    display: block;
+    margin-top: 5px;
+    color: #e3c776;
+    font-family: 'Avenir Medium';
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+#launch_button:hover,
+#launch_button:focus {
+    border-color: #f1d27d !important;
+    background: linear-gradient(180deg, rgba(180,145,74,.94), rgba(108,79,34,.96)) !important;
+    box-shadow:
+        0 0 0 7px rgba(3,16,28,.88),
+        0 0 0 8px rgba(228,190,91,.36),
+        0 0 30px rgba(218,177,77,.24),
+        inset 0 1px 0 rgba(255,246,207,.34) !important;
+}
+
+#launch_details {
+    width: 390px !important;
+    min-height: 86px;
+}
+
+/* Compact launcher windows */
+@media (max-width: 1250px), (max-height: 720px) {
+    #aeldoriaSidebar {
+        width: 76px !important;
+        padding-top: 38px !important;
+    }
+
+    .aeldoriaNavItem {
+        height: 58px !important;
+        flex-basis: 58px !important;
+        gap: 4px !important;
+    }
+
+    .aeldoriaNavItem svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .aeldoriaNavItem span {
+        font-size: 6px !important;
+    }
+
+    .aeldoriaSidebarFoot img {
+        width: 28px;
+        height: 28px;
+    }
+
+    #landingContainer > #upper > #right {
+        right: 14px !important;
+        top: 12px !important;
+        width: 326px !important;
+        height: 58px !important;
+    }
+
+    #rightContainer {
+        height: 58px !important;
+    }
+
+    #user_content {
+        width: 282px !important;
+        height: 58px !important;
+        padding-left: 60px !important;
+    }
+
+    #avatarContainer {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    #mediaContent {
+        width: 38px !important;
+        height: 58px !important;
+    }
+
+    #settingsMediaContainer,
+    #settingsMediaButton {
+        width: 38px !important;
+        height: 38px !important;
+        margin-top: 10px !important;
+    }
+
+    #aeldoriaHomeNews {
+        top: 82px !important;
+        right: 14px !important;
+        bottom: 154px !important;
+        width: 326px !important;
+        min-height: 300px !important;
+    }
+
+    .aeldoriaHomeNewsHead {
+        min-height: 38px !important;
+    }
+
+    .aeldoriaHomeNewsHead > span {
+        font-size: 14px !important;
+    }
+
+    .aeldoriaFeaturedNews img,
+    .aeldoriaFeaturedNews::after {
+        height: 116px !important;
+    }
+
+    .aeldoriaNewsTag {
+        top: 96px !important;
+    }
+
+    .aeldoriaFeaturedNews strong {
+        top: 117px !important;
+        font-size: 12px !important;
+    }
+
+    .aeldoriaFeaturedNews em {
+        top: 135px !important;
+        font-size: 7px !important;
+    }
+
+    .aeldoriaNewsShortcut {
+        grid-template-columns: 34px 1fr auto !important;
+        gap: 7px !important;
+        padding: 4px 9px !important;
+    }
+
+    .aeldoriaNewsShortcut img {
+        width: 34px;
+        height: 28px;
+    }
+
+    .aeldoriaNewsShortcut b {
+        max-width: 180px;
+        font-size: 7px !important;
+    }
+
+    .aeldoriaNewsShortcut small {
+        max-width: 180px;
+        font-size: 6px;
+    }
+
+    #landingContainer > #lower {
+        left: 76px !important;
+        height: 136px !important;
+        grid-template-columns: minmax(230px, 285px) minmax(310px, 1fr) 310px !important;
+        gap: 12px !important;
+        padding: 0 14px 20px 16px !important;
+    }
+
+    #aeldoriaQuickActions {
+        gap: 7px;
+    }
+
+    #aeldoriaQuickActions button {
+        min-height: 48px;
+        padding: 0 8px;
+        gap: 6px;
+    }
+
+    #aeldoriaQuickActions svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    #aeldoriaQuickActions span {
+        font-size: 6px;
+    }
+
+    #landingContainer > #lower > #right .bot_wrapper,
+    #launch_content,
+    #launch_details {
+        width: 310px !important;
+    }
+
+    #launch_button {
+        min-height: 69px !important;
+        font-size: 27px !important;
+    }
+
+    #launch_button::after {
+        font-size: 6px;
+        letter-spacing: 2.2px;
+    }
+}
+
+@media (max-width: 1030px) {
+    #landingContainer > #lower {
+        grid-template-columns: 230px minmax(260px, 1fr) 270px !important;
+    }
+
+    #aeldoriaQuickActions {
+        grid-template-columns: repeat(3, minmax(78px, 1fr));
+    }
+
+    #landingContainer > #lower > #right .bot_wrapper,
+    #launch_content,
+    #launch_details {
+        width: 270px !important;
+    }
+
+    #launch_button {
+        font-size: 23px !important;
+    }
+
+    #aeldoriaHomeNews {
+        width: 286px !important;
+    }
+
+    #landingContainer > #upper > #right {
+        width: 286px !important;
+    }
+
+    #user_content {
+        width: 244px !important;
+    }
+}
