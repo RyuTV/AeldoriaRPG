@@ -1,4 +1,65 @@
 <div id="landingContainer" style="display: none;">
+    <!-- AELDORIA FINAL HOME UI -->
+    <nav id="aeldoriaSidebar" aria-label="Navegación de Aeldoria">
+        <button type="button" class="aeldoriaNavItem is-active" data-aeldoria-nav="home" title="Inicio">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.6 12 3l9 7.6v9.1a1.3 1.3 0 0 1-1.3 1.3h-5.1v-6.1H9.4V21H4.3A1.3 1.3 0 0 1 3 19.7z"/></svg>
+            <span>INICIO</span>
+        </button>
+        <button type="button" class="aeldoriaNavItem" data-aeldoria-nav="server" title="Servidor">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v6H4zm2 2v2h2V6zm-2 8h16v6H4zm2 2v2h2v-2zm5-10h7v2h-7zm0 10h7v2h-7z"/></svg>
+            <span>SERVIDOR</span>
+        </button>
+        <button type="button" class="aeldoriaNavItem" data-aeldoria-nav="news" title="Novedades">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h13v16H5.7A1.7 1.7 0 0 1 4 18.3zm3 3v2h7V7zm0 4v1.8h7V11zm0 3.8v1.8h5v-1.8zM18.5 7H21v11.2A1.8 1.8 0 0 1 19.2 20h-.7z"/></svg>
+            <span>NOVEDADES</span>
+        </button>
+        <button type="button" class="aeldoriaNavItem" data-aeldoria-nav="modpack" title="Modpack">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4.2v11.6L12 22l-8-4.2V6.2zm0 2.4L7 7l5 2.6L17 7zm-6 4.1v8.1l5 2.6v-8.1zm7 10.7 5-2.6V8.5l-5 2.6z"/></svg>
+            <span>MODPACK</span>
+        </button>
+        <button type="button" class="aeldoriaNavItem" data-aeldoria-nav="settings" title="Ajustes">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10.7 2 2.6 0 .6 2.3c.6.2 1.2.4 1.7.7l2-1.2 1.8 1.8-1.2 2c.3.5.5 1.1.7 1.7l2.3.6v2.6l-2.3.6c-.2.6-.4 1.2-.7 1.7l1.2 2-1.8 1.8-2-1.2c-.5.3-1.1.5-1.7.7l-.6 2.3h-2.6l-.6-2.3c-.6-.2-1.2-.4-1.7-.7l-2 1.2-1.8-1.8 1.2-2c-.3-.5-.5-1.1-.7-1.7l-2.3-.6V9.9l2.3-.6c.2-.6.4-1.2.7-1.7l-1.2-2 1.8-1.8 2 1.2c.5-.3 1.1-.5 1.7-.7zm1.3 6A4 4 0 1 0 12 16a4 4 0 0 0 0-8z"/></svg>
+            <span>AJUSTES</span>
+        </button>
+        <button type="button" class="aeldoriaNavItem" data-aeldoria-nav="discord" title="Discord">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.1 5.5c3.1-1.4 6.7-1.4 9.8 0l1.2 1.6c1.4 2.1 2.2 4.7 2.2 7.4-1.6 1.3-3.2 2-4.8 2.4l-1-1.3c.8-.2 1.5-.6 2.2-1-2.8 1.3-6.6 1.3-9.4 0 .7.4 1.4.8 2.2 1l-1 1.3c-1.6-.4-3.2-1.1-4.8-2.4 0-2.7.8-5.3 2.2-7.4zm1.7 5.2c-.8 0-1.4.7-1.4 1.5s.6 1.5 1.4 1.5 1.4-.7 1.4-1.5-.6-1.5-1.4-1.5zm6.4 0c-.8 0-1.4.7-1.4 1.5s.6 1.5 1.4 1.5 1.4-.7 1.4-1.5-.6-1.5-1.4-1.5z"/></svg>
+            <span>DISCORD</span>
+        </button>
+        <div class="aeldoriaSidebarFoot"><b>AELDORIA RPG</b><span>MC 1.20.1</span></div>
+    </nav>
+
+    <div id="aeldoriaBrandText" aria-hidden="true">
+        <span>AELDORIA</span>
+        <small>RPG</small>
+    </div>
+
+    <section id="aeldoriaHomeNews" aria-label="Novedades de Aeldoria">
+        <div class="aeldoriaHomeNewsHead">
+            <span>NOVEDADES</span>
+            <button type="button" id="aeldoriaViewAllNews">VER TODAS →</button>
+        </div>
+        <button type="button" id="aeldoriaFeaturedNews" class="aeldoriaFeaturedNews">
+            <img src="assets/images/aeldoria-news-map.jpg" alt="Mapa de Aeldoria"/>
+            <span class="aeldoriaNewsEyebrowHome">EL MUNDO DE LOS VIAJEROS</span>
+            <strong>Aeldoria sigue creciendo</strong>
+            <em>Nuevos territorios, historias y aventuras.</em>
+        </button>
+        <div class="aeldoriaNewsShortcuts">
+            <button type="button" class="aeldoriaNewsShortcut">
+                <b>Launcher oficial de Aeldoria RPG</b>
+                <span>Tu aventura empieza aquí.</span>
+            </button>
+            <button type="button" class="aeldoriaNewsShortcut">
+                <b>Razas y Linajes</b>
+                <span>Elige tu origen. Forja tu destino.</span>
+            </button>
+            <button type="button" class="aeldoriaNewsShortcut">
+                <b>Misiones y Encargos</b>
+                <span>Descubre las historias de los Viajeros.</span>
+            </button>
+        </div>
+    </section>
+
     <div id="upper">
         <div id="left">
             <div id="image_seal_container">

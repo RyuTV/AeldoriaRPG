@@ -1142,3 +1142,75 @@ async function loadNews(){
 
     return await promise
 }
+
+// ===== AELDORIA FINAL PORTAL UI =====
+function aeldoriaSetSidebarActive(name){
+    document.querySelectorAll('[data-aeldoria-nav]').forEach(button => {
+        button.classList.toggle('is-active', button.getAttribute('data-aeldoria-nav') === name)
+    })
+}
+
+function aeldoriaOpenNews(){
+    const button = document.getElementById('newsButton')
+    if(button && !newsActive){
+        button.click()
+    }
+}
+
+document.querySelectorAll('[data-aeldoria-nav]').forEach(button => {
+    button.addEventListener('click', () => {
+        const destination = button.getAttribute('data-aeldoria-nav')
+        switch(destination){
+            case 'home':
+                if(newsActive){
+                    document.getElementById('newsButton')?.click()
+                }
+                aeldoriaSetSidebarActive('home')
+                break
+            case 'server':
+                server_selection_button?.click()
+                break
+            case 'news':
+                aeldoriaOpenNews()
+                aeldoriaSetSidebarActive('news')
+                break
+            case 'modpack':
+                open_folder_button?.click()
+                break
+            case 'settings':
+                document.getElementById('settingsMediaButton')?.click()
+                break
+            case 'discord':
+                document.getElementById('discordURL')?.click()
+                break
+        }
+    })
+})
+
+document.getElementById('aeldoriaViewAllNews')?.addEventListener('click', () => {
+    aeldoriaOpenNews()
+    aeldoriaSetSidebarActive('news')
+})
+
+document.getElementById('aeldoriaFeaturedNews')?.addEventListener('click', () => {
+    aeldoriaOpenNews()
+    aeldoriaSetSidebarActive('news')
+})
+
+document.querySelectorAll('.aeldoriaNewsShortcut').forEach(button => {
+    button.addEventListener('click', () => {
+        aeldoriaOpenNews()
+        aeldoriaSetSidebarActive('news')
+    })
+})
+
+document.getElementById('newsButton')?.addEventListener('click', () => {
+    setTimeout(() => aeldoriaSetSidebarActive(newsActive ? 'news' : 'home'), 0)
+})
+
+document.addEventListener('keydown', event => {
+    if(event.key === 'Escape' && newsActive){
+        document.getElementById('newsButton')?.click()
+    }
+})
+
