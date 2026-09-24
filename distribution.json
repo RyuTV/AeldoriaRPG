@@ -1349,17 +1349,6 @@
           }
         },
         {
-          "id": "aeldoria.mods:ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21:1.0.0",
-          "name": "ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21",
-          "type": "ForgeMod",
-          "artifact": {
-            "size": 9250820,
-            "MD5": "da027dcb012d6e38c6aa477924b83b10",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21.jar",
-            "path": "ebwizardry-forge-1.20.1-1.0.0-alpha.1.6.21.jar"
-          }
-        },
-        {
           "id": "aeldoria.mods:eeeabsmobs-1.20.1-0.98.1:1.0.0",
           "name": "eeeabsmobs-1.20.1-0.98.1",
           "type": "ForgeMod",

@@ -6125,3 +6125,90 @@ input:checked + .toggleSwitchSlider:before {
         width: 244px !important;
     }
 }
+
+
+/* ===== AELDORIA 2.2.3 GALLERY ===== */
+#aeldoriaGalleryPanel {
+    position: absolute;
+    z-index: 70;
+    left: 96px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 34px 42px 190px;
+    background: radial-gradient(circle at 34% 34%, rgba(27,92,142,.22), transparent 38%), linear-gradient(90deg, rgba(0,6,12,.92), rgba(0,12,23,.82));
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .2s ease, visibility .2s ease;
+}
+#aeldoriaGalleryPanel.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
+.aeldoriaGalleryShell {
+    width: min(1120px, 100%);
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(105,173,219,.34);
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(3,17,31,.97), rgba(2,11,21,.97));
+    box-shadow: 0 28px 70px rgba(0,0,0,.55), inset 0 0 0 1px rgba(226,194,105,.05);
+}
+.aeldoriaGalleryHeader {
+    min-height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(102,170,218,.22);
+}
+.aeldoriaGalleryEyebrow { display:block; margin-bottom:2px; color:#67c8ff; font-size:8px; font-weight:900; letter-spacing:2.4px; }
+.aeldoriaGalleryHeader h2 { margin:0; color:#ebcb7a; font-family:Georgia,'Times New Roman',serif; font-size:28px; letter-spacing:3px; }
+.aeldoriaGalleryHeader p { margin:4px 0 0; color:rgba(218,229,236,.69); font-size:9px; }
+#aeldoriaGalleryClose {
+    width:44px; height:44px; flex:0 0 44px; border:1px solid rgba(108,175,219,.3); border-radius:6px;
+    color:#dfe9ef; background:rgba(4,22,38,.9); font-size:26px; line-height:1; cursor:pointer;
+}
+#aeldoriaGalleryClose:hover { color:#f2d27a; border-color:rgba(231,195,98,.65); }
+.aeldoriaGalleryBody { min-height:0; display:grid; grid-template-columns:minmax(0,1.7fr) minmax(260px,.7fr); gap:14px; padding:14px; }
+.aeldoriaGalleryHero {
+    position:relative; min-height:390px; overflow:hidden; padding:0; border:1px solid rgba(103,173,221,.22);
+    border-radius:6px; background:#020911;
+}
+.aeldoriaGalleryHero img { width:100%; height:100%; min-height:390px; max-height:570px; object-fit:cover; display:block; }
+#aeldoriaGalleryHeroLabel {
+    position:absolute; left:18px; bottom:16px; padding:6px 10px; border:1px solid rgba(226,191,94,.56);
+    color:#f0d17a; background:rgba(4,10,15,.78); font-size:8px; font-weight:900; letter-spacing:1.7px;
+}
+.aeldoriaGalleryGrid { min-height:0; overflow-y:auto; display:grid; grid-template-columns:1fr; gap:10px; padding-right:3px; }
+.aeldoriaGalleryThumb {
+    display:grid; grid-template-columns:92px 1fr; align-items:center; gap:11px; min-height:78px; padding:7px;
+    border:1px solid rgba(91,153,197,.2); border-radius:5px; color:rgba(220,231,238,.78);
+    background:rgba(4,21,36,.74); text-align:left; cursor:pointer;
+}
+.aeldoriaGalleryThumb:hover,.aeldoriaGalleryThumb.is-active {
+    color:#f0d17a; border-color:rgba(224,190,98,.58); background:linear-gradient(90deg, rgba(119,87,31,.24), rgba(4,24,41,.86));
+}
+.aeldoriaGalleryThumb img { width:92px; height:62px; object-fit:cover; border-radius:3px; }
+.aeldoriaGalleryThumb span { font-size:9px; font-weight:900; letter-spacing:.6px; }
+
+/* Expanded news reader. */
+#newsContainer { left:96px !important; right:0 !important; width:auto !important; }
+#newsContent { width:min(1120px, calc(100% - 84px)) !important; max-width:1120px !important; margin-left:auto !important; margin-right:auto !important; }
+#newsArticleContainer { max-width:none !important; }
+
+@media (max-width:1250px), (max-height:720px) {
+    #aeldoriaGalleryPanel { left:76px; padding:22px 24px 150px; }
+    .aeldoriaGalleryHeader { min-height:72px; padding:12px 16px; }
+    .aeldoriaGalleryHeader h2 { font-size:21px; }
+    .aeldoriaGalleryBody { grid-template-columns:minmax(0,1.55fr) minmax(220px,.65fr); }
+    .aeldoriaGalleryHero,.aeldoriaGalleryHero img { min-height:300px; }
+    .aeldoriaGalleryThumb { grid-template-columns:72px 1fr; min-height:62px; }
+    .aeldoriaGalleryThumb img { width:72px; height:48px; }
+    #newsContainer { left:76px !important; }
+}

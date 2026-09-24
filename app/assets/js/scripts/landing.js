@@ -1151,10 +1151,29 @@ function aeldoriaSetSidebarActive(name){
 }
 
 function aeldoriaOpenNews(){
+    aeldoriaCloseGallery()
     const button = document.getElementById('newsButton')
     if(button && !newsActive){
         button.click()
     }
+}
+
+function aeldoriaOpenGallery(){
+    if(newsActive){
+        document.getElementById('newsButton')?.click()
+    }
+    const panel = document.getElementById('aeldoriaGalleryPanel')
+    if(!panel) return
+    panel.classList.add('is-open')
+    panel.setAttribute('aria-hidden', 'false')
+    aeldoriaSetSidebarActive('gallery')
+}
+
+function aeldoriaCloseGallery(){
+    const panel = document.getElementById('aeldoriaGalleryPanel')
+    if(!panel) return
+    panel.classList.remove('is-open')
+    panel.setAttribute('aria-hidden', 'true')
 }
 
 document.querySelectorAll('[data-aeldoria-nav]').forEach(button => {
@@ -1162,6 +1181,7 @@ document.querySelectorAll('[data-aeldoria-nav]').forEach(button => {
         const destination = button.getAttribute('data-aeldoria-nav')
         switch(destination){
             case 'home':
+                aeldoriaCloseGallery()
                 if(newsActive){
                     document.getElementById('newsButton')?.click()
                 }
@@ -1179,8 +1199,7 @@ document.querySelectorAll('[data-aeldoria-nav]').forEach(button => {
                 aeldoriaSetSidebarActive('guide')
                 break
             case 'gallery':
-                aeldoriaOpenNews()
-                aeldoriaSetSidebarActive('gallery')
+                aeldoriaOpenGallery()
                 break
             case 'modpack':
                 open_folder_button?.click()
@@ -1213,11 +1232,35 @@ document.querySelectorAll('.aeldoriaNewsShortcut').forEach(button => {
 })
 
 document.getElementById('newsButton')?.addEventListener('click', () => {
-    setTimeout(() => aeldoriaSetSidebarActive(newsActive ? 'news' : 'home'), 0)
+    setTimeout(() => aeldoriaSetSidebarActive(newsActive ? 'guide' : 'home'), 0)
+})
+
+document.getElementById('aeldoriaGalleryClose')?.addEventListener('click', () => {
+    aeldoriaCloseGallery()
+    aeldoriaSetSidebarActive('home')
+})
+
+document.querySelectorAll('.aeldoriaGalleryThumb').forEach(button => {
+    button.addEventListener('click', () => {
+        const src = button.getAttribute('data-gallery-src')
+        const label = button.getAttribute('data-gallery-label') || 'AELDORIA'
+        const hero = document.getElementById('aeldoriaGalleryHeroImage')
+        const heroLabel = document.getElementById('aeldoriaGalleryHeroLabel')
+        if(hero && src) hero.src = src
+        if(heroLabel) heroLabel.textContent = label
+        document.querySelectorAll('.aeldoriaGalleryThumb').forEach(item => item.classList.toggle('is-active', item === button))
+    })
 })
 
 document.addEventListener('keydown', event => {
-    if(event.key === 'Escape' && newsActive){
+    if(event.key !== 'Escape') return
+    const gallery = document.getElementById('aeldoriaGalleryPanel')
+    if(gallery?.classList.contains('is-open')){
+        aeldoriaCloseGallery()
+        aeldoriaSetSidebarActive('home')
+        return
+    }
+    if(newsActive){
         document.getElementById('newsButton')?.click()
     }
 })
