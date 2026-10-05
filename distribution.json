@@ -484,8 +484,8 @@
           "name": "aeldoria-rpg-core-0.5.0",
           "type": "ForgeMod",
           "artifact": {
-            "size": 14369478,
-            "MD5": "167d1552cd22ffd6eefabc37b71305e5",
+            "size": 25306962,
+            "MD5": "85b754a6c143f7bc9d2651def75b6397",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aeldoria-rpg-core-0.5.0.jar",
             "path": "aeldoria-rpg-core-0.5.0.jar"
           }
@@ -3461,14 +3461,25 @@
           }
         },
         {
-          "id": "aeldoria.mods:saintsdragons-0.9.2-forge-1.20.1:1.0.0",
-          "name": "saintsdragons-0.9.2+forge-1.20.1",
+          "id": "aeldoria.mods:saintsdragons-0.9.85-forge-1.20.1:1.0.0",
+          "name": "saintsdragons-0.9.85+forge-1.20.1",
           "type": "ForgeMod",
           "artifact": {
-            "size": 24710431,
-            "MD5": "78bf4c2237391f7a6803a2af3ee6ac7d",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/saintsdragons-0.9.2%2Bforge-1.20.1.jar",
-            "path": "saintsdragons-0.9.2+forge-1.20.1.jar"
+            "size": 29434672,
+            "MD5": "136dab8f841cd8822d2bd68bed72e48f",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/saintsdragons-0.9.85%2Bforge-1.20.1.jar",
+            "path": "saintsdragons-0.9.85+forge-1.20.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:the_lost_ones-0.4.0:1.0.0",
+          "name": "the_lost_ones-0.4.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 864479,
+            "MD5": "ac6d8d7792801f1e36b3055e10666b18",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/the_lost_ones-0.4.0.jar",
+            "path": "the_lost_ones-0.4.0.jar"
           }
         },
         {
