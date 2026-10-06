@@ -2872,6 +2872,38 @@ input:checked + .toggleSwitchSlider:before {
     margin-top: 50px;
 }
 
+/* Aeldoria: make the landing controls readable on Full HD and larger screens. */
+@media (min-width: 1500px) and (min-height: 850px) {
+    #image_seal,
+    #image_seal_container {
+        height: 90px;
+        width: 90px;
+    }
+
+    #landingContainer > #lower,
+    #rightContainer {
+        font-size: 1.2em;
+    }
+
+    #launch_button {
+        font-size: 26px;
+    }
+
+    #server_selection_button,
+    #player_count,
+    #landingPlayerLabel,
+    #mojangStatusWrapper,
+    #newsButtonText,
+    #user_text {
+        font-size: 14px;
+    }
+
+    .mediaSVG {
+        width: 18px;
+        height: 18px;
+    }
+}
+
 /* Logo container styles w/ update. */
 #image_seal_container[update]{
     cursor: pointer
@@ -3965,4 +3997,2218 @@ input:checked + .toggleSwitchSlider:before {
 /* Class which is applied when the spinner image is spinning. */
 .rotating {
     animation: rotating 10s linear infinite;
+}
+
+/* Aeldoria RPG controls */
+#realmLore {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 290px;
+    padding: 11px 27px 10px;
+    border-top: 1px solid rgba(224, 194, 112, 0.48);
+    border-bottom: 1px solid rgba(94, 181, 244, 0.3);
+    background: radial-gradient(ellipse, rgba(2, 13, 28, 0.76), transparent 72%);
+    transform: translateX(-50%);
+    text-shadow: 0 3px 10px #000;
+    pointer-events: none;
+}
+
+#realmLoreName {
+    color: #f0d891;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+#realmLoreLine {
+    margin-top: 3px;
+    color: rgba(229, 239, 247, 0.82);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.65px;
+}
+
+#landingContainer > #lower {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 210px;
+    display: grid;
+    grid-template-columns: minmax(320px, 390px) 1fr minmax(470px, 570px);
+    align-items: end;
+    gap: 28px;
+    padding: 0 42px 34px;
+    box-sizing: border-box;
+    background:
+        linear-gradient(to top, rgba(1, 7, 15, 0.96) 0%, rgba(2, 11, 22, 0.76) 48%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+}
+
+#landingContainer > #lower::after {
+    content: '';
+    position: absolute;
+    left: 42px;
+    right: 42px;
+    bottom: 24px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(106, 196, 255, 0.34), rgba(224, 194, 112, 0.52), transparent);
+    box-shadow: 0 0 12px rgba(77, 171, 242, 0.22);
+}
+
+#landingContainer > #lower > #left,
+#landingContainer > #lower > #center,
+#landingContainer > #lower > #right {
+    position: relative;
+    top: auto;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    display: flex;
+    pointer-events: auto;
+}
+
+#landingContainer > #lower > #left {
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+#landingContainer > #lower > #center {
+    justify-content: center;
+}
+
+#landingContainer > #lower > #right {
+    justify-content: flex-end;
+}
+
+#landingContainer > #lower > #left #content,
+#landingContainer > #lower > #center #content,
+#landingContainer > #lower > #right .bot_wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+#landingContainer > #lower > #left #content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: stretch;
+    width: 100%;
+    line-height: normal;
+}
+
+#landingContainer > #lower > #left .bot_divider {
+    display: none;
+}
+
+#launch_content {
+    position: relative;
+    top: auto;
+    display: grid;
+    grid-template-columns: 156px minmax(230px, 270px);
+    grid-template-areas:
+        "realm realm"
+        "repair play";
+    gap: 10px 14px;
+    align-items: center;
+    padding: 14px 16px 16px;
+    border: 1px solid rgba(103, 184, 245, 0.34);
+    border-radius: 13px;
+    background: linear-gradient(135deg, rgba(2, 13, 28, 0.91), rgba(8, 28, 51, 0.78));
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+#launch_content::before {
+    content: 'COMIENZA TU AVENTURA';
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    color: rgba(224, 194, 112, 0.76);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2.1px;
+    pointer-events: none;
+}
+
+#launch_content > .bot_divider {
+    display: none;
+}
+
+#launch_secondary_actions {
+    grid-area: repair;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+#server_status_wrapper {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 7px;
+    padding: 13px 16px;
+    border: 1px solid rgba(105, 190, 255, 0.36);
+    border-radius: 9px;
+    background: linear-gradient(135deg, rgba(3, 15, 31, 0.82), rgba(13, 39, 69, 0.62));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), inset 0 0 16px rgba(72, 158, 230, 0.06);
+}
+
+.aeldoriaStatusRow {
+    display: flex;
+    align-items: center;
+    min-height: 14px;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+#aeldoria_status_icon {
+    color: #e35d6a;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 10px;
+    margin-right: 7px;
+    text-shadow: 0 0 12px currentColor;
+}
+
+#aeldoria_status_text,
+#player_count {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.7px;
+    margin-left: 10px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+}
+
+#aeldoria_status_label,
+#landingPlayerLabel {
+    color: #d9e8f5;
+    letter-spacing: 1.15px;
+}
+
+#aeldoria_status_text {
+    color: #8ee38a;
+}
+
+#landingContainer > #lower > #left {
+    box-sizing: border-box;
+}
+
+#landingContainer > #lower > #left #content {
+    align-items: center;
+}
+
+#mojangStatusWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    gap: 9px;
+    min-height: 25px;
+    padding-left: 5px;
+}
+
+.bot_label,
+#newsButtonText,
+#launch_details_text {
+    font-size: 12px;
+}
+
+#launch_button,
+#repair_button,
+#open_folder_button,
+#server_selection_button,
+#settingsNavDone,
+.settingsSwitchServerButton,
+.settingsAddAuthAccount {
+    min-height: 42px;
+    box-sizing: border-box;
+    padding: 0 22px;
+    border: 1px solid rgba(106, 196, 255, 0.75);
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(12, 37, 68, 0.96), rgba(35, 73, 123, 0.9));
+    box-shadow: 0 0 14px rgba(52, 157, 255, 0.22), inset 0 0 12px rgba(255, 255, 255, 0.05);
+    font-family: 'Avenir Medium';
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+#launch_button {
+    grid-area: play;
+    width: 100%;
+    min-width: 0;
+    min-height: 66px;
+    font-size: 29px;
+    border-color: #d7b96d;
+    background: linear-gradient(135deg, #173b68, #315d98 58%, #76622e);
+    box-shadow: 0 0 22px rgba(52, 157, 255, 0.28), inset 0 0 18px rgba(255, 255, 255, 0.07);
+}
+
+#repair_button {
+    width: 100%;
+    min-width: 0;
+    min-height: 35px;
+    font-size: 12px;
+    background: linear-gradient(135deg, rgba(10, 32, 59, 0.96), rgba(25, 62, 103, 0.9));
+}
+
+#open_folder_button {
+    width: 100%;
+    min-width: 0;
+    min-height: 27px;
+    padding: 0 14px;
+    color: #b9d3e7;
+    border-color: rgba(106, 196, 255, 0.32);
+    background: rgba(4, 20, 37, 0.72);
+    font-size: 10px;
+}
+
+#server_selection_button {
+    grid-area: realm;
+    justify-self: start;
+    min-height: 29px;
+    width: 155px;
+    max-width: 155px;
+    padding: 0 12px;
+    border-color: rgba(111, 199, 255, 0.32);
+    background: rgba(10, 39, 68, 0.58);
+    color: #dcecff;
+    font-size: 11px;
+    line-height: 29px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#launch_button:hover,
+#repair_button:hover,
+#open_folder_button:hover,
+#server_selection_button:hover,
+#settingsNavDone:hover,
+.settingsSwitchServerButton:hover,
+.settingsAddAuthAccount:hover {
+    transform: translateY(-2px);
+    border-color: #f2d88a;
+    box-shadow: 0 0 24px rgba(67, 174, 255, 0.52), 0 0 12px rgba(226, 190, 93, 0.28);
+}
+
+#launch_button:active,
+#repair_button:active,
+#open_folder_button:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+#repair_button:disabled {
+    cursor: progress;
+    filter: grayscale(0.55);
+    opacity: 0.72;
+}
+
+#launch_progress[value] {
+    width: 360px;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+#launch_progress[value]::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+}
+
+#launch_progress[value]::-webkit-progress-value {
+    background: linear-gradient(90deg, #459ee8, #80d8ff 68%, #e0c270);
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(72, 172, 255, 0.8);
+}
+
+#launch_details {
+    position: relative;
+    top: auto;
+    width: 470px;
+    box-sizing: border-box;
+    padding: 16px 18px;
+    border: 1px solid rgba(102, 187, 255, 0.48);
+    border-radius: 10px;
+    background: rgba(3, 13, 27, 0.78);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.32);
+}
+
+#launch_progress_stage {
+    margin-top: 6px;
+    color: #d9bd72;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.65px;
+}
+
+/* Aeldoria traveler identity */
+#travelerIdentity {
+    position: absolute;
+    right: 86px;
+    width: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    padding: 8px 12px;
+    border-right: 1px solid rgba(225, 193, 105, 0.7);
+    background: linear-gradient(90deg, transparent, rgba(2, 13, 28, 0.68));
+}
+
+#travelerIdentityLabel {
+    color: #d9bd72;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+#travelerIdentity #user_text {
+    position: static;
+    min-width: 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: right;
+}
+
+#travelerLastJourney {
+    color: rgba(218, 232, 244, 0.72);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    white-space: nowrap;
+}
+
+/* Named side navigation instead of anonymous glyphs. */
+.mediaContainer {
+    position: relative;
+}
+
+.mediaURL::before {
+    content: attr(data-label);
+    position: absolute;
+    right: 40px;
+    top: 2px;
+    min-width: 88px;
+    padding: 5px 9px;
+    color: #dceeff;
+    border: 1px solid rgba(103, 184, 245, 0.34);
+    border-radius: 5px;
+    background: rgba(2, 13, 28, 0.92);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.35);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 140ms ease, transform 140ms ease, visibility 140ms;
+    pointer-events: none;
+}
+
+.mediaURL:hover::before,
+.mediaURL:focus::before {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* RPG news board */
+#newsContainer {
+    align-items: center;
+    padding: 70px 80px 42px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 70% 30%, rgba(33, 79, 120, 0.18), transparent 52%), rgba(0, 5, 12, 0.84);
+    backdrop-filter: blur(7px);
+}
+
+#newsContent {
+    height: min(760px, 82vh);
+    max-width: 1320px;
+    overflow: hidden;
+    border: 1px solid rgba(112, 194, 255, 0.34);
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(2, 14, 29, 0.96), rgba(10, 30, 53, 0.91));
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+#newsStatusContainer {
+    width: 270px;
+    min-width: 270px;
+    height: auto;
+    padding: 34px 26px;
+    border-right: 1px solid rgba(111, 190, 246, 0.19);
+    background: linear-gradient(180deg, rgba(15, 47, 78, 0.58), rgba(2, 13, 27, 0.7));
+}
+
+#newsStatusContent {
+    align-items: flex-start;
+}
+
+#newsTitleContainer {
+    max-width: 100%;
+}
+
+#newsArticleTitle {
+    color: #f0d891;
+    font-size: 23px;
+    line-height: 1.25;
+    text-align: left;
+}
+
+#newsMetaContainer {
+    align-items: flex-start;
+    margin-top: 18px;
+    gap: 5px;
+}
+
+#newsArticleDateWrapper,
+#newsArticleAuthorWrapper {
+    justify-content: flex-start;
+}
+
+#newsArticleAuthor {
+    background: #1f5a8b;
+}
+
+#newsArticleComments {
+    color: #77c7ff;
+    text-align: left;
+}
+
+#newsArticleContainer {
+    margin: 0;
+    padding: 22px 8px 10px 26px;
+    box-sizing: border-box;
+}
+
+#newsArticleContentScrollable {
+    padding-right: 25px;
+    font-size: 14px;
+}
+
+#newsArticleContentWrapper {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.aeldoriaNewsHero {
+    margin-bottom: 20px;
+    padding: 24px 26px;
+    border: 1px solid rgba(224, 194, 112, 0.3);
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(41, 78, 115, 0.52), rgba(90, 67, 30, 0.34));
+}
+
+.aeldoriaNewsEyebrow {
+    color: #f0cd70;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+}
+
+.aeldoriaNewsHero h1 {
+    margin: 8px 0 6px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.aeldoriaNewsArticle section {
+    margin: 10px 0;
+    padding: 14px 17px;
+    border-left: 2px solid rgba(105, 190, 255, 0.62);
+    border-radius: 0 8px 8px 0;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.aeldoriaNewsArticle h2 {
+    margin: 0 0 5px;
+    color: #dceeff;
+    font-size: 15px;
+}
+
+.aeldoriaNewsArticle p {
+    margin: 0;
+    color: rgba(232, 240, 247, 0.82);
+    line-height: 1.55;
+}
+
+.aeldoriaNewsArticle blockquote {
+    margin: 24px 0;
+    padding: 17px;
+    color: #f0d891;
+    border-top: 1px solid rgba(224, 194, 112, 0.34);
+    border-bottom: 1px solid rgba(224, 194, 112, 0.34);
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+
+#newsButton {
+    min-width: 154px;
+    min-height: 48px;
+    padding: 7px 24px 5px;
+    border: 1px solid rgba(112, 194, 255, 0.32);
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(3, 17, 33, 0.82), rgba(16, 45, 75, 0.7));
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+#newsButtonSVG {
+    height: 8px;
+    margin-bottom: 1px;
+}
+
+#newsButtonText {
+    justify-content: center;
+    line-height: 19px;
+}
+
+#loadCenterImage {
+    width: 250px;
+    filter: drop-shadow(0 0 24px rgba(67, 166, 255, 0.55));
+}
+
+#loadSpinnerImage {
+    width: 390px;
+    filter: drop-shadow(0 0 14px rgba(225, 192, 105, 0.5));
+}
+
+#image_seal,
+#welcomeImageSeal,
+#loginImageSeal,
+#settingsAboutLogo {
+    filter: drop-shadow(0 0 14px rgba(76, 174, 255, 0.52));
+}
+
+#settingsNavDone,
+.settingsSwitchServerButton,
+.settingsAddAuthAccount {
+    font-size: 14px;
+}
+
+@media (min-width: 1500px) and (min-height: 850px) {
+    #launch_button {
+        min-height: 72px;
+        font-size: 33px;
+    }
+
+    #repair_button {
+        min-height: 38px;
+        font-size: 13px;
+    }
+
+    #landingContainer > #lower {
+        transform: none;
+    }
+
+    #rightContainer {
+        transform: scale(1.16);
+        transform-origin: right top;
+    }
+
+    #settingsContainer > #settingsContent,
+    #welcomeContent,
+    #loginContent,
+    #loginOptionsContent {
+        zoom: 1.12;
+    }
+
+    #image_seal,
+    #image_seal_container {
+        height: 104px;
+        width: 104px;
+    }
+}
+
+@media (max-width: 1250px), (max-height: 720px) {
+    #landingContainer > #lower {
+        height: 180px;
+        grid-template-columns: minmax(260px, 330px) 1fr minmax(400px, 470px);
+        gap: 18px;
+        padding: 0 26px 24px;
+    }
+
+    #landingContainer > #lower::after {
+        left: 26px;
+        right: 26px;
+        bottom: 15px;
+    }
+
+    #launch_content {
+        grid-template-columns: 132px minmax(195px, 225px);
+        padding: 11px 13px 13px;
+    }
+
+    #launch_content::before {
+        right: 14px;
+        top: 14px;
+        max-width: 190px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #server_selection_button {
+        width: 128px;
+        max-width: 128px;
+    }
+
+    #launch_button {
+        min-height: 58px;
+        font-size: 25px;
+    }
+
+    #repair_button {
+        min-height: 48px;
+        font-size: 12px;
+    }
+}
+
+/* ===== AELDORIA FINAL PORTAL UI ===== */
+
+/* Sidebar */
+#aeldoriaSidebar {
+    position: absolute;
+    z-index: 80;
+    inset: 0 auto 0 0;
+    width: 78px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 46px 0 12px;
+    border-right: 1px solid rgba(210, 183, 103, 0.24);
+    background:
+        linear-gradient(180deg, rgba(2, 10, 19, 0.94), rgba(2, 13, 25, 0.84) 62%, rgba(1, 7, 14, 0.97));
+    box-shadow: 12px 0 34px rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(8px);
+}
+
+.aeldoriaNavItem {
+    position: relative;
+    height: 69px;
+    flex: 0 0 69px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    color: rgba(212, 226, 237, 0.66);
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Avenir Medium';
+    transition: color 150ms ease, background 150ms ease, transform 150ms ease;
+}
+
+.aeldoriaNavItem svg {
+    width: 21px;
+    height: 21px;
+    fill: currentColor;
+    filter: drop-shadow(0 0 7px transparent);
+    transition: filter 150ms ease, transform 150ms ease;
+}
+
+.aeldoriaNavItem span {
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: 1.15px;
+}
+
+.aeldoriaNavItem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    opacity: 0;
+    background: #e6c66c;
+    box-shadow: 0 0 12px rgba(230, 198, 108, 0.8);
+    transition: opacity 150ms ease;
+}
+
+.aeldoriaNavItem:hover,
+.aeldoriaNavItem:focus,
+.aeldoriaNavItem.is-active {
+    color: #f0d891;
+    background: linear-gradient(90deg, rgba(213, 177, 83, 0.14), transparent);
+}
+
+.aeldoriaNavItem:hover svg,
+.aeldoriaNavItem:focus svg,
+.aeldoriaNavItem.is-active svg {
+    transform: translateY(-1px);
+    filter: drop-shadow(0 0 8px rgba(231, 196, 100, 0.38));
+}
+
+.aeldoriaNavItem.is-active::before {
+    opacity: 1;
+}
+
+.aeldoriaSidebarFoot {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: rgba(208, 222, 233, 0.45);
+    text-align: center;
+    pointer-events: none;
+}
+
+.aeldoriaSidebarFoot b {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+}
+
+.aeldoriaSidebarFoot span {
+    font-size: 6px;
+    letter-spacing: 0.7px;
+}
+
+/* Brand */
+#aeldoriaBrandText {
+    position: absolute;
+    z-index: 18;
+    left: 206px;
+    top: 66px;
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    color: #e5c776;
+    text-shadow: 0 3px 18px #000, 0 0 16px rgba(208, 172, 75, 0.22);
+    pointer-events: none;
+}
+
+#aeldoriaBrandText span {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2.6px;
+}
+
+#aeldoriaBrandText small {
+    padding-left: 9px;
+    border-left: 1px solid rgba(229, 199, 118, 0.46);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+/* Keep the original seal as the crest beside the wordmark. */
+#landingContainer > #upper > #left {
+    width: 15%;
+    padding-left: 78px;
+    box-sizing: border-box;
+}
+
+#image_seal_container {
+    z-index: 19;
+}
+
+/* Traveler card */
+#landingContainer > #upper > #right {
+    position: absolute;
+    z-index: 30;
+    right: 24px;
+    top: 18px;
+    width: 382px;
+    height: 78px;
+}
+
+#rightContainer {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 78px;
+    align-items: stretch;
+    transform: none !important;
+}
+
+#user_content {
+    width: 100%;
+    height: 74px;
+    justify-content: flex-start;
+    padding: 10px 16px 10px 82px;
+    border: 1px solid rgba(112, 188, 239, 0.22);
+    border-radius: 7px;
+    background: linear-gradient(90deg, rgba(3, 14, 28, 0.82), rgba(5, 23, 41, 0.66));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255,255,255,0.04);
+    backdrop-filter: blur(6px);
+}
+
+#avatarContainer {
+    position: absolute;
+    left: 12px;
+    width: 54px;
+    height: 54px;
+    border-color: rgba(226, 195, 109, 0.66);
+    box-shadow: 0 0 16px rgba(53, 145, 214, 0.22);
+}
+
+#travelerIdentity {
+    position: static;
+    width: auto;
+    align-items: flex-start;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+#travelerIdentityLabel {
+    font-size: 7px;
+    letter-spacing: 1.7px;
+}
+
+#travelerIdentity #user_text {
+    position: static;
+    min-width: 0;
+    font-size: 15px;
+    text-align: left;
+}
+
+#travelerLastJourney {
+    font-size: 8px;
+    text-align: left;
+}
+
+#mediaContent {
+    display: none !important;
+}
+
+/* Home news card */
+#aeldoriaHomeNews {
+    position: absolute;
+    z-index: 24;
+    right: 24px;
+    top: 111px;
+    width: 382px;
+    height: min(472px, calc(100% - 315px));
+    min-height: 330px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(108, 185, 238, 0.24);
+    border-radius: 8px;
+    background:
+        linear-gradient(180deg, rgba(3, 15, 29, 0.88), rgba(3, 18, 34, 0.77));
+    box-shadow: 0 18px 52px rgba(0, 0, 0, 0.40), inset 0 1px 0 rgba(255,255,255,0.05);
+    backdrop-filter: blur(7px);
+}
+
+.aeldoriaHomeNewsHead {
+    min-height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid rgba(112, 188, 239, 0.17);
+}
+
+.aeldoriaHomeNewsHead > span {
+    color: #f1d58a;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+}
+
+#aeldoriaViewAllNews {
+    padding: 6px 0;
+    border: 0;
+    color: rgba(204, 225, 240, 0.62);
+    background: transparent;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: color 150ms ease;
+}
+
+#aeldoriaViewAllNews:hover,
+#aeldoriaViewAllNews:focus {
+    color: #f0d891;
+}
+
+.aeldoriaFeaturedNews {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0 12px;
+    border: 0;
+    border-bottom: 1px solid rgba(112, 188, 239, 0.16);
+    color: #fff;
+    background: rgba(255,255,255,0.018);
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.aeldoriaFeaturedNews img {
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(1.04) brightness(0.82);
+    transition: filter 180ms ease, transform 250ms ease;
+}
+
+.aeldoriaFeaturedNews:hover img,
+.aeldoriaFeaturedNews:focus img {
+    filter: saturate(1.04) contrast(1.06) brightness(0.95);
+    transform: scale(1.012);
+}
+
+.aeldoriaNewsEyebrowHome {
+    margin: 11px 15px 4px;
+    color: #d8b963;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: 1.6px;
+}
+
+.aeldoriaFeaturedNews strong {
+    margin: 0 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.aeldoriaFeaturedNews em {
+    margin: 4px 15px 0;
+    color: rgba(218, 230, 239, 0.68);
+    font-size: 9px;
+    font-style: normal;
+}
+
+.aeldoriaNewsShortcuts {
+    min-height: 0;
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.aeldoriaNewsShortcut {
+    min-height: 0;
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 0;
+    border-bottom: 1px solid rgba(112, 188, 239, 0.12);
+    color: #e8f0f6;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: background 150ms ease, padding-left 150ms ease;
+}
+
+.aeldoriaNewsShortcut:last-child {
+    border-bottom: 0;
+}
+
+.aeldoriaNewsShortcut:hover,
+.aeldoriaNewsShortcut:focus {
+    padding-left: 18px;
+    background: linear-gradient(90deg, rgba(58, 129, 181, 0.15), transparent);
+}
+
+.aeldoriaNewsShortcut b {
+    font-size: 10px;
+    letter-spacing: 0.25px;
+}
+
+.aeldoriaNewsShortcut span {
+    margin-top: 2px;
+    color: rgba(207, 221, 231, 0.56);
+    font-size: 8px;
+}
+
+/* Bottom HUD: status / news / launch */
+#landingContainer > #lower {
+    left: 78px;
+    right: 0;
+    width: auto;
+    height: 194px;
+    grid-template-columns: minmax(285px, 360px) 1fr 382px;
+    gap: 24px;
+    padding: 0 24px 25px 26px;
+}
+
+#landingContainer > #lower::after {
+    left: 26px;
+    right: 24px;
+    bottom: 16px;
+}
+
+#landingContainer > #lower > #right .bot_wrapper {
+    width: 382px;
+}
+
+#landingContainer > #lower > #left #content {
+    gap: 7px;
+}
+
+#server_status_wrapper {
+    padding: 11px 14px;
+    border-color: rgba(105, 190, 255, 0.24);
+    border-radius: 7px;
+    background: linear-gradient(135deg, rgba(3, 15, 31, 0.76), rgba(13, 39, 69, 0.52));
+}
+
+#mojangStatusWrapper {
+    padding: 0 6px;
+    min-height: 22px;
+    color: rgba(215, 229, 239, 0.68);
+}
+
+#mojang_status_icon {
+    margin-left: 5px;
+}
+
+#launch_content {
+    width: 382px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "realm realm"
+        "play play"
+        "repair repair";
+    gap: 7px 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+}
+
+#launch_content::before {
+    display: none;
+}
+
+#server_selection_button {
+    grid-area: realm;
+    justify-self: stretch;
+    width: 100%;
+    max-width: none;
+    min-height: 31px;
+    padding: 0 13px;
+    border-radius: 5px;
+    color: #dcecff;
+    border-color: rgba(94, 174, 230, 0.40);
+    background: linear-gradient(90deg, rgba(8, 40, 72, 0.94), rgba(13, 62, 105, 0.88));
+    line-height: 31px;
+    text-align: left;
+}
+
+#launch_button {
+    grid-area: play;
+    min-height: 65px;
+    border-radius: 5px;
+    border: 1px solid #c7a75a;
+    color: #fff7dc;
+    background:
+        linear-gradient(180deg, rgba(183, 143, 63, 0.96), rgba(126, 91, 35, 0.98)),
+        #8d672b;
+    box-shadow:
+        0 0 22px rgba(218, 177, 77, 0.24),
+        inset 0 1px 0 rgba(255, 241, 189, 0.27),
+        inset 0 -9px 22px rgba(61, 38, 8, 0.18);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 31px;
+    letter-spacing: 3.3px;
+    text-shadow: 0 2px 6px rgba(55, 32, 2, 0.72);
+}
+
+#launch_button:hover,
+#launch_button:focus {
+    transform: translateY(-1px);
+    border-color: #f1d783;
+    background:
+        linear-gradient(180deg, rgba(204, 165, 81, 0.98), rgba(145, 106, 43, 0.98)),
+        #9b7532;
+    box-shadow: 0 0 30px rgba(228, 187, 83, 0.38), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+#launch_secondary_actions {
+    grid-area: repair;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+#repair_button,
+#open_folder_button {
+    width: 100%;
+    min-height: 29px;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: rgba(218, 232, 242, 0.78);
+    border-color: rgba(99, 175, 228, 0.25);
+    background: rgba(3, 19, 34, 0.72);
+    font-size: 9px;
+}
+
+#newsButton {
+    min-width: 152px;
+    min-height: 43px;
+    border-color: rgba(226, 194, 105, 0.27);
+    background: linear-gradient(180deg, rgba(5, 19, 35, 0.84), rgba(5, 27, 48, 0.72));
+}
+
+/* 1920-ish screens */
+@media (min-width: 1500px) and (min-height: 850px) {
+    #aeldoriaSidebar {
+        width: 86px;
+    }
+
+    .aeldoriaNavItem {
+        height: 75px;
+        flex-basis: 75px;
+    }
+
+    #aeldoriaBrandText {
+        left: 233px;
+        top: 77px;
+    }
+
+    #aeldoriaBrandText span {
+        font-size: 39px;
+    }
+
+    #landingContainer > #upper > #right,
+    #aeldoriaHomeNews,
+    #landingContainer > #lower > #right .bot_wrapper,
+    #launch_content {
+        width: 430px;
+    }
+
+    #landingContainer > #upper > #right,
+    #aeldoriaHomeNews {
+        right: 34px;
+    }
+
+    #aeldoriaHomeNews {
+        top: 125px;
+        height: min(520px, calc(100% - 350px));
+    }
+
+    .aeldoriaFeaturedNews img {
+        height: 190px;
+    }
+
+    #landingContainer > #lower {
+        left: 86px;
+        height: 218px;
+        grid-template-columns: minmax(330px, 405px) 1fr 430px;
+        padding: 0 34px 31px;
+    }
+
+    #launch_button {
+        min-height: 73px;
+        font-size: 35px;
+    }
+}
+
+/* 980x600 / compact launcher */
+@media (max-width: 1120px), (max-height: 700px) {
+    #aeldoriaSidebar {
+        width: 66px;
+        padding-top: 36px;
+    }
+
+    .aeldoriaNavItem {
+        height: 55px;
+        flex-basis: 55px;
+        gap: 4px;
+    }
+
+    .aeldoriaNavItem svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .aeldoriaNavItem span {
+        font-size: 6px;
+        letter-spacing: 0.75px;
+    }
+
+    #aeldoriaBrandText {
+        left: 172px;
+        top: 52px;
+    }
+
+    #aeldoriaBrandText span {
+        font-size: 27px;
+    }
+
+    #aeldoriaBrandText small {
+        font-size: 10px;
+    }
+
+    #landingContainer > #upper > #right {
+        right: 14px;
+        top: 12px;
+        width: 305px;
+        height: 65px;
+    }
+
+    #rightContainer,
+    #user_content {
+        height: 62px;
+    }
+
+    #user_content {
+        padding-left: 68px;
+    }
+
+    #avatarContainer {
+        width: 44px;
+        height: 44px;
+        left: 10px;
+    }
+
+    #travelerIdentity #user_text {
+        font-size: 12px;
+    }
+
+    #aeldoriaHomeNews {
+        right: 14px;
+        top: 83px;
+        width: 305px;
+        height: min(350px, calc(100% - 248px));
+        min-height: 255px;
+    }
+
+    .aeldoriaHomeNewsHead {
+        min-height: 35px;
+    }
+
+    .aeldoriaFeaturedNews img {
+        height: 104px;
+    }
+
+    .aeldoriaNewsEyebrowHome {
+        margin-top: 7px;
+    }
+
+    .aeldoriaFeaturedNews strong {
+        font-size: 14px;
+    }
+
+    .aeldoriaNewsShortcut {
+        padding: 5px 11px;
+    }
+
+    .aeldoriaNewsShortcut span {
+        display: none;
+    }
+
+    #landingContainer > #lower {
+        left: 66px;
+        height: 160px;
+        grid-template-columns: minmax(230px, 286px) 1fr 305px;
+        gap: 14px;
+        padding: 0 14px 18px 16px;
+    }
+
+    #landingContainer > #lower > #right .bot_wrapper,
+    #launch_content {
+        width: 305px;
+    }
+
+    #server_status_wrapper {
+        padding: 8px 10px;
+    }
+
+    .bot_label,
+    #newsButtonText,
+    #launch_details_text {
+        font-size: 9px;
+    }
+
+    #launch_button {
+        min-height: 50px;
+        font-size: 24px;
+    }
+
+    #repair_button,
+    #open_folder_button {
+        min-height: 25px;
+        font-size: 8px;
+    }
+
+    #server_selection_button {
+        min-height: 26px;
+        line-height: 26px;
+        font-size: 9px;
+    }
+
+    #newsButton {
+        min-height: 38px;
+    }
+}
+
+
+/* ===== AELDORIA REFERENCE MATCH V3 ===== */
+
+#realmLore,
+#aeldoriaBrandText,
+#image_seal_container {
+    display: none !important;
+}
+
+#landingContainer {
+    overflow: hidden;
+}
+
+/* LEFT RPG NAVIGATION */
+#aeldoriaSidebar {
+    width: 96px !important;
+    padding: 54px 0 16px !important;
+    border-right: 1px solid rgba(208, 176, 88, .28) !important;
+    background: linear-gradient(180deg, rgba(2,8,16,.92), rgba(2,12,23,.86) 72%, rgba(1,6,12,.97)) !important;
+    box-shadow: 12px 0 35px rgba(0,0,0,.28) !important;
+}
+
+.aeldoriaNavItem {
+    height: 80px !important;
+    flex-basis: 80px !important;
+    gap: 7px !important;
+    color: rgba(219,225,226,.72) !important;
+}
+
+.aeldoriaNavItem svg {
+    width: 29px !important;
+    height: 29px !important;
+}
+
+.aeldoriaNavItem span {
+    font-size: 9px !important;
+    letter-spacing: 1.15px !important;
+}
+
+.aeldoriaNavItem::before {
+    top: 9px !important;
+    bottom: 9px !important;
+    width: 3px !important;
+}
+
+.aeldoriaNavItem:hover,
+.aeldoriaNavItem:focus,
+.aeldoriaNavItem.is-active {
+    color: #f0d38a !important;
+    background: linear-gradient(90deg, rgba(216,177,72,.20), rgba(216,177,72,.04), transparent) !important;
+}
+
+.aeldoriaSidebarFoot {
+    gap: 3px !important;
+}
+
+.aeldoriaSidebarFoot img {
+    width: 39px;
+    height: 39px;
+    object-fit: contain;
+    opacity: .76;
+    filter: drop-shadow(0 0 8px rgba(95,174,235,.28));
+}
+
+.aeldoriaSidebarFoot b {
+    color: rgba(213,225,233,.70);
+    font-size: 7px !important;
+}
+
+.aeldoriaSidebarFoot span {
+    color: rgba(213,225,233,.54);
+    font-size: 7px !important;
+}
+
+/* TOP-RIGHT TRAVELER CARD + GEAR */
+#landingContainer > #upper > #right {
+    position: absolute !important;
+    z-index: 45 !important;
+    top: 20px !important;
+    right: 22px !important;
+    width: 390px !important;
+    height: 70px !important;
+}
+
+#rightContainer {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 70px !important;
+    display: block !important;
+    transform: none !important;
+}
+
+#user_content {
+    width: 336px !important;
+    height: 70px !important;
+    justify-content: flex-start !important;
+    padding: 9px 34px 9px 72px !important;
+    border: 1px solid rgba(100,168,220,.34) !important;
+    border-radius: 7px !important;
+    background: linear-gradient(90deg, rgba(2,12,24,.88), rgba(4,24,42,.78)) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.04) !important;
+}
+
+#user_content::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 31px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #52df76;
+    box-shadow: 0 0 10px #52df76;
+}
+
+#avatarContainer {
+    position: absolute !important;
+    left: 10px !important;
+    top: 8px !important;
+    width: 52px !important;
+    height: 52px !important;
+    border-color: rgba(219,190,103,.72) !important;
+}
+
+#travelerIdentity {
+    position: static !important;
+    width: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+    align-items: flex-start !important;
+}
+
+#travelerIdentityLabel {
+    font-size: 7px !important;
+    color: #e7c974 !important;
+}
+
+#travelerIdentity #user_text {
+    position: static !important;
+    font-size: 14px !important;
+    text-align: left !important;
+}
+
+#travelerLastJourney {
+    font-size: 8px !important;
+    text-align: left !important;
+}
+
+#mediaContent {
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 44px !important;
+    height: 70px !important;
+    margin: 0 !important;
+}
+
+#internalMedia {
+    display: block !important;
+}
+
+#externalMedia,
+#mediaContent > .mediaDivider {
+    display: none !important;
+}
+
+#settingsMediaContainer {
+    width: 44px !important;
+    height: 44px !important;
+    margin-top: 13px !important;
+}
+
+#settingsMediaButton {
+    width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid rgba(100,168,220,.25) !important;
+    border-radius: 6px !important;
+    background: rgba(2,15,28,.78) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,.30) !important;
+}
+
+#settingsMediaButton .mediaSVG {
+    width: 22px !important;
+    height: 22px !important;
+    fill: #d8e3ea !important;
+}
+
+/* RIGHT NEWS PANEL */
+#aeldoriaHomeNews {
+    top: 108px !important;
+    right: 22px !important;
+    bottom: 188px !important;
+    width: 390px !important;
+    height: auto !important;
+    min-height: 420px !important;
+    border: 1px solid rgba(102,169,218,.30) !important;
+    border-radius: 5px !important;
+    background: linear-gradient(180deg, rgba(2,13,25,.91), rgba(3,18,32,.88)) !important;
+    box-shadow: 0 20px 46px rgba(0,0,0,.42), inset 0 0 0 1px rgba(225,190,95,.05) !important;
+}
+
+.aeldoriaHomeNewsHead {
+    min-height: 50px !important;
+    padding: 0 17px !important;
+    border-bottom: 1px solid rgba(97,159,205,.22) !important;
+}
+
+.aeldoriaHomeNewsHead > span {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 18px !important;
+    color: #e8c77a !important;
+    letter-spacing: 1.8px !important;
+}
+
+#aeldoriaViewAllNews {
+    color: #6fc9ff !important;
+    font-size: 8px !important;
+}
+
+.aeldoriaFeaturedNews {
+    position: relative !important;
+    padding: 10px 10px 13px !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(97,159,205,.20) !important;
+}
+
+.aeldoriaFeaturedNews img {
+    height: 180px !important;
+    border: 1px solid rgba(123,184,226,.22);
+    border-radius: 4px;
+    object-fit: cover !important;
+    filter: saturate(.92) contrast(1.06) brightness(.72) !important;
+}
+
+.aeldoriaFeaturedNews::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    height: 180px;
+    border-radius: 4px;
+    background: linear-gradient(to top, rgba(0,7,14,.72), transparent 58%);
+    pointer-events: none;
+}
+
+.aeldoriaNewsTag {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    top: 154px;
+    padding: 3px 7px;
+    border: 1px solid rgba(221,181,72,.58);
+    color: #efd17b;
+    background: rgba(12,13,12,.74);
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: .8px;
+}
+
+.aeldoriaFeaturedNews strong {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    right: 18px;
+    top: 176px;
+    margin: 0 !important;
+    color: #fff !important;
+    font-family: 'Avenir Medium' !important;
+    font-size: 15px !important;
+    letter-spacing: .4px !important;
+}
+
+.aeldoriaFeaturedNews em {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    right: 18px;
+    top: 198px;
+    margin: 0 !important;
+    color: rgba(225,233,239,.86) !important;
+    font-size: 9px !important;
+}
+
+.aeldoriaNewsDots {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    border-bottom: 1px solid rgba(97,159,205,.18);
+}
+
+.aeldoriaNewsDots i {
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(213,226,235,.45);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.aeldoriaNewsDots i.active {
+    border-color: #e2c570;
+    background: #e2c570;
+    box-shadow: 0 0 9px rgba(226,197,112,.72);
+}
+
+.aeldoriaNewsShortcuts {
+    flex: 1 1 auto !important;
+    display: grid !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+}
+
+.aeldoriaNewsShortcut {
+    display: grid !important;
+    grid-template-columns: 43px 1fr auto !important;
+    gap: 10px !important;
+    align-items: center !important;
+    padding: 7px 13px !important;
+    border-bottom: 1px solid rgba(97,159,205,.14) !important;
+}
+
+.aeldoriaNewsShortcut img {
+    width: 43px;
+    height: 36px;
+    object-fit: cover;
+    border: 1px solid rgba(123,184,226,.18);
+}
+
+.aeldoriaNewsShortcut > span {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.aeldoriaNewsShortcut b {
+    font-size: 9px !important;
+    color: #e7eef3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+}
+
+.aeldoriaNewsShortcut small {
+    margin-top: 2px;
+    color: rgba(198,213,223,.61);
+    font-size: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+}
+
+.aeldoriaNewsShortcut time {
+    color: rgba(178,204,222,.68);
+    font-size: 7px;
+}
+
+/* BOTTOM HUD */
+#landingContainer > #lower {
+    left: 96px !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: auto !important;
+    height: 166px !important;
+    display: grid !important;
+    grid-template-columns: minmax(300px, 365px) minmax(420px, 1fr) 390px !important;
+    align-items: end !important;
+    gap: 18px !important;
+    padding: 0 22px 28px 24px !important;
+    background: linear-gradient(to top, rgba(0,6,13,.96), rgba(1,9,18,.62) 56%, transparent) !important;
+}
+
+#landingContainer > #lower::after {
+    left: 24px !important;
+    right: 22px !important;
+    bottom: 18px !important;
+}
+
+#landingContainer > #lower > #left,
+#landingContainer > #lower > #center,
+#landingContainer > #lower > #right {
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+}
+
+#landingContainer > #lower > #left {
+    justify-content: flex-start !important;
+}
+
+#landingContainer > #lower > #center {
+    justify-content: flex-end !important;
+}
+
+#landingContainer > #lower > #right {
+    justify-content: flex-end !important;
+}
+
+#landingContainer > #lower > #left #content,
+#landingContainer > #lower > #center #content {
+    position: static !important;
+    width: 100% !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+#server_status_wrapper {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    border-radius: 6px !important;
+    border-color: rgba(89,169,224,.30) !important;
+    background: linear-gradient(135deg, rgba(3,18,34,.90), rgba(7,33,57,.76)) !important;
+}
+
+.aeldoriaStatusRow {
+    min-height: 18px !important;
+}
+
+#aeldoria_status_label,
+#landingPlayerLabel {
+    font-size: 9px !important;
+}
+
+#aeldoria_status_text,
+#player_count {
+    font-size: 10px !important;
+}
+
+#mojangStatusWrapper {
+    margin-top: 7px;
+    padding-left: 4px !important;
+    font-size: 8px !important;
+}
+
+#aeldoriaQuickActions {
+    width: min(510px, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(118px, 1fr));
+    gap: 10px;
+}
+
+#aeldoriaQuickActions button {
+    min-height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 12px;
+    border: 1px solid rgba(95,166,219,.30);
+    border-radius: 6px;
+    color: #dfe9ef;
+    background: linear-gradient(180deg, rgba(4,21,38,.93), rgba(3,15,29,.93));
+    box-shadow: 0 8px 20px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.035);
+    cursor: pointer;
+    font-family: 'Avenir Medium';
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+
+#aeldoriaQuickActions button:hover,
+#aeldoriaQuickActions button:focus {
+    transform: translateY(-2px);
+    border-color: rgba(228,194,100,.66);
+    box-shadow: 0 10px 24px rgba(0,0,0,.34), 0 0 15px rgba(219,181,77,.12);
+}
+
+#aeldoriaQuickActions svg {
+    width: 24px;
+    height: 24px;
+    fill: #d7e4ec;
+    opacity: .92;
+}
+
+#aeldoriaQuickActions span {
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1.45;
+    letter-spacing: .8px;
+    text-align: left;
+}
+
+#newsButton {
+    display: none !important;
+}
+
+#landingContainer > #lower > #right .bot_wrapper,
+#launch_content {
+    width: 390px !important;
+}
+
+#launch_content {
+    position: static !important;
+    display: block !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#launch_content::before {
+    display: none !important;
+}
+
+#server_selection_button {
+    display: none !important;
+}
+
+#launch_button {
+    width: 100% !important;
+    min-height: 91px !important;
+    border-radius: 5px !important;
+    border: 1px solid #c9a64e !important;
+    color: #fff5d1 !important;
+    background:
+        linear-gradient(180deg, rgba(156,124,65,.89), rgba(91,67,30,.95)),
+        rgba(107,80,35,.96) !important;
+    box-shadow:
+        0 0 0 7px rgba(3,16,28,.88),
+        0 0 0 8px rgba(202,166,78,.25),
+        0 10px 30px rgba(0,0,0,.42),
+        inset 0 1px 0 rgba(255,239,184,.30) !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 34px !important;
+    letter-spacing: 3.2px !important;
+    text-shadow: 0 2px 7px rgba(44,27,4,.72) !important;
+}
+
+#launch_button::after {
+    content: 'COMIENZA TU AVENTURA';
+    display: block;
+    margin-top: 5px;
+    color: #e3c776;
+    font-family: 'Avenir Medium';
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+#launch_button:hover,
+#launch_button:focus {
+    border-color: #f1d27d !important;
+    background: linear-gradient(180deg, rgba(180,145,74,.94), rgba(108,79,34,.96)) !important;
+    box-shadow:
+        0 0 0 7px rgba(3,16,28,.88),
+        0 0 0 8px rgba(228,190,91,.36),
+        0 0 30px rgba(218,177,77,.24),
+        inset 0 1px 0 rgba(255,246,207,.34) !important;
+}
+
+#launch_details {
+    width: 390px !important;
+    min-height: 86px;
+}
+
+/* Compact launcher windows */
+@media (max-width: 1250px), (max-height: 720px) {
+    #aeldoriaSidebar {
+        width: 76px !important;
+        padding-top: 38px !important;
+    }
+
+    .aeldoriaNavItem {
+        height: 58px !important;
+        flex-basis: 58px !important;
+        gap: 4px !important;
+    }
+
+    .aeldoriaNavItem svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .aeldoriaNavItem span {
+        font-size: 6px !important;
+    }
+
+    .aeldoriaSidebarFoot img {
+        width: 28px;
+        height: 28px;
+    }
+
+    #landingContainer > #upper > #right {
+        right: 14px !important;
+        top: 12px !important;
+        width: 326px !important;
+        height: 58px !important;
+    }
+
+    #rightContainer {
+        height: 58px !important;
+    }
+
+    #user_content {
+        width: 282px !important;
+        height: 58px !important;
+        padding-left: 60px !important;
+    }
+
+    #avatarContainer {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    #mediaContent {
+        width: 38px !important;
+        height: 58px !important;
+    }
+
+    #settingsMediaContainer,
+    #settingsMediaButton {
+        width: 38px !important;
+        height: 38px !important;
+        margin-top: 10px !important;
+    }
+
+    #aeldoriaHomeNews {
+        top: 82px !important;
+        right: 14px !important;
+        bottom: 154px !important;
+        width: 326px !important;
+        min-height: 300px !important;
+    }
+
+    .aeldoriaHomeNewsHead {
+        min-height: 38px !important;
+    }
+
+    .aeldoriaHomeNewsHead > span {
+        font-size: 14px !important;
+    }
+
+    .aeldoriaFeaturedNews img,
+    .aeldoriaFeaturedNews::after {
+        height: 116px !important;
+    }
+
+    .aeldoriaNewsTag {
+        top: 96px !important;
+    }
+
+    .aeldoriaFeaturedNews strong {
+        top: 117px !important;
+        font-size: 12px !important;
+    }
+
+    .aeldoriaFeaturedNews em {
+        top: 135px !important;
+        font-size: 7px !important;
+    }
+
+    .aeldoriaNewsShortcut {
+        grid-template-columns: 34px 1fr auto !important;
+        gap: 7px !important;
+        padding: 4px 9px !important;
+    }
+
+    .aeldoriaNewsShortcut img {
+        width: 34px;
+        height: 28px;
+    }
+
+    .aeldoriaNewsShortcut b {
+        max-width: 180px;
+        font-size: 7px !important;
+    }
+
+    .aeldoriaNewsShortcut small {
+        max-width: 180px;
+        font-size: 6px;
+    }
+
+    #landingContainer > #lower {
+        left: 76px !important;
+        height: 136px !important;
+        grid-template-columns: minmax(230px, 285px) minmax(310px, 1fr) 310px !important;
+        gap: 12px !important;
+        padding: 0 14px 20px 16px !important;
+    }
+
+    #aeldoriaQuickActions {
+        gap: 7px;
+    }
+
+    #aeldoriaQuickActions button {
+        min-height: 48px;
+        padding: 0 8px;
+        gap: 6px;
+    }
+
+    #aeldoriaQuickActions svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    #aeldoriaQuickActions span {
+        font-size: 6px;
+    }
+
+    #landingContainer > #lower > #right .bot_wrapper,
+    #launch_content,
+    #launch_details {
+        width: 310px !important;
+    }
+
+    #launch_button {
+        min-height: 69px !important;
+        font-size: 27px !important;
+    }
+
+    #launch_button::after {
+        font-size: 6px;
+        letter-spacing: 2.2px;
+    }
+}
+
+@media (max-width: 1030px) {
+    #landingContainer > #lower {
+        grid-template-columns: 230px minmax(260px, 1fr) 270px !important;
+    }
+
+    #aeldoriaQuickActions {
+        grid-template-columns: repeat(3, minmax(78px, 1fr));
+    }
+
+    #landingContainer > #lower > #right .bot_wrapper,
+    #launch_content,
+    #launch_details {
+        width: 270px !important;
+    }
+
+    #launch_button {
+        font-size: 23px !important;
+    }
+
+    #aeldoriaHomeNews {
+        width: 286px !important;
+    }
+
+    #landingContainer > #upper > #right {
+        width: 286px !important;
+    }
+
+    #user_content {
+        width: 244px !important;
+    }
+}
+
+
+/* ===== AELDORIA 2.2.3 GALLERY ===== */
+#aeldoriaGalleryPanel {
+    position: absolute;
+    z-index: 70;
+    left: 96px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 34px 42px 190px;
+    background: radial-gradient(circle at 34% 34%, rgba(27,92,142,.22), transparent 38%), linear-gradient(90deg, rgba(0,6,12,.92), rgba(0,12,23,.82));
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .2s ease, visibility .2s ease;
+}
+#aeldoriaGalleryPanel.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
+.aeldoriaGalleryShell {
+    width: min(1120px, 100%);
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(105,173,219,.34);
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(3,17,31,.97), rgba(2,11,21,.97));
+    box-shadow: 0 28px 70px rgba(0,0,0,.55), inset 0 0 0 1px rgba(226,194,105,.05);
+}
+.aeldoriaGalleryHeader {
+    min-height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(102,170,218,.22);
+}
+.aeldoriaGalleryEyebrow { display:block; margin-bottom:2px; color:#67c8ff; font-size:8px; font-weight:900; letter-spacing:2.4px; }
+.aeldoriaGalleryHeader h2 { margin:0; color:#ebcb7a; font-family:Georgia,'Times New Roman',serif; font-size:28px; letter-spacing:3px; }
+.aeldoriaGalleryHeader p { margin:4px 0 0; color:rgba(218,229,236,.69); font-size:9px; }
+#aeldoriaGalleryClose {
+    width:44px; height:44px; flex:0 0 44px; border:1px solid rgba(108,175,219,.3); border-radius:6px;
+    color:#dfe9ef; background:rgba(4,22,38,.9); font-size:26px; line-height:1; cursor:pointer;
+}
+#aeldoriaGalleryClose:hover { color:#f2d27a; border-color:rgba(231,195,98,.65); }
+.aeldoriaGalleryBody { min-height:0; display:grid; grid-template-columns:minmax(0,1.7fr) minmax(260px,.7fr); gap:14px; padding:14px; }
+.aeldoriaGalleryHero {
+    position:relative; min-height:390px; overflow:hidden; padding:0; border:1px solid rgba(103,173,221,.22);
+    border-radius:6px; background:#020911;
+}
+.aeldoriaGalleryHero img { width:100%; height:100%; min-height:390px; max-height:570px; object-fit:cover; display:block; }
+#aeldoriaGalleryHeroLabel {
+    position:absolute; left:18px; bottom:16px; padding:6px 10px; border:1px solid rgba(226,191,94,.56);
+    color:#f0d17a; background:rgba(4,10,15,.78); font-size:8px; font-weight:900; letter-spacing:1.7px;
+}
+.aeldoriaGalleryGrid { min-height:0; overflow-y:auto; display:grid; grid-template-columns:1fr; gap:10px; padding-right:3px; }
+.aeldoriaGalleryThumb {
+    display:grid; grid-template-columns:92px 1fr; align-items:center; gap:11px; min-height:78px; padding:7px;
+    border:1px solid rgba(91,153,197,.2); border-radius:5px; color:rgba(220,231,238,.78);
+    background:rgba(4,21,36,.74); text-align:left; cursor:pointer;
+}
+.aeldoriaGalleryThumb:hover,.aeldoriaGalleryThumb.is-active {
+    color:#f0d17a; border-color:rgba(224,190,98,.58); background:linear-gradient(90deg, rgba(119,87,31,.24), rgba(4,24,41,.86));
+}
+.aeldoriaGalleryThumb img { width:92px; height:62px; object-fit:cover; border-radius:3px; }
+.aeldoriaGalleryThumb span { font-size:9px; font-weight:900; letter-spacing:.6px; }
+
+/* Expanded news reader. */
+#newsContainer { left:96px !important; right:0 !important; width:auto !important; }
+#newsContent { width:min(1120px, calc(100% - 84px)) !important; max-width:1120px !important; margin-left:auto !important; margin-right:auto !important; }
+#newsArticleContainer { max-width:none !important; }
+
+@media (max-width:1250px), (max-height:720px) {
+    #aeldoriaGalleryPanel { left:76px; padding:22px 24px 150px; }
+    .aeldoriaGalleryHeader { min-height:72px; padding:12px 16px; }
+    .aeldoriaGalleryHeader h2 { font-size:21px; }
+    .aeldoriaGalleryBody { grid-template-columns:minmax(0,1.55fr) minmax(220px,.65fr); }
+    .aeldoriaGalleryHero,.aeldoriaGalleryHero img { min-height:300px; }
+    .aeldoriaGalleryThumb { grid-template-columns:72px 1fr; min-height:62px; }
+    .aeldoriaGalleryThumb img { width:72px; height:48px; }
+    #newsContainer { left:76px !important; }
 }
