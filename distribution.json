@@ -4242,6 +4242,17 @@
           }
         },
         {
+          "id": "aeldoria.files:config-combat_focus-client.toml:1.0.0",
+          "name": "Aeldoria - config/combat_focus-client.toml",
+          "type": "File",
+          "artifact": {
+            "size": 17971,
+            "MD5": "b835a4cedf677fbfa56602a335112c6e",
+            "url": "https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/modpack/config/combat_focus-client.toml",
+            "path": "config/combat_focus-client.toml"
+          }
+        },
+        {
           "id": "aeldoria.files:config-epicclassmod-common.toml:1.0.0",
           "name": "Aeldoria - config/epicclassmod-common.toml",
           "type": "File",
