@@ -485,9 +485,20 @@
           "type": "ForgeMod",
           "artifact": {
             "size": 44833127,
-            "MD5": "6ba83eb5a1549ba8b3f5182a5974681d",
+            "MD5": "39a2318913f0e191150f5c9a31a33276",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aeldoria-rpg-core-0.5.0.jar",
             "path": "aeldoria-rpg-core-0.5.0.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:afkplayeranchor-forge-1.20.1-1.0.0:1.0.0",
+          "name": "AFKPlayerAnchor-Forge-1.20.1-1.0.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 43127,
+            "MD5": "f846a6037f9d9574ee7c5d10907ccdf3",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/AFKPlayerAnchor-Forge-1.20.1-1.0.0.jar",
+            "path": "AFKPlayerAnchor-Forge-1.20.1-1.0.0.jar"
           }
         },
         {
