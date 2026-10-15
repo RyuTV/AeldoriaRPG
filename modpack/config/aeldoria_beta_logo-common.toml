@@ -1,0 +1,294 @@
+
+[general]
+	#Master switch for the Aeldoria race system.
+	enabled = true
+	#Open the lineage menu the first time a player joins.
+	openMenuOnFirstLogin = true
+	#Apply Pehkui body scale when Pehkui is installed.
+	enablePehkuiScale = true
+	#Apply mana attributes when a compatible magic mod exposes max mana.
+	enableManaBonuses = true
+	#Apply mana regeneration attributes when a compatible magic mod exposes mana regeneration.
+	enableManaRegenBonuses = true
+	#Refresh racial potion passives such as haste, luck, jump boost and night vision.
+	enablePassiveEffects = true
+	#Apply racial weakness while exposed to daylight.
+	enableSunWeakness = true
+
+[combat_passives]
+	#Elves deal slightly more projectile damage.
+	enableElfProjectileBonus = true
+	#Elf projectile damage bonus as percent. 8 means +8%.
+	#Range: 0.0 ~ 100.0
+	elfProjectileBonusPercent = 8.0
+	#Elf mana regeneration bonus as percent. 10 means +10%.
+	#Range: -100.0 ~ 300.0
+	elfManaRegenBonusPercent = 10.0
+	#Dark elf mana regeneration bonus as percent. Default is 0 because they focus on max mana.
+	#Range: -100.0 ~ 300.0
+	darkElfManaRegenBonusPercent = 0.0
+	#Undead mana regeneration bonus as percent. Default is 0 for balance.
+	#Range: -100.0 ~ 300.0
+	undeadManaRegenBonusPercent = 0.0
+	#Orcs gain Strength I while under the configured health threshold.
+	enableOrcLowHealthStrength = true
+	#Orc strength threshold as health ratio. 0.35 means 35%.
+	#Range: 0.05 ~ 0.95
+	orcLowHealthThreshold = 0.35
+	#Undead remove poison and hunger effects during racial passive refresh.
+	enableUndeadPoisonHungerResist = true
+	#Dark elves and undead emit a small visual aura when compatible mana is full.
+	enableFullManaAura = true
+	#How often the full mana aura checks and emits particles. 20 ticks = 1 second.
+	#Range: 5 ~ 200
+	fullManaAuraIntervalTicks = 20
+	#Particle count per full mana aura pulse. Keep low for multiplayer.
+	#Range: 1 ~ 20
+	fullManaAuraParticles = 5
+
+[orbe_de_linaje]
+	#Consume one Orbe de Linaje when changing an already chosen lineage.
+	consumeOnChange = true
+	#Cooldown after using the Orbe de Linaje. 20 ticks = 1 second.
+	#Range: 0 ~ 72000
+	cooldownTicks = 1200
+	#Players cannot change lineage for this many ticks after taking or dealing damage. 20 ticks = 1 second.
+	#Range: 0 ~ 12000
+	combatLockTicks = 240
+	#Prevent lineage changes while riding another entity.
+	preventChangeWhileMounted = true
+	#Prevent lineage changes if hostile mobs are inside this radius. 0 disables.
+	#Range: 0 ~ 64
+	hostileLockRadius = 10
+
+[race_balance]
+
+	[race_balance.humanos]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = 0.0
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = 0.0
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = 0.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = 0.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 0.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = -1
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = -1
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = -1
+
+	[race_balance.enanos]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = -0.02
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = 0.0
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = 2.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = 4.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 0.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = 0
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = -1
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = -1
+
+	[race_balance.orcos]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = -0.06
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = 0.06
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = 1.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = 6.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 0.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = -1
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = -1
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = -1
+
+	[race_balance.elfos]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = 0.07
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = 0.0
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = 0.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = -2.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 25.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = -1
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = -1
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = -1
+
+	[race_balance.elfos_oscuros]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = 0.06
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = 0.03
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = 0.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = -2.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 45.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = -1
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = -1
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = 0
+
+	[race_balance.goblins]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = 0.1
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = -0.04
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = -1.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = -2.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 0.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = -1
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = 0
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = -1
+
+	[race_balance.semihumanos]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = 0.05
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = 0.02
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = 0.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = 0.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 0.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = -1
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = -1
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = -1
+
+	[race_balance.no_muertos]
+		#Movement speed modifier. 0.05 means +5%.
+		#Range: -0.9 ~ 3.0
+		speedBonus = -0.01
+		#Attack damage modifier. 0.02 means +2%.
+		#Range: -0.9 ~ 3.0
+		attackBonus = 0.04
+		#Flat armor bonus.
+		#Range: -20.0 ~ 100.0
+		armorBonus = 2.0
+		#Flat max health bonus. 2 health = 1 heart.
+		#Range: -18.0 ~ 100.0
+		maxHealthBonus = -4.0
+		#Flat max mana bonus for compatible magic mods.
+		#Range: -1000.0 ~ 1000.0
+		manaBonus = 20.0
+		#Haste amplifier. -1 disables, 0 means Haste I.
+		#Range: -1 ~ 4
+		miningHasteAmplifier = -1
+		#Luck amplifier. -1 disables, 0 means Luck I.
+		#Range: -1 ~ 4
+		luckAmplifier = -1
+		#Weakness amplifier while exposed to sun. -1 disables, 0 means Weakness I.
+		#Range: -1 ~ 4
+		sunWeaknessAmplifier = 1
+
+[class_system]
+	#Master switch for the Aeldoria class level system.
+	enabled = true
+	#Maximum class level.
+	#Range: 1 ~ 100
+	maxLevel = 30
+	#Show small actionbar messages when players gain class XP.
+	showXpMessages = true
+	#Base class XP gained from killing hostile or living enemies. Small mobs are capped by code for balance.
+	#Range: 0 ~ 10000
+	killXp = 8
+	#Extra XP for projectile kills, useful for Explorador.
+	#Range: 0 ~ 10000
+	projectileKillXp = 4
+	#Extra XP for killing undead enemies, useful for Clerigo.
+	#Range: 0 ~ 10000
+	undeadKillXp = 6
+	#Extra class XP when a detected owned summon kills an enemy, useful for Invocador.
+	#Range: 0 ~ 10000
+	summonKillXp = 2
+
