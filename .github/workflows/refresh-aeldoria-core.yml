@@ -1,0 +1,79 @@
+name: Refresh Aeldoria Core artifact
+
+on:
+  push:
+    branches:
+      - codex/configurar-launcher-aeldoria
+    paths:
+      - .github/workflows/refresh-aeldoria-core.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-aeldoria-core
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/configurar-launcher-aeldoria
+      - name: Download and validate Core JAR
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 2 --max-time 90 \
+            -H 'Cache-Control: no-cache' \
+            -o "$RUNNER_TEMP/aeldoria-core.jar" \
+            'https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aeldoria-rpg-core-0.5.0.jar'
+          python3 - <<'PY'
+          import hashlib, json, os, zipfile
+          from pathlib import Path
+          jar = Path(os.environ["RUNNER_TEMP"]) / "aeldoria-core.jar"
+          with zipfile.ZipFile(jar) as archive:
+              bad = archive.testzip()
+              if bad:
+                  raise RuntimeError("Corrupt JAR entry: " + bad)
+              if "META-INF/mods.toml" not in archive.namelist():
+                  raise RuntimeError("Forge mod metadata missing")
+          raw = jar.read_bytes()
+          size = len(raw)
+          md5 = hashlib.md5(raw).hexdigest()
+          path = Path("distribution.json")
+          original = path.read_text(encoding="utf-8")
+          data = json.loads(original)
+          matches = [
+              module for server in data["servers"] for module in server["modules"]
+              if module.get("artifact", {}).get("path") == "aeldoria-rpg-core-0.5.0.jar"
+          ]
+          if len(matches) != 1:
+              raise RuntimeError("Expected exactly one Core artifact")
+          artifact = matches[0]["artifact"]
+          if artifact["url"] != "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aeldoria-rpg-core-0.5.0.jar":
+              raise RuntimeError("Unexpected Core download URL")
+          old = '"size": ' + str(artifact["size"]) + ',\n            "MD5": "' + artifact["MD5"] + '"'
+          new = '"size": ' + str(size) + ',\n            "MD5": "' + md5 + '"'
+          if original.count(old) != 1:
+              raise RuntimeError("Unexpected artifact formatting")
+          path.write_text(original.replace(old, new, 1), encoding="utf-8")
+          print(json.dumps({"size": size, "MD5": md5, "valid": True}))
+          PY
+      - name: Publish verified manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          if git diff --quiet -- distribution.json; then
+            echo "Core artifact metadata is already current"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add distribution.json
+          git commit -m "Refresh verified Aeldoria Core download metadata"
+          git push origin HEAD:codex/configurar-launcher-aeldoria
