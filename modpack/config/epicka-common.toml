@@ -1,0 +1,153 @@
+#Text prefix for all mod messages in chat.
+chatPrefixText = "RpgMounts"
+#Resource location for the main GUI background texture.
+setGuiMenuTextureBackground = "epicka:textures/gui/menu_background.png"
+#Resource location for the 'Close' button texture (normal state).
+setGuiMenuTextureCloseButton = "epicka:textures/gui/close_button.png"
+#Resource location for the 'Close' button texture (hovered state).
+setGuiMenuTextureCloseButtonHovered = "epicka:textures/gui/close_button_hovered.png"
+#X offset from the right screen edge for the Close button.
+#Range: 0 ~ 1000
+guiCloseButtonXOffsetRight = 15
+#Y offset from the top screen edge for the Close button.
+#Range: 0 ~ 1000
+guiCloseButtonYOffsetTop = 15
+#Text for the 'Ride' button (if not using custom textures).
+guiRideButtonText = "Ride"
+#Hex color for the 'Ride' button text (if not using custom textures).
+guiRideButtonTextColor = "#FFFFFF"
+#Hex color for the scrollbar in the UI.
+guiScrollbarColor = "#585858"
+#Hex color for the background of the mount slots in the UI.
+guiSlotBackgroundColor = "#303030"
+#Hex color for the mount name text.
+guiMountNameTextColor = "#FFFFFF"
+#Show mount type [GROUND, AQUATIC, FLYING] next to the mount name.
+guiShowMountType = false
+#Hex color for the GROUND mount type text.
+guiMountTypeGroundTextColor = "#AAAAAA"
+#Hex color for the AQUATIC mount type text.
+guiMountTypeAquaticTextColor = "#5555FF"
+#Hex color for the FLYING mount type text.
+guiMountTypeFlyingTextColor = "#FFFFFF"
+#Show mount speed text (or bar) under the mount name.
+guiShowMountSpeed = true
+#Show mount speed as a progress bar instead of text.
+guiShowSpeedAsBar = false
+#Hex color for the filled part of the speed bar.
+guiSpeedBarFilledColor = "#55FF55"
+#Hex color for the empty part (background) of the speed bar.
+guiSpeedBarEmptyColor = "#404040"
+#Hex color for the mount speed text.
+guiSpeedTextColor = "#AAAAAA"
+#Hex color for the mount description text.
+guiDescriptionTextColor = "#808080"
+#Hex color for the mount cost text.
+guiCostTextColor = "#FF5555"
+#Enable custom textures for the 'Ride' button.
+enableGuiCustomRideButton = false
+guiRideButtonTextureNormal = "epicka:textures/gui/ride_normal.png"
+guiRideButtonTextureHovered = "epicka:textures/gui/ride_hovered.png"
+guiRideButtonTextureClicked = "epicka:textures/gui/ride_clicked.png"
+#Show the Search Box to filter mounts by name.
+guiShowSearchBox = true
+#Hex color for the text inside the search box.
+guiSearchTextColor = "#FFFFFF"
+#X position of the Search Box. Set to -1 to auto-position based on UI mode.
+#Range: -1 ~ 10000
+guiSearchBoxX = -1
+#Y position of the Search Box. Set to -1 to auto-position based on UI mode.
+#Range: -1 ~ 10000
+guiSearchBoxY = -1
+#Width of the Search Box. Set to -1 to auto-scale based on UI mode.
+#Range: -1 ~ 10000
+guiSearchBoxWidth = -1
+#Show the 'Filters & Sort' button in the UI.
+guiShowFilterButton = true
+#X position of the Filter button. Set to -1 to center horizontally (or align right if search is active).
+#Range: -1 ~ 10000
+guiFilterButtonX = -1
+#Y position of the Filter button.
+#Range: 0 ~ 10000
+guiFilterButtonY = 15
+guiFilterButtonText = "Filters & Sort"
+#Enable custom textures for the 'Filter' button.
+enableGuiCustomFilterButton = false
+guiFilterButtonTextureNormal = "epicka:textures/gui/filter_normal.png"
+guiFilterButtonTextureHovered = "epicka:textures/gui/filter_hovered.png"
+guiFilterButtonTextureClicked = "epicka:textures/gui/filter_clicked.png"
+#Hex color for the filter dropdown panel background.
+guiFilterPanelColor = "#A0202020"
+#Enable custom textures for the 'Filter' sub-buttons (Ground, Aquatic, etc.).
+enableGuiCustomFilterSubButton = false
+guiFilterSubButtonTextureNormal = "epicka:textures/gui/filter_sub_normal.png"
+guiFilterSubButtonTextureHovered = "epicka:textures/gui/filter_sub_hovered.png"
+guiFilterSubButtonTextureClicked = "epicka:textures/gui/filter_sub_clicked.png"
+#If true, renders the default text ON TOP of custom textured buttons (Ride, main Filter). Filter sub-buttons always show text if they use custom textures.
+enableTextOnCustomButtons = true
+#Enable the Modern UI style (List on left, Details on right) instead of the basic list.
+enableModernUi = false
+#Hex color for the selected mount name in Modern UI.
+guiModernListSelectedColor = "#FFFF55"
+#Hex color for unselected mount names in Modern UI.
+guiModernListNormalColor = "#AAAAAA"
+#Hex color for hovered mount name in Modern UI.
+guiModernListHoverColor = "#FFFFFF"
+#Range: 0 ~ 3600
+mountSummonCooldownSeconds = 5
+enableSummonIndoors = true
+#Force dismount when entering water.
+enableAutoDismountInWater = true
+#Force dismount when entering lava.
+enableAutoDismountInLava = true
+enableAutoDismountInPowderSnow = false
+#Speed multiplier when mount is in Lava (0.3 = 30% speed).
+#Range: 0.0 ~ 1.0
+mountLavaSpeedFactor = 0.3
+#Speed multiplier when mount is in Powder Snow (0.4 = 40% speed).
+#Range: 0.0 ~ 1.0
+mountPowderSnowSpeedFactor = 0.4
+#Speed multiplier when mount is in Water for non aquatic mounts (0.4 = 40% speed).
+#Range: 0.0 ~ 1.0
+mountWaterSpeedFactor = 1.0
+#Allow players to dismount by pressing Sneak (Shift) key.
+enableSneakDismount = true
+#Allow mounts to jump.
+enableMountJump = true
+#Allow mounts to jump when flying.
+enableMountJumpWhenFlying = true
+#Amount of speed to add when using the speed boost food.
+#Range: 0.0 ~ 10.0
+mountSpeedBoostValue = 0.1
+#Amount of speed to add when using the SUPER speed boost food.
+#Range: 0.0 ~ 10.0
+mountSuperBoostValue = 0.2
+#The maximum speed a mount can have. Set to 0 or less to disable the limit.
+#Range: -1.0 ~ 100.0
+mountMaxSpeed = 3.0
+#Allow mounts to climb walls like spiders.
+enableMountClimb = true
+#Make mounts invincible to damage.
+enableMountInvincibility = true
+#Type of particle to spawn. Valid options: "NONE", "FLAME", "HEART", "PORTAL", "BUBBLE", "SMOKE".
+mountSpawnParticlesType = "FLAME"
+#Amount of particles to spawn when summoning a mount.
+#Range: 0 ~ 300
+mountSpawnParticlesAmount = 100
+#Multiplier for mount gravity. Higher value = falls faster.
+#Range: -10 ~ 10
+multiplyMountGravity = 1
+#Global multiplier for mount speed.
+#Range: -10 ~ 10
+multiplyMountSpeed = 1
+#Multiplier for mount climbing speed.
+#Range: -10 ~ 10
+multiplyMountClimb = 1
+#Multiplier for mount jump height.
+#Range: 0.0 ~ 10.0
+multiplyMountJump = 1.0
+#List of entity IDs that cannot be used as mounts (e.g., "minecraft:wither").
+mountBlacklist = ["minecraft:wither", "minecraft:player"]
+#Clean inexistent world entity in player configuration when server start.
+enableStartupMountValidation = false
+
