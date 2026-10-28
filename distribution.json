@@ -4198,6 +4198,28 @@
           }
         },
         {
+          "id": "aeldoria.mods:livingwind-forge-1.20.1-v1.3.4:1.0.0",
+          "name": "LivingWind-Forge-1.20.1-v1.3.4",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 4164144,
+            "MD5": "cd10db66b20a92886db77253793d67dd",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/LivingWind-Forge-1.20.1-v1.3.4.jar",
+            "path": "LivingWind-Forge-1.20.1-v1.3.4.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:signplates-forge-1.20.1-v1.2.1:1.0.0",
+          "name": "SignPlates-Forge-1.20.1-v1.2.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 823769,
+            "MD5": "1ecb295d147ba11083f503970e9305a2",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/SignPlates-Forge-1.20.1-v1.2.1.jar",
+            "path": "SignPlates-Forge-1.20.1-v1.2.1.jar"
+          }
+        },
+        {
           "id": "aeldoria.resourcepacks:newaeldoria:1.0.0",
           "name": "NEWAELDORIA",
           "type": "File",
