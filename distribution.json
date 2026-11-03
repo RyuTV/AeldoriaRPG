@@ -1316,14 +1316,36 @@
           }
         },
         {
-          "id": "aeldoria.mods:dragonmounts-1.20.1-10017:1.0.0",
-          "name": "dragonmounts-1.20.1-10017",
+          "id": "aeldoria.mods:wyvernrider-1.1.1-aeldoria-serverfix:1.0.0",
+          "name": "WyvernRider-1.1.1-Aeldoria-ServerFix",
           "type": "ForgeMod",
           "artifact": {
-            "size": 3131809,
-            "MD5": "2001178463a6d5764c8d2b16db621bfe",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/dragonmounts-1.20.1-10017.jar",
-            "path": "dragonmounts-1.20.1-10017.jar"
+            "size": 3161687,
+            "MD5": "0b3acb09a4667839715d1afb0d94fbcf",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/WyvernRider-1.1.1-Aeldoria-ServerFix.jar",
+            "path": "WyvernRider-1.1.1-Aeldoria-ServerFix.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:quick-pack-forge-1.5.1-1.20.1-all-srg:1.0.0",
+          "name": "quick-pack-forge-1.5.1+1.20.1-all-srg",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 652961,
+            "MD5": "277762381ae7e716187dae180dd78247",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/quick-pack-forge-1.5.1%2B1.20.1-all-srg.jar",
+            "path": "quick-pack-forge-1.5.1+1.20.1-all-srg.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:animebattleaura-1.20.1-1.1.0:1.0.0",
+          "name": "animebattleaura-1.20.1-1.1.0",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 51561,
+            "MD5": "2cc6d1bc8328b03af88304b0477b652c",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/animebattleaura-1.20.1-1.1.0.jar",
+            "path": "animebattleaura-1.20.1-1.1.0.jar"
           }
         },
         {
