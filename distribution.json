@@ -1316,17 +1316,6 @@
           }
         },
         {
-          "id": "aeldoria.mods:wyvernrider-1.1.1-aeldoria-serverfix-v2:1.0.0",
-          "name": "WyvernRider-1.1.1-Aeldoria-ServerFix-v2",
-          "type": "ForgeMod",
-          "artifact": {
-            "size": 3163571,
-            "MD5": "48e07ef0087563f59586a3dd3ac36b9a",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/WyvernRider-1.1.1-Aeldoria-ServerFix-v2.jar",
-            "path": "WyvernRider-1.1.1-Aeldoria-ServerFix-v2.jar"
-          }
-        },
-        {
           "id": "aeldoria.mods:animebattleaura-1.20.1-1.1.0:1.0.0",
           "name": "animebattleaura-1.20.1-1.1.0",
           "type": "ForgeMod",
