@@ -484,8 +484,8 @@
           "name": "aeldoria-rpg-core-0.5.0",
           "type": "ForgeMod",
           "artifact": {
-            "size": 51884287,
-            "MD5": "2992c40431e7b73f78a96dee02a24e6a",
+            "size": 51914835,
+            "MD5": "823efbe1d5d2c556ae7511a56f24b640",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/aeldoria-rpg-core-0.5.0.jar",
             "path": "aeldoria-rpg-core-0.5.0.jar"
           }
@@ -4217,6 +4217,17 @@
             "MD5": "1ecb295d147ba11083f503970e9305a2",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/SignPlates-Forge-1.20.1-v1.2.1.jar",
             "path": "SignPlates-Forge-1.20.1-v1.2.1.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:leafdrift-forge-1.0.0-1.20.1:1.0.0",
+          "name": "leafdrift-forge-1.0.0-1.20.1",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 160658,
+            "MD5": "67a9695ef343fa32bd0568d73b22a48d",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/leafdrift-forge-1.0.0-1.20.1.jar",
+            "path": "leafdrift-forge-1.0.0-1.20.1.jar"
           }
         },
         {
