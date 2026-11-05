@@ -1,0 +1,152 @@
+name: Forge 47.4.16 and Windows test
+
+on:
+  push:
+    branches:
+      - codex/configurar-launcher-aeldoria
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  forge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout launcher branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/configurar-launcher-aeldoria
+          fetch-depth: 0
+
+      - name: Detect existing Forge module
+        id: forge
+        shell: bash
+        run: |
+          if node -e "const d=require('./distribution.json'); process.exit(d.servers[0].modules.some(m => m.type === 'ForgeHosted') ? 0 : 1)"; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Node 22
+        if: steps.forge.outputs.ready != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Java 17
+        if: steps.forge.outputs.ready != 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Generate Forge client files with Nebula
+        if: steps.forge.outputs.ready != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/dscalzi/Nebula.git .nebula
+          cd .nebula
+          npm ci
+          NEBULA_ROOT="$RUNNER_TEMP/aeldoria-nebula"
+          cat > .env <<ENV
+          JAVA_EXECUTABLE=$JAVA_HOME/bin/java
+          ROOT=$NEBULA_ROOT
+          BASE_URL=https://raw.githubusercontent.com/RyuTV/AeldoriaRPG/codex/configurar-launcher-aeldoria/forge/
+          HELIOS_DATA_FOLDER=$RUNNER_TEMP/helios-data
+          ENV
+          npm run start -- init root
+          npm run start -- generate server Aeldoria_RPG 1.20.1 --forge 47.4.16
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('src/resolver/forge/adapter/ForgeGradle3.resolver.ts')
+          s = p.read_text()
+          old = "'-jar',\n                installerExec"
+          new = "'-jar',\n                installerExec,\n                '--installClient',\n                dirname(installerExec)"
+          if old not in s:
+              raise SystemExit('Nebula installer invocation changed')
+          p.write_text(s.replace(old, new, 1))
+          PY
+          npm run start -- generate distro aeldoria-forge
+
+      - name: Merge Forge module and hosted artifacts
+        if: steps.forge.outputs.ready != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          NEBULA_ROOT="$RUNNER_TEMP/aeldoria-nebula"
+          rm -rf forge
+          mkdir -p forge
+          cp -R "$NEBULA_ROOT/repo/." forge/
+          FORGE_DISTRO="$(find "$NEBULA_ROOT" -maxdepth 2 -name 'aeldoria-forge.json' -print -quit)"
+          test -n "$FORGE_DISTRO"
+          node - "$FORGE_DISTRO" <<'NODE'
+          const fs = require('fs')
+          const forgePath = process.argv[2]
+          const current = JSON.parse(fs.readFileSync('distribution.json', 'utf8'))
+          const generated = JSON.parse(fs.readFileSync(forgePath, 'utf8'))
+          const forge = generated.servers[0].modules.find(m => m.type === 'ForgeHosted')
+          if (!forge) throw new Error('ForgeHosted module not generated')
+          const fixHostedUrls = module => {
+            if (module.artifact?.url) {
+              module.artifact.url = module.artifact.url.replace('/forge/repo/', '/forge/')
+            }
+            ;(module.subModules || []).forEach(fixHostedUrls)
+          }
+          fixHostedUrls(forge)
+          const server = current.servers[0]
+          server.modules = [forge, ...server.modules.filter(m => !['ForgeHosted', 'Forge'].includes(m.type))]
+          server.version = '0.1.4'
+          fs.writeFileSync('distribution.json', JSON.stringify(current, null, 2) + '\n')
+          NODE
+
+      - name: Commit generated Forge files
+        if: steps.forge.outputs.ready != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add distribution.json forge
+          git commit -m "Integrate Forge 47.4.16"
+          git push origin HEAD:codex/configurar-launcher-aeldoria
+
+  windows:
+    needs: forge
+    runs-on: windows-latest
+    steps:
+      - name: Checkout updated launcher branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/configurar-launcher-aeldoria
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate distribution
+        shell: pwsh
+        run: |
+          $d = Get-Content distribution.json -Raw | ConvertFrom-Json
+          $server = $d.servers[0]
+          if (-not ($server.modules | Where-Object type -eq 'ForgeHosted')) { throw 'ForgeHosted missing' }
+          if (($server.modules | Where-Object type -eq 'ForgeMod').Count -lt 300) { throw 'Mod list incomplete' }
+
+      - name: Build Windows installer
+        run: npm run dist:win
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload test EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aeldoria-Launcher-Windows-test
+          path: dist/*.exe
+          if-no-files-found: error

@@ -53,6 +53,11 @@ class ProcessBuilder {
         this.usingFabricLoader = this.server.modules.some(mdl => mdl.rawModule.type === Type.Fabric)
         logger.info('Using fabric loader:', this.usingFabricLoader)
         const modObj = this.resolveModConfiguration(ConfigManager.getModConfiguration(this.server.rawServer.id).mods, this.server.modules)
+
+        // Forge 1.20.x no longer loads Helios' legacy Maven mod list reliably.
+        // Materialize launcher-managed mods in the instance mods directory.
+        this.syncForgeMods(modObj.fMods)
+        this.syncResourcePacks()
         
         // Mod list below 1.13
         // Fabric only supports 1.14+
@@ -67,8 +72,9 @@ class ProcessBuilder {
         let args = this.constructJVMArguments(uberModArr, tempNativePath)
 
         if(mcVersionAtLeast('1.13', this.server.rawServer.minecraftVersion)){
-            //args = args.concat(this.constructModArguments(modObj.fMods))
-            args = args.concat(this.constructModList(modObj.fMods))
+            if(this.usingFabricLoader){
+                args = args.concat(this.constructModList(modObj.fMods))
+            }
         }
 
         // Hide access token
@@ -108,6 +114,136 @@ class ProcessBuilder {
         })
 
         return child
+    }
+
+    /**
+     * Copy enabled distribution mods into the instance mods directory.
+     * A manifest is used so updates only remove files managed by the launcher,
+     * preserving any user-installed drop-in mods.
+     */
+    syncForgeMods(mods){
+        if(this.usingFabricLoader){
+            return
+        }
+
+        const modsDir = path.join(this.gameDir, 'mods')
+        const manifestPath = path.join(this.gameDir, '.aeldoria-managed-mods.json')
+        fs.ensureDirSync(modsDir)
+
+        let previous = []
+        try {
+            previous = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
+        } catch(_err) {
+            // First launch or an old/corrupt manifest.
+        }
+
+        const current = []
+        for(const mod of mods){
+            const source = mod.getPath()
+            const artifactPath = mod.rawModule.artifact != null ? mod.rawModule.artifact.path : null
+            const fileName = artifactPath != null && artifactPath.trim() !== ''
+                ? path.basename(artifactPath)
+                : path.basename(source)
+            const destination = path.join(modsDir, fileName)
+
+            if(!fs.existsSync(source)){
+                throw new Error(`Downloaded mod is missing: ${source}`)
+            }
+
+            fs.copyFileSync(source, destination)
+            current.push(fileName)
+        }
+
+        for(const oldFile of previous){
+            if(!current.includes(oldFile)){
+                fs.removeSync(path.join(modsDir, oldFile))
+            }
+        }
+
+        fs.writeFileSync(manifestPath, JSON.stringify(current, null, 2), 'utf8')
+        logger.info(`Synced ${current.length} launcher-managed mods to ${modsDir}`)
+    }
+
+    /**
+     * Ensure distribution-managed resource packs are present in the active
+     * instance. This also repairs installations created by older launcher
+     * builds which downloaded the pack but did not materialize it there.
+     */
+    syncResourcePacks(){
+        const resourcePacksDir = path.join(this.gameDir, 'resourcepacks')
+        fs.ensureDirSync(resourcePacksDir)
+
+        let synced = 0
+        const enabledPacks = []
+        for(const module of this.server.modules){
+            const artifactPath = module.rawModule.artifact != null
+                ? module.rawModule.artifact.path
+                : null
+
+            if(module.rawModule.type !== 'File' || artifactPath == null || !artifactPath.startsWith('resourcepacks/')){
+                continue
+            }
+
+            const source = module.getPath()
+            const destination = path.join(resourcePacksDir, path.basename(artifactPath))
+            if(!fs.existsSync(source)){
+                throw new Error(`Downloaded resource pack is missing: ${source}`)
+            }
+
+            if(path.resolve(source) !== path.resolve(destination)){
+                fs.copyFileSync(source, destination)
+            }
+            enabledPacks.push(`file/${path.basename(artifactPath)}`)
+            synced++
+        }
+
+        const optionsPath = path.join(this.gameDir, 'options.txt')
+        if(enabledPacks.length > 0){
+            let options = fs.existsSync(optionsPath)
+                ? fs.readFileSync(optionsPath, 'utf8')
+                : ''
+
+            const updateList = (key, transform, fallback) => {
+                const expression = new RegExp(`^${key}:(.*)$`, 'm')
+                const match = options.match(expression)
+                let values = fallback
+
+                if(match != null){
+                    try {
+                        values = JSON.parse(match[1])
+                    } catch(err) {
+                        logger.warn(`Could not parse ${key}; rebuilding its resource-pack list.`, err)
+                    }
+                }
+
+                values = transform(Array.isArray(values) ? values : fallback)
+                const replacement = `${key}:${JSON.stringify(values)}`
+                options = match != null
+                    ? options.replace(expression, replacement)
+                    : `${options}${options.length > 0 && !options.endsWith('\n') ? '\n' : ''}${replacement}\n`
+            }
+
+            const managedNames = new Set(enabledPacks.map(pack => pack.toLowerCase()))
+            // Older builds wrote the same pack without its .zip extension.
+            managedNames.add('file/newaeldoria')
+
+            updateList('resourcePacks', (packs) => {
+                const preserved = packs.filter(pack => !managedNames.has(String(pack).toLowerCase()))
+                return preserved.concat(enabledPacks)
+            }, ['vanilla'])
+
+            // Preserve Minecraft's accepted-incompatibility flags while fixing
+            // the old extensionless identifier there as well.
+            updateList('incompatibleResourcePacks', (packs) => {
+                return packs.map(pack => String(pack).toLowerCase() === 'file/newaeldoria'
+                    ? 'file/NEWAELDORIA.zip'
+                    : pack)
+            }, [])
+
+            fs.writeFileSync(optionsPath, options, 'utf8')
+        }
+
+        logger.info(`Synced and enabled ${synced} launcher-managed resource packs in ${resourcePacksDir}`)
     }
 
     /**
