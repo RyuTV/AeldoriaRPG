@@ -865,17 +865,6 @@
           }
         },
         {
-          "id": "aeldoria.mods:born_in_chaos_-forge-1.20.1_1.7.2:1.0.0",
-          "name": "born_in_chaos_[Forge]1.20.1_1.7.2",
-          "type": "ForgeMod",
-          "artifact": {
-            "size": 11816101,
-            "MD5": "53c0274da230c0b83864a8f1043d0a60",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/born_in_chaos_%5BForge%5D1.20.1_1.7.2.jar",
-            "path": "born_in_chaos_[Forge]1.20.1_1.7.2.jar"
-          }
-        },
-        {
           "id": "aeldoria.mods:bossesrise-1.20.1-forge-1.0.9.2b:1.0.0",
           "name": "bossesrise-1.20.1-forge-1.0.9.2b",
           "type": "ForgeMod",
@@ -2149,17 +2138,6 @@
             "MD5": "bf599e9fd78eac2d367f95229b77bd7e",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/hytalecraft-2.5.0-forge-1.20.1.jar",
             "path": "hytalecraft-2.5.0-forge-1.20.1.jar"
-          }
-        },
-        {
-          "id": "aeldoria.mods:iceandfire-2.1.13-1.20.1-beta-5:1.0.0",
-          "name": "iceandfire-2.1.13-1.20.1-beta-5",
-          "type": "ForgeMod",
-          "artifact": {
-            "size": 21854126,
-            "MD5": "cadbfab46fa1b02f9a9b09fa5cf86803",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/iceandfire-2.1.13-1.20.1-beta-5.jar",
-            "path": "iceandfire-2.1.13-1.20.1-beta-5.jar"
           }
         },
         {
@@ -3447,17 +3425,6 @@
             "MD5": "97524969f61a28820faa6da541e7b747",
             "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/RPG_Style_More_Weapons_R_1.0.3_Forge_1.20.1.jar",
             "path": "RPG_Style_More_Weapons_R_1.0.3_Forge_1.20.1.jar"
-          }
-        },
-        {
-          "id": "aeldoria.mods:runicskills-1.0.0:1.0.0",
-          "name": "runicskills-1.0.0",
-          "type": "ForgeMod",
-          "artifact": {
-            "size": 1205560,
-            "MD5": "cfd3f4081036eaa81ee98ca9710b123f",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/runicskills-1.0.0.jar",
-            "path": "runicskills-1.0.0.jar"
           }
         },
         {
