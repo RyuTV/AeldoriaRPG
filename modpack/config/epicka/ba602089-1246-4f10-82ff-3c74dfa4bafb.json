@@ -1,0 +1,15 @@
+{
+  "mounts": {
+    "a": {
+      "idMonture": "aeldoriarpgprivatemod:caballo_espartano",
+      "enable": true,
+      "customName": "a",
+      "nbtData": "",
+      "speedModifier": 1.5,
+      "mountType": "GROUND",
+      "costAmount": 0,
+      "particleAmount": 0
+    }
+  },
+  "lastSummonedMount": "a"
+}

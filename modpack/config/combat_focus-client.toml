@@ -1,0 +1,435 @@
+
+#
+#Which enemies can be locked on to, and how the game decides which one
+#
+[targeting]
+	#What the lock on key does
+	#TOGGLE: press once to lock, press again to let go
+	#HOLD:   the lock lasts exactly as long as you hold the key down
+	#Allowed Values: TOGGLE, HOLD
+	lock_mode = "TOGGLE"
+	#When the target dies or gets too far away, lock the next best enemy instead of letting go
+	#The lock is only dropped when there is nothing left to move to
+	retarget_on_loss = true
+	#How far away an enemy may be to get locked, in blocks
+	#Range: 0 ~ 128
+	range = 16
+	#Half angle of the cone in front of the camera used to pick a target, in degrees
+	#With nothing inside the cone it falls back to the closest enemy in range
+	#Range: 0.0 ~ 180.0
+	max_lock_angle = 70.0
+	#Only allow locking on to enemies you can actually see
+	require_line_of_sight = true
+	#The lock is released once the target is further away than range * this multiplier
+	#Range: 1.0 ~ 4.0
+	break_distance_multiplier = 1.5
+	#Snap the player rotation exactly onto the target when attacking
+	#Makes sure combat mods that use the player look direction, such as Better Combat, hit the locked target
+	face_target_on_attack = true
+	#How much distance counts when aiming decides the target, in degrees charged per block
+	#0 picks purely by what is closest to the middle of the screen, which lets a far enemy
+	#dead centre beat one at arm's length. Higher pulls the choice towards whatever is near you
+	#Range: 0.0 ~ 30.0
+	aim_distance_bias = 2.5
+	#Enemies this close always count as being in front of you, in blocks
+	#A safety net for the times the cone is measured from your eyes, where someone standing
+	#beside you sits near ninety degrees and would be thrown out of it. Over the shoulder the
+	#cone is measured from the camera instead, which already sees them, so it rarely matters there
+	#Range: 0.0 ~ 32.0
+	point_blank_range = 4.0
+	#Only allow the lock in third person
+	#The marker, the camera work and the aim view are all built around seeing your own character,
+	#so in first person the lock gives up most of what it is for. Switching to first person while
+	#locked drops the lock rather than leaving it running out of sight
+	third_person_only = true
+	#How far the mouse has to be flicked sideways to switch to the next target, in degrees
+	#Measured against how far the camera would have turned, so it scales with your mouse sensitivity
+	#Lower switches more eagerly
+	#Range: 1.0 ~ 180.0
+	target_switch_sensitivity = 20.0
+	#Which candidate wins the lock when several are in range
+	#HOSTILE_THEN_AIM:      hostiles first, then whichever is closest to the middle of the screen
+	#HOSTILE_THEN_DISTANCE: hostiles first, then whichever is nearest
+	#AIM:                   closest to the middle of the screen, hostile or not
+	#DISTANCE:              nearest, hostile or not
+	#Hostile means anything the game marks as a monster, plus other players. Whether a
+	#neutral mob is currently angry lives on the server, so the client cannot see it
+	#Allowed Values: HOSTILE_THEN_AIM, HOSTILE_THEN_DISTANCE, AIM, DISTANCE
+	priority = "HOSTILE_THEN_AIM"
+	#Where bosses and automatically detected minibosses rank against every other candidate
+	#FIRST: major threats win initial acquisition and automatic retargeting
+	#Manual Tab/mouse switching always remains free to select every permitted target
+	#NORMAL: they use the regular hostile, aim and distance rules
+	#Allowed Values: FIRST, NORMAL
+	boss_priority = "FIRST"
+	#Optional overrides: entity types that are always recognized as full bosses
+	#Automatic health detection handles normal cases; use this only for exceptions
+	bosses = ["minecraft:ender_dragon", "minecraft:wither"]
+	#Automatically recognize bosses and hostile minibosses by maximum health
+	detect_bosses_by_health = true
+	#Minimum maximum health for automatic boss recognition
+	#The explicit bosses list is always recognized regardless of this value
+	#Range: 1.0 ~ 1000000.0
+	boss_health_threshold = 150.0
+	#Boss acquisition and lock-retention range multiplier
+	#Large or flying bosses can remain usable beyond the ordinary mob range
+	#Range: 1.0 ~ 16.0
+	boss_range_multiplier = 3.0
+	#Minimum maximum health for automatic hostile miniboss recognition
+	#Covers threats such as ravagers and elder guardians without maintaining a type list
+	#Range: 1.0 ~ 1000000.0
+	miniboss_health_threshold = 60.0
+	#Acquisition and lock-retention range multiplier for detected minibosses
+	#Range: 1.0 ~ 16.0
+	miniboss_range_multiplier = 1.75
+	#Allow locking on to other players
+	#Team mates are never targeted whatever this says: the scoreboard team comes from the
+	#server and vanilla targeting drops allies before any setting here is consulted
+	players = true
+	#Where other players rank against everything else
+	#FIRST:  a player always beats a mob, however well placed the mob is. For fighting people
+	#NORMAL: ranked like any other hostile, on aim and distance alone
+	#LAST:   only picked when nothing else is around. For fighting mobs next to friends
+	#Allowed Values: FIRST, NORMAL, LAST
+	player_priority = "FIRST"
+	#Allow locking on to players in creative mode, usually staff and builders
+	#Read from the player list, which the server keeps up to date, so it is reliable
+	#Spectators are never targeted at all, that one is vanilla and not a setting here
+	creative_players = false
+	#Allow using the lock while you yourself are in spectator mode
+	#Nothing can be attacked from there, so this is purely a camera: turned on, the lock
+	#becomes a way to follow a player or a mob around a fight hands free
+	while_spectating = false
+	#Entity types that can never be targeted
+	#Everything else is fair game, so this is the list to grow, not a list to pick from
+	#Empty it out to allow absolutely everything
+	blacklist = ["minecraft:allay"]
+
+#
+#Everything drawn over lock candidates and locked targets
+#
+[indicator]
+
+	#
+	#The main marker drawn on the locked target
+	#
+	[indicator.marker]
+		#Marker drawn on the locked target
+		#NONE:   nothing, the lock still works
+		#ARROW:  an arrow just above the head that dips toward the target on every pulse
+		#DOT:    a small ring on its middle that spins up and rings out on every pulse
+		#TARGET: a reticle whose four quarters fly in and lock together, then split and snap back
+		#Each one is a white 16x16 image in assets/combat_focus/images, so a resource pack can replace it
+		#Allowed Values: NONE, ARROW, DOT, TARGET
+		type = "DOT"
+		#Color of the marker, plain six digit hex, the same thing any color picker hands you
+		#Examples: #FFFFFF white, #FF3030 red, #FFFF00 yellow, #30FF90 green
+		#How see through it is lives in the opacity option below, not in the color
+		color = "#FFFFFF"
+		#Overall size multiplier of the marker
+		#Range: 0.1 ~ 5.0
+		size = 1.0
+		#Grow the marker with the target, so a warden gets a bigger one than a silverfish
+		#The growth tapers off on purpose, a huge mob does not get a marker that fills the screen
+		scale_with_entity = true
+		#Moves the marker up or down on the target, in blocks
+		#Range: -5.0 ~ 5.0
+		height_offset = 0.0
+		#Draw the marker on top of everything, so nothing can ever hide it
+		#Turning this off lets the world and the mob itself cover it up
+		draw_through_walls = true
+		#How solid the marker is. 1 is fully opaque, 0.5 is half see through
+		#Range: 0.05 ~ 1.0
+		opacity = 0.9
+
+	#
+	#Dark edge around the main marker
+	#
+	[indicator.outline]
+		#Draw a dark edge behind the marker
+		#Off by default. Turn it on if the marker gets lost against a bright or busy mob texture
+		enabled = true
+		#Color of that edge, six digit hex
+		color = "#000000"
+		#How solid the edge is
+		#Range: 0.0 ~ 1.0
+		opacity = 0.25
+		#How much larger the dark copy behind the marker is drawn, as a fraction of its size
+		#Range: 0.01 ~ 1.0
+		width = 0.12
+
+	#
+	#Soft shadow or glow behind the main marker
+	#
+	[indicator.shadow]
+		#Drop a soft shadow behind the marker
+		#Cheap depth cue that lifts the marker off the mob without ringing it in black
+		#With the default offset of 0 it sits centred, reading as a glow rather than a cast shadow
+		enabled = false
+		#Color of that shadow, six digit hex
+		color = "#6B1616"
+		#How solid the shadow is at its core
+		#Range: 0.0 ~ 1.0
+		opacity = 0.35
+		#How far the shadow is offset, as a fraction of the marker size
+		#Range: 0.0 ~ 1.0
+		offset = 0.0
+		#How much wider the softest shadow layer spreads, as a fraction of the marker size
+		#0 gives a hard duplicate, which reads as a second outline rather than a shadow
+		#Higher spreads it into a soft fade
+		#Range: 0.0 ~ 2.0
+		blur = 0.35
+
+	#
+	#Small triangle that previews the target the lock would choose
+	#
+	[indicator.preview]
+		#Show a small triangle over wherever the lock is headed next
+		#With nothing locked that is whoever the key would take, so you see it before you commit
+		enabled = true
+		#Keep showing the preview triangle after an entity is already locked
+		#Then it points at whoever would inherit the lock next. Off by default so the locked
+		#target is the only entity carrying an indicator during combat
+		while_locked = false
+		#Color of that preview triangle, separate from the marker color on purpose
+		#It is only a suggestion, so it reads better in a different color than the real lock
+		color = "#FFFFFF"
+		#Size of that preview triangle, as a fraction of the normal marker
+		#Range: 0.05 ~ 2.0
+		size = 0.45
+		#How fast the preview triangle pulses, in full blinks per second. 0 holds it steady
+		#Range: 0.0 ~ 5.0
+		blink_speed = 0.8
+		#How solid the preview triangle gets at the top of its blink
+		#Range: 0.05 ~ 1.0
+		opacity = 0.7
+
+		#
+		#Appearance used when the next-target preview remains visible during a lock
+		#
+		[indicator.preview.locked]
+			#Color used while an entity is locked
+			color = "#AAAAAA"
+			#Size while locked, as a fraction of indicator.preview.size
+			#Range: 0.1 ~ 2.0
+			size = 0.75
+			#Blink speed while locked, in full blinks per second. 0 holds it steady
+			#Slower than the free one on purpose: a fast blink pulls the eye away from the fight
+			#Range: 0.0 ~ 5.0
+			blink_speed = 0.35
+			#How solid it gets at the top of its blink while locked
+			#Range: 0.05 ~ 1.0
+			opacity = 0.4
+
+	#
+	#How the marker moves. All of it is skipped when accessibility.reduce_motion is on
+	#
+	[indicator.animation]
+		#How long the marker takes to sweep in and settle when a target is acquired, in seconds
+		#0 makes it appear instantly
+		#Range: 0.0 ~ 3.0
+		appear_duration = 0.3
+		#How fast the marker turns while held, in degrees per second. 0 keeps it still
+		#Range: 0.0 ~ 720.0
+		spin_speed = 25.0
+		#How far the marker drifts up and down while idle, as a fraction of its size. 0 keeps it steady
+		#Range: 0.0 ~ 1.0
+		bob_strength = 0.06
+		#Seconds between each here I am pulse the marker does while a target is held
+		#0 disables the pulse
+		#Range: 0.0 ~ 30.0
+		pop_interval = 2.4
+		#How strong each pulse is, as a fraction of the marker size
+		#Range: 0.0 ~ 2.0
+		pop_strength = 0.3
+		#How long a single pulse takes, in seconds
+		#Range: 0.05 ~ 3.0
+		pop_duration = 0.5
+
+#
+#Cues played when the lock changes. Each one takes any sound event id in the game
+#
+[sound]
+	#Master switch for every lock on sound
+	enabled = true
+	#Shortest gap between two cues, in seconds
+	#Shared by all three of them. Sweeping the mouse across a crowd fires a switch per
+	#target, which without this turns into a machine gun. 0 removes the limit
+	#Range: 0.0 ~ 5.0
+	min_interval = 0.18
+
+	#Played when a target is first acquired
+	[sound.lock]
+		#Any sound event id in the game, such as minecraft:block.note_block.hat
+		#Leave empty to play nothing for this one
+		sound = "minecraft:ui.button.click"
+		#Range: 0.0 ~ 1.0
+		volume = 0.06
+		#Range: 0.5 ~ 2.0
+		pitch = 2.0
+
+	#Played when the lock moves to another target
+	[sound.switch]
+		#Any sound event id in the game, such as minecraft:block.note_block.hat
+		#Leave empty to play nothing for this one
+		sound = "minecraft:ui.button.click"
+		#Range: 0.0 ~ 1.0
+		volume = 0.06
+		#Range: 0.5 ~ 2.0
+		pitch = 2.0
+
+	#Played when the lock is dropped
+	[sound.release]
+		#Any sound event id in the game, such as minecraft:block.note_block.hat
+		#Leave empty to play nothing for this one
+		sound = "minecraft:ui.button.click"
+		#Range: 0.0 ~ 1.0
+		volume = 0.06
+		#Range: 0.5 ~ 2.0
+		pitch = 2.0
+
+#
+#For players who need less motion on screen, or more contrast to read the marker
+#
+[accessibility]
+	#Turn off every marker animation: no sweeping in, no spin, no pulse, no bobbing
+	#The marker still fades in, so an acquired lock stays noticeable
+	reduce_motion = false
+	#Force the outline on and make it thicker, for maximum readability
+	high_contrast = false
+
+#
+#What the camera does while locked on
+#
+[camera]
+	#Complete focus behaviour; one option prevents incompatible combinations
+	#FACE_TARGET: original lock, body and camera stay facing the entity
+	#FREE_ROTATION: requires Shoulder Surfing; its camera stays locked while the body moves freely
+	#DYNAMIC: face-target and distance-aware zoom, plus automatic shoulder framing when available
+	#Without Shoulder Surfing, FREE_ROTATION falls back safely to FACE_TARGET; DYNAMIC keeps its zoom
+	#Allowed Values: FACE_TARGET, FREE_ROTATION, DYNAMIC
+	focus_mode = "FREE_ROTATION"
+
+	#
+	#Optional black bars drawn underneath the HUD while locked on
+	#
+	[camera.cinematic_bars]
+		#Show cinematic bars at the top and bottom while a target is locked
+		#Disabled by default; HUD elements are rendered above them
+		enabled = false
+		#Height of each bar as a fraction of the screen; 0.12 means 12 percent
+		#Range: 0.0 ~ 0.45
+		height = 0.12
+		#Maximum opacity of the black bars
+		#Range: 0.0 ~ 1.0
+		opacity = 1.0
+		#NONE: instant, SLIDE: height only, FADE: opacity only, SLIDE_FADE: both
+		#Allowed Values: NONE, SLIDE, FADE, SLIDE_FADE
+		animation = "SLIDE_FADE"
+		#Seconds used to enter or leave; 0 is instant
+		#accessibility.reduce_motion also makes the transition instant
+		#Range: 0.0 ~ 5.0
+		duration = 0.35
+
+	#
+	#Optional field-of-view adjustment for distant targets
+	#
+	[camera.fov]
+		#Widen the field of view as the target gets further away
+		#Works in any perspective. Off by default, it is the kind of motion that bothers some players
+		enabled = false
+		#Field of view multiplier reached at maximum lock range
+		#Range: 1.0 ~ 2.0
+		max_multiplier = 1.15
+
+	#
+	#Distance-aware framing; advanced shoulder movement is exclusive to DYNAMIC
+	#
+	[camera.dynamic]
+		#Adapt the Shoulder Surfing distance and height as the target gets further away
+		#FACE_TARGET and FREE_ROTATION preserve their raised view; DYNAMIC uses its lower framing
+		adaptive_framing = true
+		#Sideways player framing when the target is near, in blocks; requires Shoulder Surfing
+		#Range: 0.0 ~ 5.0
+		near_shoulder_offset = 1.45
+		#Sideways player framing at maximum target range, in blocks; requires Shoulder Surfing
+		#Range: 0.0 ~ 6.0
+		far_shoulder_offset = 2.2
+		#FOV multiplier for a nearby target; below 1 zooms in
+		#Range: 0.3 ~ 1.5
+		near_zoom = 0.78
+		#FOV multiplier at maximum target range
+		#Range: 0.3 ~ 1.5
+		far_zoom = 0.68
+		#How quickly zoom and shoulder framing react, 1 is instant
+		#Range: 0.01 ~ 1.0
+		switch_speed = 0.18
+		#How far back Shoulder Surfing may pull the camera at maximum lock range, in blocks
+		#Range: 0.0 ~ 15.0
+		max_back = 2.5
+		#Maximum upward adjustment for FACE_TARGET and FREE_ROTATION
+		#Kept separate so DYNAMIC cannot flatten the original adaptive view
+		#Range: 0.0 ~ 15.0
+		classic_max_up = 1.0
+		#Vertical adjustment for DYNAMIC at maximum range; negative moves the camera lower
+		#Range: -5.0 ~ 5.0
+		dynamic_vertical_offset = -0.2
+
+	#
+	#Optional integration. Every setting below is ignored when Shoulder Surfing Reloaded is absent
+	#Vanilla third person keeps the original Combat Focus rotation and is never remapped
+	#
+	[camera.shoulder_surfing]
+		#Allow Combat Focus to control Shoulder Surfing while a target is locked
+		enabled = true
+
+		#
+		#How quickly the camera follows the locked entity
+		#
+		[camera.shoulder_surfing.tracking]
+			#How closely the camera tracks the target, 1 is instant
+			#Normalized to 60 fps, so the feel does not change with your framerate
+			#Range: 0.01 ~ 1.0
+			turn_speed = 0.4
+			#Ceiling on how fast the camera may swing, in degrees per second
+			#This is what keeps switching between targets from snapping. Raise it for a snappier feel
+			#Range: 10.0 ~ 3600.0
+			max_turn_speed = 240.0
+			#Added to the camera pitch while locked on, in degrees. Positive looks further down
+			#Range: -90.0 ~ 90.0
+			pitch_offset = 0.0
+			#Lowest camera pitch while locked on, in degrees. Negative looks up
+			#Range: -90.0 ~ 90.0
+			min_pitch = -50.0
+			#Highest camera pitch while locked on, in degrees. Positive looks down
+			#Range: -90.0 ~ 90.0
+			max_pitch = 50.0
+
+		#
+		#Bow, crossbow and trident view; also requires Shoulder Surfing
+		#
+		[camera.shoulder_surfing.aiming]
+			#Pull the view in and shift the camera aside while aiming
+			enabled = true
+			#FOV multiplier at full aim
+			#Range: 0.3 ~ 1.5
+			zoom = 0.78
+			#Transition speed, 1 is instant
+			#Range: 0.01 ~ 1.0
+			speed = 0.5
+			#Side on which the player appears while aiming
+			#Allowed Values: AUTO, LEFT, RIGHT
+			side = "AUTO"
+			#Minimum sideways offset at full aim
+			#Range: 0.0 ~ 5.0
+			side_minimum = 0.9
+			#Extra sideways offset added at full aim
+			#Range: 0.0 ~ 5.0
+			side_extra = 0.35
+			#Fraction of camera distance removed at full aim
+			#Range: 0.0 ~ 1.0
+			closer_fraction = 0.35
+			#Vertical camera shift at full aim, in blocks
+			#Range: -5.0 ~ 5.0
+			offset_up = 0.05
+

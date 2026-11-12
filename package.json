@@ -1,13 +1,13 @@
 {
-  "name": "helioslauncher",
-  "version": "2.2.1",
-  "productName": "Helios Launcher",
-  "description": "Modded Minecraft Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "name": "aeldoria-launcher",
+  "version": "2.2.3",
+  "productName": "Aeldoria Launcher",
+  "description": "Launcher oficial de Aeldoria RPG para Minecraft 1.20.1",
+  "author": "Aeldoria RPG",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/dscalzi/HeliosLauncher",
+  "homepage": "https://github.com/RyuTV/AeldoriaRPG",
   "bugs": {
-    "url": "https://github.com/dscalzi/HeliosLauncher/issues"
+    "url": "https://github.com/RyuTV/AeldoriaRPG/issues"
   },
   "private": true,
   "main": "index.js",
@@ -47,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dscalzi/HeliosLauncher.git"
+    "url": "git+https://github.com/RyuTV/AeldoriaRPG.git"
   }
 }
