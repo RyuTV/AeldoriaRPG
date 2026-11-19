@@ -1,0 +1,61 @@
+
+["Aeldoria RPG Core"]
+	#Show or hide the Aeldoria logo HUD.
+	enabled = true
+	#Hide the logo while the F3 debug screen is open.
+	hideWhenDebugScreenIsOpen = true
+	#Main logo text.
+	title = "Aeldoria RPG"
+	#Beta/version text.
+	version = "BETA 0.5.0"
+	#Position: TOP_LEFT, TOP_CENTER, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT.
+	position = "TOP_RIGHT"
+	#Horizontal offset from the chosen position.
+	#Range: -1000 ~ 1000
+	xOffset = 10
+	#Vertical offset from the chosen position.
+	#Range: -1000 ~ 1000
+	yOffset = 10
+	#HUD scale.
+	#Range: 0.5 ~ 3.0
+	scale = 0.7
+	#Background opacity from 0 to 255.
+	#Range: 0 ~ 255
+	backgroundAlpha = 125
+
+["Linaje HUD"]
+	#Show or hide the small current lineage HUD.
+	raceHudEnabled = true
+	#Show the lineage name next to the icon.
+	raceHudShowName = true
+	#Position: TOP_LEFT, TOP_CENTER, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT.
+	raceHudPosition = "BOTTOM_RIGHT"
+	#Horizontal offset from the chosen race HUD position.
+	#Range: -1000 ~ 1000
+	raceHudXOffset = 10
+	#Vertical offset from the chosen race HUD position.
+	#Range: -1000 ~ 1000
+	raceHudYOffset = 54
+	#Race HUD scale.
+	#Range: 0.35 ~ 2.5
+	raceHudScale = 0.75
+	#Race HUD background opacity from 0 to 255.
+	#Range: 0 ~ 255
+	raceHudBackgroundAlpha = 105
+
+["Habilidad HUD"]
+	#Show or hide the class ability HUD next to the hotbar.
+	abilityHudEnabled = true
+	#Horizontal offset from the right side of the vanilla hotbar.
+	#Range: -300 ~ 300
+	abilityHudXOffset = 8
+	#Vertical offset from the hotbar baseline.
+	#Range: -300 ~ 300
+	abilityHudYOffset = 0
+	#Class ability HUD scale.
+	#Range: 0.5 ~ 2.5
+	abilityHudScale = 0.7
+	#Class ability HUD background opacity from 0 to 255.
+	#Range: 0 ~ 255
+	abilityHudBackgroundAlpha = 145
+
