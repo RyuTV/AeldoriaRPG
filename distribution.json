@@ -1602,14 +1602,25 @@
           }
         },
         {
-          "id": "aeldoria.mods:epicfightdd-20.14.1.14.0:1.0.0",
-          "name": "EpicfightDd-20.14.1.14.0",
+          "id": "aeldoria.mods:epicfightdd-20.14.1.19.2:1.0.0",
+          "name": "EpicfightDd-20.14.1.19.2",
           "type": "ForgeMod",
           "artifact": {
-            "size": 26754213,
-            "MD5": "3f137c777585dea5a001656fa6116a51",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EpicfightDd-20.14.1.14.0.jar",
-            "path": "EpicfightDd-20.14.1.14.0.jar"
+            "size": 37534944,
+            "MD5": "0275d12888d8d9291a75511a54e2a260",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/EpicfightDd-20.14.1.19.2.jar",
+            "path": "EpicfightDd-20.14.1.19.2.jar"
+          }
+        },
+        {
+          "id": "aeldoria.mods:thaumicstrike-forge-1.20.1-2.0.3:1.0.0",
+          "name": "thaumicstrike-forge-1.20.1-2.0.3",
+          "type": "ForgeMod",
+          "artifact": {
+            "size": 22213539,
+            "MD5": "5a5155127b61a41ac05ac674bcae2ab8",
+            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/thaumicstrike-forge-1.20.1-2.0.3.jar",
+            "path": "thaumicstrike-forge-1.20.1-2.0.3.jar"
           }
         },
         {
