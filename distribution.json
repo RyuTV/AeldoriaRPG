@@ -1613,17 +1613,6 @@
           }
         },
         {
-          "id": "aeldoria.mods:thaumicstrike-forge-1.20.1-2.0.3:1.0.0",
-          "name": "thaumicstrike-forge-1.20.1-2.0.3",
-          "type": "ForgeMod",
-          "artifact": {
-            "size": 22213539,
-            "MD5": "5a5155127b61a41ac05ac674bcae2ab8",
-            "url": "https://pub-79b82cbc60264b58bdb1b8dbd8680e2a.r2.dev/thaumicstrike-forge-1.20.1-2.0.3.jar",
-            "path": "thaumicstrike-forge-1.20.1-2.0.3.jar"
-          }
-        },
-        {
           "id": "aeldoria.mods:epicfight_awaken-1.0.4-forge-1.20.1:1.0.0",
           "name": "epicfight_awaken-1.0.4-forge-1.20.1",
           "type": "ForgeMod",
